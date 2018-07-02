@@ -1,0 +1,11 @@
+{
+  "name": "astridlindgren.se",
+  "version": "0.0.5",
+  "description": "Main app for astridlindgren.se",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "http://www.itch.se",
+  "license": "ISC"
+}
