@@ -1,5 +1,6 @@
 @import "normalize.css";
 
 @import "../components/base";
+@import "../components/section";
 
 @import "suitcss-utils-flex";

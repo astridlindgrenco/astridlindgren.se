@@ -1,0 +1,7 @@
+/* @define Header */
+
+@import '../base';
+
+.Header {
+  padding: calc(var(--baseline-px) * 2) 0
+}
