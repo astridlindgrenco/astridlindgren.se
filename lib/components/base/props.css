@@ -1,6 +1,38 @@
 :root {
 
   /**
+   * Grids
+   */
+
+  --baseline-unit: 8px;
+  --baseline: calc(var(--baseline-unit) * 2);
+  --grid-gutter: 40px;
+
+  /**
+   * Basic type
+   */
+   --base-font-size: 18px;
+
+   /**
+   * Breakpoins and framing
+   */
+   --page-width-wide: 1440px;
+  --page-width-narrow: calc(1025px - 50px);
+  --page-margins-small: calc(40px / 2);
+  --page-margins-large: 56px;
+
+  --page-margins-small: calc(var(--baseline-unit) * 3);
+  --page-margins-medium: calc(var(--baseline-unit) * 5);
+  --page-margins-large: calc(var(--baseline-unit) * 6);
+
+  /**
+  * Layer stacking
+  */
+  --z-index-modal-content: 10;
+  --z-index-modal-bg: 9;
+
+
+  /**
    * Grays
    */
 
