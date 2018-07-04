@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "standard",
-    "start": "node -r dotenv/config index.js"
+    "start": "node index.js",
+    "restart": "nodemon -r dotenv/config --inspect index.js -e js -i lib/components"
   },
   "author": "http://www.itch.se",
   "license": "ISC",
