@@ -3,5 +3,54 @@
 @import '../base';
 
 .Header {
-  padding: calc(var(--baseline-px) * 2) 0
+  display: flex;
+  align-items: center;
+  padding: calc(var(--baseline-px) * 2) 0;
+  margin: calc(var(--baseline-px) * 4) 0;
 }
+
+.Header-logo {
+
+}
+
+
+.Header-nav {
+  display: flex;
+  align-items: center;
+}
+  .Header-aside {
+    display: flex;
+    align-items: center;
+  }
+  .Header-navList {
+    display: flex;
+  }
+  .Header-navList {
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .Header-navItem:not(:first-child) {
+    margin-left: calc(var(--baseline-px) * 4);
+  }
+
+    .Header-navList--primary {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .Header-navList--secondary {
+      justify-content: flex-end;
+    }
+      .Header-navList--secondary .Header-navItem:not(:first-child) {
+        margin-left: calc(var(--baseline-px) * 2);
+      }
+
+.Header-actions {
+  margin-left: calc(var(--baseline-px) * 2);
+}
+  .Header-action {
+    padding: calc(var(--baseline-px) / 2);
+  }
+  .Header-action:not(:first-child) {
+    margin-left: calc(var(--baseline-px) / 2);
+  }

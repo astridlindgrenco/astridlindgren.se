@@ -9,5 +9,5 @@
 :root {
   --avenir-next: "AvenirNextCondensed-DemiBold", "HelveticaNeue-CondensedBold", "Helvetica Inserat", "Franklin Gothic Condensed", Haettenschweiler, Impact, sans-serif-condensed, sans-serif;
 
-  --font-family-heading: var(--avenir-next-bold);
+  --font-family-body: 'Avenir Next', sans-serif;
 }

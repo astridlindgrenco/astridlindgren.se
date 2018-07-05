@@ -1,6 +1,9 @@
 @import "normalize.css";
 
 @import "../components/base";
+@import "../components/header";
 @import "../components/section";
+@import "../components/logo";
 
 @import "suitcss-utils-flex";
+@import "suitcss-utils-size";
