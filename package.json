@@ -6,6 +6,7 @@
   "scripts": {
     "test": "standard",
     "start": "node index.js",
+    "setup": "./bin/setup",
     "restart": "nodemon -r dotenv/config --inspect index.js -e js -i lib/components"
   },
   "author": "http://www.itch.se",
@@ -41,6 +42,7 @@
     "prismic-javascript": "^1.5.0",
     "prismic-richtext": "^0.4.2",
     "suitcss-utils-flex": "^2.0.1",
+    "suitcss-utils-size": "^2.0.1",
     "y18n": "^4.0.0"
   }
 }

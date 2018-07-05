@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+const path = require('path')
+const dedent = require('dedent')
+const { promisify } = require('util')
+const writeFile = promisify(fs.writeFile)
+
+const dotenv = dedent`
+  PORT=3000
+  NODE_ENV=development
+
+  GLOBALGOALS_NAME=Astrid Lindgren Company
+  GLOBALGOALS_URL=http://localhost:3000
+  GLOBALGOALS_LANG=sv
+
+  PRISMIC_API=https://astridlindgren.cdn.prismic.io/api/v2
+  PRISMIC_REPOSITORY=astridlindgren
+  PRISMIC_SECRET=<PRISMIC_WEB_HOOK_SECRET>
+  PRISMIC_HOOK=/prismic-hook
+  PRISMIC_PREVIEW=/prismic-preview
+
+  GOOGLE_ANALYTICS_ID=
+
+`
+
+writeFile(path.resolve(process.cwd(), '.env'), dotenv).then(
+  () => console.log(dedent`
+    > Environment variables were generated successfully
+  `),
+  err => console.error(dedent`
+    > An error occured in generating files, see error:
+
+    ${err}
+  `)
+)
