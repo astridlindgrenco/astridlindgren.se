@@ -88,9 +88,14 @@
   }
   .Header-action--menu {
     position: absolute;
-    top: 50%;
+    top: calc(var(--baseline-px) * 4);
     right: 0;
     transform: translateY(-50%);
+  }
+  @media (--viewport-sm) {
+    .Header-action--menu {
+      top: calc(var(--baseline-px) * 5);
+    }
   }
   @media (min-width: 900px) {
     .Header-action--menu {
@@ -101,14 +106,43 @@
   @media (max-width: 899px) {
     .Header {
       margin: var(--baseline-px) 0;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .Header-nav {
       display: none;
     }
+    .Header-navList,
+    .Header-aside {
+      width: 100%;
+      flex-direction: column;
+    }
 
-    .Header-action--lang,
-    .Header-action--search {
-      display: none;
+    .Header--withOpenNav .Header-nav {
+      display: block;
+      width: 100%;
+      margin-top: calc(var(--baseline-px) * 3);
+    }
+    .Header--withOpenNav .Header-navItem {
+      display: block;
+      margin: 0 !important;
+    }
+    .Header--withOpenNav .Header-navItem a {
+      display: block;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      padding: calc(var(--baseline-px) * 2) 0;
+    }
+      .Header--withOpenNav .Header-navList--secondary {
+        border-top: 1px solid rgba(0,0,0,0.1);
+        padding-top: var(--baseline-px);
+      }
+      .Header--withOpenNav .Header-navList--secondary .Header-navItem a {
+        border: 0;
+        padding: var(--baseline-px) 0;
+      }
+    .Header--withOpenNav .Header-actions {
+      display: block;
+      flex-direction: column;
     }
   }
