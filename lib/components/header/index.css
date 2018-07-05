@@ -3,6 +3,7 @@
 @import '../base';
 
 .Header {
+  position: relative;
   display: flex;
   align-items: center;
   padding: calc(var(--baseline-px) * 2) 0;
@@ -10,9 +11,13 @@
 }
 
 .Header-logo {
-
+  width: 100px;
 }
-
+@media (--viewport-sm) {
+  .Header-logo {
+    width: 140px;
+  }
+}
 
 .Header-nav {
   display: flex;
@@ -31,7 +36,7 @@
     font-size: 14px;
   }
   .Header-navItem:not(:first-child) {
-    margin-left: calc(var(--baseline-px) * 4);
+    margin-left: calc(var(--baseline-px) * 2);
   }
 
     .Header-navList--primary {
@@ -45,6 +50,26 @@
         margin-left: calc(var(--baseline-px) * 2);
       }
 
+    /**
+     * Secondary nav items can be hidden in certain screens
+     */
+    @media (--viewport-lg-max) {
+      .Header-navItem--secondary {
+        display: none;
+      }
+    }
+
+@media (--viewport-xl) {
+  .Header-navItem:not(:first-child) {
+    margin-left: calc(var(--baseline-px) * 4);
+  }
+}
+
+
+/*
+ * Element: actions for things like language and search
+ */
+
 .Header-actions {
   margin-left: calc(var(--baseline-px) * 2);
 }
@@ -53,4 +78,37 @@
   }
   .Header-action:not(:first-child) {
     margin-left: calc(var(--baseline-px) / 2);
+  }
+
+  .Header-action--lang {
+
+  }
+  .Header-action--search {
+
+  }
+  .Header-action--menu {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 900px) {
+    .Header-action--menu {
+      display: none;
+    }
+  }
+  /** Small screen friendly header */
+  @media (max-width: 899px) {
+    .Header {
+      margin: var(--baseline-px) 0;
+    }
+
+    .Header-nav {
+      display: none;
+    }
+
+    .Header-action--lang,
+    .Header-action--search {
+      display: none;
+    }
   }
