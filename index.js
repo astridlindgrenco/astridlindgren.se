@@ -18,7 +18,7 @@ var server = new Koa()
 
 if (process.env.NODE_ENV === 'development') {
   // Serve live client resources
-  //server.use(require('./lib/middleware/watchify'))
+  server.use(require('./lib/middleware/watchify'))
   server.use(require('./lib/middleware/postcss'))
 
   // Serve components assets from disk
