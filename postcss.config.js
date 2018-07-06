@@ -3,6 +3,7 @@ module.exports = (ctx) => ({
   plugins: [
     require('postcss-import')(),
     require('postcss-custom-properties')(),
+    require('postcss-custom-media')(),
     require('postcss-url')([
       {filter: '**/*.woff', url: 'inline'},
       { url: 'copy', useHash: true }

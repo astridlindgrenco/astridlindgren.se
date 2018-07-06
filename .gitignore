@@ -1,3 +1,6 @@
+# Build
+public
+
 ## File-based project format:
 *.iws
 
@@ -29,7 +32,11 @@ Temporary Items
 logs
 *.log
 npm-debug.log*
-.env
+*.env*
+server.key
+server.crt
+.vscode
+.npmrc
 
 # Runtime data
 pids

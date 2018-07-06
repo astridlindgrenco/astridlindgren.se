@@ -91,10 +91,10 @@
    */
 
   --color-document: #fafaf5;
+  --background-black: #222;
 
-  --color-text-light: rgba(0, 0, 0, 0.54);
-  --color-text-light-large: rgba(0, 0, 0, 0.42);
   --color-text: var(--color-black);
+  --color-text-on-dark: #fafafa;
 
   --color-interactive: #26bde2;
   --color-interactive-dark: #10a2c6;
