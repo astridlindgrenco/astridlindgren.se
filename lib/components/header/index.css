@@ -77,6 +77,7 @@
     line-height: 24px;
     text-align: left;
     padding: calc(var(--baseline-px) / 2);
+    cursor: pointer;
   }
   .Header-action:not(:first-child) {
     margin-left: calc(var(--baseline-px) / 2);
