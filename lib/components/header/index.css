@@ -32,8 +32,7 @@
   }
   .Header-navList {
     justify-content: center;
-    font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
   }
   .Header-navItem:not(:first-child) {
 
@@ -65,7 +64,7 @@
 
 @media (--viewport-xl) {
   .Header-navItem:not(:first-child) {
-    margin-left: calc(var(--baseline-px) * 4);
+    margin-left: var(--baseline-px);
   }
 }
 
@@ -87,6 +86,7 @@
     margin-left: calc(var(--baseline-px) / 2);
   }
     .Header-actionLabel {
+      font-size: 15px;
       margin-left: var(--baseline-px);
     }
 
@@ -156,7 +156,7 @@
     .Header--withOpenNav .Header-link {
       display: block;
       border-top: 1px solid var(--color-gray-light);
-      padding: calc(var(--baseline-px) * 2) 0 calc(var(--baseline-px) * 2) 2px;
+      padding: var(--baseline-px) 0 var(--baseline-px) 2px;
     }
       .Header--withOpenNav .Header-navList--secondary {
         border-top: 1px solid rgba(0,0,0,0.1);
