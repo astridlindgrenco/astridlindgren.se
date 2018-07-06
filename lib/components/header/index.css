@@ -29,13 +29,10 @@
   }
   .Header-navList {
     display: flex;
-  }
-  .Header-navList {
     justify-content: center;
-    font-size: 15px;
   }
-  .Header-navItem:not(:first-child) {
-
+  .Header-navItem {
+    font-size: 14px;
   }
 
     .Header-navList--primary {
@@ -56,13 +53,19 @@
     /**
      * Secondary nav items can be hidden in certain screens
      */
-    @media (--viewport-lg-max) {
+   .Header-navItem--secondary {
+     display: none;
+   }
+    @media (--viewport-lg) {
       .Header-navItem--secondary {
-        display: none;
+        display: block;
       }
     }
 
 @media (--viewport-xl) {
+  .Header-navItem {
+    font-size: 15px;
+  }
   .Header-navItem:not(:first-child) {
     margin-left: var(--baseline-px);
   }
