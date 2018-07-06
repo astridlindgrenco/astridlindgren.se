@@ -74,13 +74,6 @@
 }
 
 /**
- * Modifier: Fully collapsed vertical paddings for cases where that is controlled within contained component
- */
-.Section--collapsed {
-  padding: 0;
-}
-
-/**
  * Modifier: Narrower version with less wide body
  */
 
@@ -90,3 +83,20 @@
     max-width: calc(var(--page-width-narrow) + (var(--page-margins-large) * 2));
   }
 }
+
+/**
+ * Modifier: Has margins to other content
+ */
+ .Section--push {
+   margin: calc(var(--baseline-px) * 2) auto;
+ }
+ @media (--viewport-md) {
+   .Section--push {
+     margin: calc(var(--baseline-px) * 4) auto;
+   }
+ }
+ @media (--viewport-xl) {
+   .Section--push {
+     margin: calc(var(--baseline-px) * 6) auto;
+   }
+ }
