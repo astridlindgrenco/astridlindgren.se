@@ -1,13 +1,13 @@
-/*@font-face {
-  font-family: "Giorgio Sans Bold";
+@font-face {
+  font-family: "Pippi";
   font-style: normal;
   font-weight: bold;
-  src: url("./giorgio-sans-bold.woff") format("woff");
+  src: url("./pippilangstrump-webfont.woff") format("woff");
   font-display: block;
 }
-*/
+
 :root {
-  --avenir-next: "AvenirNextCondensed-DemiBold", "HelveticaNeue-CondensedBold", "Helvetica Inserat", "Franklin Gothic Condensed", Haettenschweiler, Impact, sans-serif-condensed, sans-serif;
+  --font-pippi: 'Pippi', 'Avenir Next', sans-serif;
 
   --font-family-body: 'Avenir Next', sans-serif;
 }
