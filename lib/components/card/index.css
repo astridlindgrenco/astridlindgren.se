@@ -1,0 +1,110 @@
+/* @define Card */
+
+@import '../base';
+
+:root {
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/*
+ * Element: Content
+ * Category, heading, body etc
+ */
+
+.Card-content {
+  padding: calc(var(--baseline-px) * 4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 1;
+  flex-basis: 0%;
+  border: 1px solid var(--color-gray-light);
+}
+.Card--image .Card-content { border-top: 0 }
+
+
+/*
+ * Element: Title
+ * The title can be linked
+ */
+
+.Card-title {
+  font-weight: 700;
+  margin-bottom: var(--baseline-px);
+}
+  .Card-title a {
+    text-decoration: underline;
+  }
+
+/*
+ * Element: Body
+ */
+
+.Card-body {
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  flex-basis: 0%;
+  margin-top: var(--baseline-px);
+}
+@media (--viewport-sm) {
+  .Card-body {
+    margin-top: calc(var(--baseline-px) * 2);
+  }
+}
+.Card--title .Card-body { margin-top: 0 }
+@media (--viewport-xl) {
+  .Card:not(.Card--title):not(.Card--image) .Card-body {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+/*
+ * Element: Call-To-Action
+ */
+
+.Card-cta {
+  display: inline-block;
+  text-decoration: underline;
+  margin-top: calc(var(--baseline-px) * 3);
+  font-weight: 600;
+}
+
+
+/*
+ * Element: Category
+ *
+ */
+
+.Card-category {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/*
+ * Element: Image
+ * The actual image media
+ */
+
+.Card-image {
+  width: 100%;
+}
+  .Card-imageElm {
+    width: 100%;
+  }
+
+/**
+ * Modifiers
+ */
+
+ .Card--horisontal {
+   flex-direction: row;
+ }

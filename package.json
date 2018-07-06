@@ -53,6 +53,7 @@
     "prismic-element": "^1.0.0",
     "prismic-javascript": "^1.5.0",
     "prismic-richtext": "^0.4.2",
+    "suitcss-components-grid": "^4.0.0",
     "suitcss-utils-flex": "^2.0.1",
     "suitcss-utils-size": "^2.0.1",
     "uglify-js": "^3.4.3",

@@ -12,7 +12,8 @@
    * Basic type
    */
 
-   --base-font-size: 18px;
+   --base-font-size: 24px;
+   --base-line-height: 32px;
 
    /**
    * Breakpoins and framing
@@ -36,8 +37,8 @@
    * Grays
    */
 
-  --color-gray-light: #e0e0db;
-  --color-gray-light-alpha: rgba(0, 0, 0, 0.1);
+  --color-gray-light: #e8e8ea;
+  --color-gray-light-alpha: rgba(0, 0, 0, 0.08);
 
   --color-gray: #aaaaaa;
   --color-gray-alpha: rgba(0, 0, 0, 0.34);

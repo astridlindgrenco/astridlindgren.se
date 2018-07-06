@@ -17,6 +17,18 @@
 @custom-media --viewport-xl (min-width: 1250px);
 @custom-media --viewport-xl-max (max-width: 1249px);
 
+/** For SUIT CSS Grid */
+@custom-media --sm-viewport (min-width:0px) and (max-width:480px);
+@custom-media --md-viewport (min-width:481px) and (max-width:768px);
+@custom-media --lg-viewport (min-width:769px);
+
+/**
+ * Configure SUIT CSS Grid component
+ */
+:root {
+ --Grid-gutterSize: var(--grid-gutter)
+}
+
 /**
  * Easing curves
  */
@@ -41,8 +53,9 @@
   cursor: default;
   background: var(--color-document);
   color: var(--color-text);
-  font-size: 16px;
-  line-height: 1;
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  font-weight: 500;
   text-rendering: geometricPrecision;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
