@@ -36,7 +36,7 @@
     font-size: 14px;
   }
   .Header-navItem:not(:first-child) {
-    margin-left: calc(var(--baseline-px) * 2);
+
   }
 
     .Header-navList--primary {
@@ -47,8 +47,12 @@
       justify-content: flex-end;
     }
       .Header-navList--secondary .Header-navItem:not(:first-child) {
-        margin-left: calc(var(--baseline-px) * 2);
+
       }
+
+  .Header-link {
+    padding: var(--baseline-px);
+  }
 
     /**
      * Secondary nav items can be hidden in certain screens
@@ -71,7 +75,7 @@
  */
 
 .Header-actions {
-  margin-left: calc(var(--baseline-px) * 2);
+  margin-left: var(--baseline-px);
 }
   .Header-action {
     line-height: 24px;
@@ -135,7 +139,7 @@
       margin-top: var(--baseline-px);
       padding-top: var(--baseline-px);
     }
-    .Header-action {
+    .Header-actions .Header-action {
       margin: var(--baseline-px) 0 0 calc((var(--baseline-px) / 2) * -1) !important;
     }
 
@@ -149,16 +153,16 @@
       width: 100%;
       margin: 0 !important;
     }
-    .Header--withOpenNav .Header-navItem a {
+    .Header--withOpenNav .Header-link {
       display: block;
-      border-top: 1px solid rgba(0,0,0,0.1);
+      border-top: 1px solid var(--color-gray-light);
       padding: calc(var(--baseline-px) * 2) 0 calc(var(--baseline-px) * 2) 2px;
     }
       .Header--withOpenNav .Header-navList--secondary {
         border-top: 1px solid rgba(0,0,0,0.1);
         padding-top: var(--baseline-px);
       }
-      .Header--withOpenNav .Header-navList--secondary .Header-navItem a {
+      .Header--withOpenNav .Header-navList--secondary .Header-link {
         border: 0;
         padding: var(--baseline-px) 0;
       }

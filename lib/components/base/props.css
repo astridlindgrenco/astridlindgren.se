@@ -42,8 +42,10 @@
   --color-gray: #aaaaaa;
   --color-gray-alpha: rgba(0, 0, 0, 0.34);
 
-  --color-gray-dark: #1a1a1a;
+  --color-gray-dark: #176176;
   --color-gray-dark-alpha: rgba(0, 0, 0, 0.9);
+
+  --color-black: #222;
 
   /**
    * Brand colors
@@ -92,7 +94,7 @@
 
   --color-text-light: rgba(0, 0, 0, 0.54);
   --color-text-light-large: rgba(0, 0, 0, 0.42);
-  --color-text: var(--color-gray-dark);
+  --color-text: var(--color-black);
 
   --color-interactive: #26bde2;
   --color-interactive-dark: #10a2c6;
