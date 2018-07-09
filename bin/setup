@@ -10,9 +10,9 @@ const dotenv = dedent`
   PORT=3000
   NODE_ENV=development
 
-  GLOBALGOALS_NAME=Astrid Lindgren Company
-  GLOBALGOALS_URL=http://localhost:3000
-  GLOBALGOALS_LANG=sv
+  AL_NAME=Astrid Lindgren Company
+  AL_URL=http://localhost:3000
+  AL_LANG=sv
 
   PRISMIC_API=https://astridlindgren.cdn.prismic.io/api/v2
   PRISMIC_REPOSITORY=astridlindgren
