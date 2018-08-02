@@ -59,7 +59,6 @@ server.use(noTrailingSlash())
  */
 
 server.use(assets)
-// fixme: public saknas, vi har lib?
 server.use(serve('public', { maxage: 1000 * 60 * 60 * 24 * 365 }))
 
 /**
