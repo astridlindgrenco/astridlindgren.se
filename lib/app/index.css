@@ -5,6 +5,7 @@
 @import "../components/section";
 @import "../components/card";
 @import "../components/logo";
+@import "../components/searchbox";
 
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";
