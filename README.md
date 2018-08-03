@@ -31,7 +31,12 @@ A few words from the coders of this website:
 - *Patterns over frameworks* - a great framework is a great framework. React is one of those. But we are curious about the innovation that happens outside the norm. We like to support the initiatives that distills the greatness of the framework giants into something that is more hands on.
 
 ## Build and deploy
-It's important to start the app with 'npm start ...' in order to set the 'process.env' variables correctly. Eg. otherwise the process.env.npm_package_version will be undefined.
+- It's important to start the app with 'npm start ...' in order to set the 'process.env' variables correctly. Eg. the important process.env.npm_package_version will be undefined.
+- Target production environment is the Jelastic PAAS hosted by Elastx. Normally production get's updated within minutes whenever the git master branch is updated. Build and deploy is part of a Jelastic command pipe wich essentially runs:
+  1. Stop node
+  2. Pull from git
+  3. npm install
+  4. npm start
 
 ## Special thanks
 Special thanks to codeandconspire who built the open sourced globalgoals.org website for inspiration 🤜🏼❤️🤛🏼.
