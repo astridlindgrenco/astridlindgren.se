@@ -31,7 +31,7 @@ A few words from the coders of this website:
 - *Patterns over frameworks* - a great framework is a great framework. React is one of those. But we are curious about the innovation that happens outside the norm. We like to support the initiatives that distills the greatness of the framework giants into something that is more hands on.
 
 ## Build and deploy
-TBD - under development
+It's important to start the app with 'npm start ...' in order to set the 'process.env' variables correctly. Eg. otherwise the process.env.npm_package_version will be undefined.
 
 ## Special thanks
 Special thanks to codeandconspire who built the open sourced globalgoals.org website for inspiration 🤜🏼❤️🤛🏼.
