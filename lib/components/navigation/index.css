@@ -1,0 +1,10 @@
+/* @define Navgation */
+
+@import '../base';
+
+.navigation {
+  width: 100%;
+  height: 2em;
+  background-color: yellow;
+  margin: .5em 0;
+}

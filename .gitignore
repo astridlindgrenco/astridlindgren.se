@@ -72,3 +72,4 @@ jspm_packages
 # Output of 'npm pack'
 *.tgz.log
 .jshintrc
+/nbproject/private/
