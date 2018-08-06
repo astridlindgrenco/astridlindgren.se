@@ -1,6 +1,7 @@
 var Koa = require('koa')
 var body = require('koa-body')
 var serve = require('koa-static')
+var compress= require('koa-compress')
 var helmet = require('koa-helmet')
 var noTrailingSlash = require('koa-no-trailing-slash')
 //var app = require('./lib/app')
@@ -8,6 +9,7 @@ var router = require('./lib/router')
 var assets = require('./lib/middleware/assets')
 var stores = require('./lib/middleware/stores')
 var prismic = require('./lib/middleware/prismic')
+var menu = require('./lib/middleware/menu')
 
 var server = new Koa()
 
@@ -97,10 +99,16 @@ server.use(stores)
  */
 
 server.use(prismic)
+server.use(menu)
 
 /**
  * Hook up em' routes
  */
+
+if (process.env.NODE_ENV !== 'development') {
+  // Compress html
+  server.use(compress())
+}
 
 server.use(router)
 
