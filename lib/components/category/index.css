@@ -1,0 +1,27 @@
+/* @define Category */
+
+@import '../base';
+
+.Category {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: calc(var(--grid-gutter) / 2);
+}
+
+/**
+ * Label
+ */
+
+.Category-label {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/**
+ * Divider
+ */
+
+.Category-divider {
+
+}

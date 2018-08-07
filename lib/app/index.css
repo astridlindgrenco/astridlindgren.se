@@ -6,6 +6,8 @@
 @import "../components/card";
 @import "../components/logo";
 @import "../components/searchbox";
+@import "../components/category";
+@import "../components/quote";
 
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";

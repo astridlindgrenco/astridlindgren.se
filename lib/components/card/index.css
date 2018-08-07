@@ -70,7 +70,7 @@
  * Element: Call-To-Action
  */
 
-.Card-cta {
+.Card-moreLink {
   display: inline-block;
   text-decoration: underline;
   margin-top: calc(var(--baseline-px) * 3);
@@ -84,9 +84,7 @@
  */
 
 .Card-category {
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 2px;
+
 }
 
 /*
@@ -98,6 +96,7 @@
   width: 100%;
 }
   .Card-imageElm {
+    display: block;
     width: 100%;
   }
 
