@@ -2,6 +2,10 @@
 
 @import '../base';
 
-.searchbox {
-  
+.SearchBox {
+}
+
+.SearchBox-input {
+  font-size: 16px;
+  padding: calc(var(--grid-gutter) / 3);
 }
