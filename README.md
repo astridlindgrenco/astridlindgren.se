@@ -2,8 +2,11 @@
 Website for Astrid Lindgren Company that promotes and protects the Astrid Lindgren trademark all over the world.
 
 ## Setup
-
-TBD - under development
+Requirements:
+- Git
+- NodeJS 10+
+- Nodemon
+- Check .editorconfig works with your editor
 
 ### Environment variables
 
@@ -30,6 +33,17 @@ A few words from the coders of this website:
 - *Minimalism is simplicity* - minimalism is the art of identifying and using only what you need. It may not always be easy. But we think this keeps things simple.
 - *Patterns over frameworks* - a great framework is a great framework. React is one of those. But we are curious about the innovation that happens outside the norm. We like to support the initiatives that distills the greatness of the framework giants into something that is more hands on.
 
+### Coding Style
+TBD
+#### JS
+- No semi
+- 2 space indent
+- string sequences enclosed with single quote characters
+- 'use strict'
+- var vs let, const
+#### css
+- suitcss flavour bem
+
 ## Build and deploy
 - It's important to start the app with 'npm start ...' in order to set the 'process.env' variables correctly. Eg. the important process.env.npm_package_version will be undefined.
 - Target production environment is the Jelastic PAAS hosted by Elastx. Normally production get's updated within minutes whenever the git master branch is updated. Build and deploy is part of a Jelastic command pipe wich essentially runs:
@@ -39,7 +53,7 @@ A few words from the coders of this website:
   4. npm start
 
 ## Special thanks
-Special thanks to codeandconspire who built the open sourced globalgoals.org website for inspiration 🤜🏼❤️🤛🏼.
+Special thanks to codeandconspire who built the open sourced globalgoals.org website for inspiration.
 
 ## License
 TBD - under development
