@@ -9,7 +9,7 @@ var router = require('./lib/router')
 var assets = require('./lib/middleware/assets')
 var stores = require('./lib/middleware/stores')
 var prismic = require('./lib/middleware/prismic')
-var menu = require('./lib/middleware/menu')
+var navigation = require('./lib/middleware/navigation')
 
 var server = new Koa()
 
@@ -99,7 +99,7 @@ server.use(stores)
  */
 
 server.use(prismic)
-server.use(menu)
+server.use(navigation)
 
 /**
  * Hook up em' routes
