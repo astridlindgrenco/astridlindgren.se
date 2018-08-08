@@ -56,6 +56,9 @@
    .Header-navItem--secondary {
      display: none;
    }
+   .Header-navList--secondary[aria-hidden="true"] {
+     visibility: hidden;
+   }
     @media (--viewport-lg) {
       .Header-navItem--secondary {
         display: block;
@@ -78,6 +81,7 @@
 
 .Header-actions {
   margin-left: var(--baseline-px);
+  display: flex;
 }
   .Header-action {
     line-height: 24px;
@@ -93,9 +97,40 @@
       margin-left: var(--baseline-px);
     }
 
-  .Header-action--search .Header-actionLabel {
-    margin-left: calc(var(--baseline-px) - 3px); /* Adjust for optical balance */
-  }
+    .Header-actionPanel {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 25%;
+      transform: translate(0, -300%);
+      opacity: 0;
+      transition: opacity .15s ease, transform 0 .15s linear;
+      background: var(--color-document);
+    }
+      @media (max-width: 1100px) {
+        .Header-actionPanel {
+          width: 20%;
+        }
+      }
+      .Header--withOpenSearch .Header-action--search .Header-actionPanel {
+        display: block;
+        opacity: 1;
+        transform: translate(-36px, -50%);
+      }
+      .Header--withOpenLang .Header-action--lang .Header-actionPanel {
+        display: block;
+        opacity: 1;
+        transform: translate(-76px, -50%);
+        text-align: right;
+      }
+
+      .Header-action--search .Header-actionPanel {
+        margin-left: calc(var(--baseline-px) - 3px); /* Adjust for optical balance */
+      }
+      .Header-action--lang .Header-actionLabel {
+        text-align: right;
+      }
+
   .Header-action--menu {
     position: absolute;
     top: calc(var(--baseline-px) * 4);
@@ -113,6 +148,8 @@
       display: none;
     }
   }
+
+
   /** Small screen friendly header */
   @media (max-width: 899px) {
     .Header {
