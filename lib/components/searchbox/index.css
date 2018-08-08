@@ -6,6 +6,8 @@
 }
 
 .SearchBox-input {
-  font-size: 16px;
-  padding: calc(var(--grid-gutter) / 3);
+  width: 100%;
+  font-size: 14px;
+  padding: calc(var(--grid-gutter) / 4);
+  border: 1px solid var(--color-gray);
 }
