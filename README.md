@@ -36,11 +36,18 @@ A few words from the coders of this website:
 ### Coding Style
 TBD
 #### JS
-- No semi
-- 2 space indent
-- string sequences enclosed with single quote characters
-- 'use strict'
-- var vs let, const
+- Put 'use strict' on line 1.
+- Use 'var', 'let' and 'const' where fit.
+- We follow https://standardjs.com/. Set up your IDE, ESLint accordingly.
+  Format on check-in. Some of the rules are:
+  - No semi.
+  - 2 space indent.
+  - Single quotes for strings.
+  - Space between 'function name' and '(...)'
+  - Space after keywords.
+  - Space after comma, colon.
+  - Space or NL for blocks { ... }
+  - No space for (...) and [...].
 #### css
 - suitcss flavour bem
 
