@@ -56,6 +56,9 @@
    .Header-navItem--secondary {
      display: none;
    }
+   .Header-navList--secondary[aria-hidden="true"] {
+     visibility: hidden;
+   }
     @media (--viewport-lg) {
       .Header-navItem--secondary {
         display: block;
@@ -104,6 +107,11 @@
       transition: opacity .15s ease, transform 0 .15s linear;
       background: var(--color-document);
     }
+      @media (max-width: 1100px) {
+        .Header-actionPanel {
+          width: 20%;
+        }
+      }
       .Header--withOpenSearch .Header-action--search .Header-actionPanel {
         display: block;
         opacity: 1;
@@ -119,10 +127,10 @@
       .Header-action--search .Header-actionPanel {
         margin-left: calc(var(--baseline-px) - 3px); /* Adjust for optical balance */
       }
+      .Header-action--lang .Header-actionLabel {
+        text-align: right;
+      }
 
-  .Header-action--lang .Header-actionLabel {
-    text-align: right;
-  }
   .Header-action--menu {
     position: absolute;
     top: calc(var(--baseline-px) * 4);
