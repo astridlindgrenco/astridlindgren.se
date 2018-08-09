@@ -34,7 +34,7 @@ A few words from the coders of this website:
 - *Patterns over frameworks* - a great framework is a great framework. React is one of those. But we are curious about the innovation that happens outside the norm. We like to support the initiatives that distills the greatness of the framework giants into something that is more hands on.
 
 ### Coding Style
-TBD
+- Unix style EOL (only a LF character).
 #### JS
 - Put 'use strict' on line 1.
 - Use 'var', 'let' and 'const' where fit.
