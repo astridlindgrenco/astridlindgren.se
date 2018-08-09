@@ -4,11 +4,15 @@
 
 .Hero {
   margin: 0 auto;
+  display: block;
 }
 
 .Hero-media {
-
+  width: 100%;
+  height: calc(65vh);
 }
 .Hero-image {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
