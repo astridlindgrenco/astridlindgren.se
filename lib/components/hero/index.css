@@ -1,0 +1,14 @@
+/* @define Hero */
+
+@import '../base';
+
+.Hero {
+  margin: 0 auto;
+}
+
+.Hero-media {
+
+}
+.Hero-image {
+  max-width: 100%;
+}

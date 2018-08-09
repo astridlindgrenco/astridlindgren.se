@@ -52,6 +52,7 @@
   flex: 1 1;
   flex-basis: 0%;
   margin-top: var(--baseline-px);
+  line-height: var(---base-line-height);
 }
 @media (--viewport-sm) {
   .Card-body {

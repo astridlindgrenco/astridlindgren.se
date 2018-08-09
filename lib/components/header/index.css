@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   padding: calc(var(--baseline-px) * 2) 0;
-  margin: calc(var(--baseline-px) * 4) 0;
+  margin: calc(var(--baseline-px) * 2) 0;
 }
 
 .Header-logo {
