@@ -87,16 +87,29 @@
 /**
  * Modifier: Has margins to other content
  */
- .Section--push {
+ .Section--marginVerSmall {
    margin: calc(var(--baseline-px) * 2) auto;
  }
  @media (--viewport-md) {
-   .Section--push {
+   .Section--marginVerSmall {
      margin: calc(var(--baseline-px) * 4) auto;
    }
  }
  @media (--viewport-xl) {
-   .Section--push {
+   .Section--marginVerSmall {
      margin: calc(var(--baseline-px) * 6) auto;
+   }
+ }
+ .Section--marginVerLarge {
+   margin: calc(var(--baseline-px) * 6) auto;
+ }
+ @media (--viewport-md) {
+   .Section--marginVerLarge {
+     margin: calc(var(--baseline-px) * 8) auto;
+   }
+ }
+ @media (--viewport-xl) {
+   .Section--marginVerLarge {
+     margin: calc(var(--baseline-px) * 10) auto;
    }
  }

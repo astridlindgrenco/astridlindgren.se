@@ -107,4 +107,11 @@
   --color-hover-dark-on-fill: rgba(0, 0, 0, 0.09);
   --color-hover-light: rgba(255, 255, 255, 0.04);
 
+  /**
+   * Animation
+   */
+
+  --ease-out: cubic-bezier(.17,.67,.78,.99);
+  --ease-in: cubic-bezier(.42,.16,.64,.2);
+
 }
