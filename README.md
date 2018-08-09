@@ -50,6 +50,8 @@ TBD
   - No space for (...) and [...].
 #### css
 - suitcss flavour bem
+- enable chrome://flags "experimental Web Platform features"
+  https://caniuse.com/#feat=css-matches-pseudo
 
 ## Build and deploy
 - It's important to start the app with 'npm start ...' in order to set the 'process.env' variables correctly. Eg. the important process.env.npm_package_version will be undefined.
