@@ -1,11 +1,12 @@
 var Koa = require('koa')
 var body = require('koa-body')
 var serve = require('koa-static')
-var compress= require('koa-compress')
+var compress = require('koa-compress')
 var helmet = require('koa-helmet')
 var noTrailingSlash = require('koa-no-trailing-slash')
 //var app = require('./lib/app')
 var router = require('./lib/router')
+var errors = require('./lib/errors')
 var assets = require('./lib/middleware/assets')
 var stores = require('./lib/middleware/stores')
 var prismic = require('./lib/middleware/prismic')
@@ -13,7 +14,6 @@ var lang = require('./lib/middleware/lang')
 var navigation = require('./lib/middleware/navigation')
 
 var server = new Koa()
-
 
 /**
  * Compile and serve assets on demand during development
@@ -112,8 +112,8 @@ if (process.env.NODE_ENV !== 'development') {
   server.use(compress())
 }
 
+server.use(errors)
 server.use(router)
-
 /**
  * Lift off
  */
