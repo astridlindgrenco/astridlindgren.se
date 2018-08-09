@@ -7,8 +7,6 @@
   font-family: var(--font-family-body);
   line-height: 1.6666;
   font-size: var(--base-font-size);
-  max-width: 970px;
-  margin: 0 auto;
 }
 
 @media print {
@@ -148,7 +146,7 @@
  */
 
 .Text :matches(p, ul, ol) {
-  margin: calc(var(--baseline-px) * 2) 0;
+  margin: calc(var(--baseline-px) * 3) 0;
 }
 
 .Text :matches(img, pre, .Text-embed, [data-oembed]) {
@@ -263,6 +261,7 @@ ul.Text--links a::after {
 .Text :matches(h1, .Text-h1) {
   font-size: 32px;
   line-height: 32px;
+  text-align: center;
 }
 
 .Text :matches(h2, .Text-h2) {
@@ -372,6 +371,11 @@ ul.Text--links a::after {
   .Text :matches(h4, .Text-h4) {
     font-size: 24px;
     line-height: 32px;
+  }
+
+  .Text--centerLarge {
+    margin: 0 auto;
+    text-align: center;
   }
 
   /**
