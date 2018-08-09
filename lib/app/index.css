@@ -1,6 +1,7 @@
 @import "normalize.css";
 
 @import "../components/base";
+@import "../components/text";
 @import "../components/header";
 @import "../components/section";
 @import "../components/card";
@@ -8,7 +9,9 @@
 @import "../components/searchbox";
 @import "../components/category";
 @import "../components/quote";
+@import "../components/hero";
 
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";
+@import "suitcss-utils-text";
 @import "suitcss-components-grid";

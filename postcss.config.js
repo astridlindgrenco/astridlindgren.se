@@ -4,6 +4,7 @@ module.exports = (ctx) => ({
     require('postcss-import')(),
     require('postcss-custom-properties')(),
     require('postcss-custom-media')(),
+    require('postcss-selector-matches')(),
     require('postcss-url')([
       {filter: '**/*.woff', url: 'inline'},
       { url: 'copy', useHash: true }
