@@ -47,45 +47,24 @@
   --color-gray-dark-alpha: rgba(0, 0, 0, 0.9);
 
   --color-black: #222;
+  --color-white: #fafafa;
 
   /**
    * Brand colors
    */
 
-  --color-blue: #0a97d9;
-  --color-blue-shaded: #003570;
-  --color-bright-blue: #26bde2;
-  --color-bright-blue-shaded: #015379;
-  --color-burgundy-red: #a21942;
-  --color-burgundy-red-shaded: #40002a;
-  --color-dark-green: #3f7e44;
-  --color-dark-green-shaded: #00301f;
-  --color-dark-mustard: #bf8b2e;
-  --color-dark-mustard-shaded: #5b3203;
-  --color-dark-red: #c5192d;
-  --color-dark-red-shaded: #5b0104;
-  --color-golden-yellow: #fd9d24;
-  --color-golden-yellow-shaded: #944009;
-  --color-kelly-green: #4c9f38;
-  --color-kelly-green-shaded: #0d3b06;
-  --color-lime-green: #56c02b;
-  --color-lime-green-shaded: #105702;
-  --color-magenta: #dd1367;
-  --color-magenta-shaded: #6e0035;
-  --color-mustard: #dda63a;
-  --color-mustard-shaded: #774804;
-  --color-navy-blue: #19486a;
-  --color-navy-blue-shaded: #00132e;
-  --color-orange: #fd6925;
-  --color-orange-shaded: #872600;
-  --color-red-orange: #ff3a21;
-  --color-red-orange-shaded: #800501;
-  --color-red: #e5243b;
-  --color-red-shaded: #75001f;
-  --color-royal-blue: #00689d;
-  --color-royal-blue-shaded: #001b3c;
-  --color-yellow: #fcc30b;
-  --color-yellow-shaded: #ce8307;
+  --color-slate-blue: #6295a6; /** Undis */
+  --color-light-blue: #9eccd1; /** Söderhavet */
+  --color-dark-blue: #1b5365; /** Darköga */
+  --color-slate-green: #86ad9c; /** Melker */
+  --color-light-green: #bee685; /** Rövare */
+  --color-yellow: #eecf52; /** Tjorven */
+  --color-light-orange: #f1ac57; /** Lukas */
+  --color-peach: #fdcac9; /** Villa Villekulla */
+  --color-light-red: #e95c4d; /** Ida */
+  --color-dark-red: #9d223e; /** Katthult */
+
+
 
   /**
    * Somewhat semantic
@@ -95,10 +74,10 @@
   --background-black: #222;
 
   --color-text: var(--color-black);
-  --color-text-on-dark: #fafafa;
+  --color-text-on-dark: var(--color-white);
 
-  --color-interactive: #26bde2;
-  --color-interactive-dark: #10a2c6;
+  --color-interactive: var(--color-black);
+  --color-interactive-dark: var(--color-white);
 
   --color-link: var(--color-interactive);
   --color-link-enter: var(--color-interactive-dark);
