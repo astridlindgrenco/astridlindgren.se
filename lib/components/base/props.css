@@ -53,6 +53,8 @@
    * Brand colors
    */
 
+  --color-blue-black: #1e272e; /** Kato svart */
+  --color-warm-gray: #ecece6; /** Pepper varmgrå */
   --color-slate-blue: #6295a6; /** Undis */
   --color-light-blue: #9eccd1; /** Söderhavet */
   --color-dark-blue: #1b5365; /** Darköga */

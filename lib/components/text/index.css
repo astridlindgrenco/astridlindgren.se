@@ -317,7 +317,7 @@ ul.Text--links a::after {
 
 .Text-small,
 .Text small {
-  font-size: 14px;
+  font-size: 16px;
   line-height: inherit;
 }
 

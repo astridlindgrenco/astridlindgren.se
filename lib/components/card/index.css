@@ -17,7 +17,7 @@
  */
 
 .Card-content {
-  padding: calc(var(--baseline-px) * 4);
+  padding: calc(var(--baseline-px) * 6);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -109,6 +109,7 @@
      flex-direction: row;
    }
      .Card--horisontal .Card-content {
+       padding: calc(var(--baseline-px) * 12);
        display: flex;
        flex-basis: auto;
        align-self: center;
@@ -155,6 +156,15 @@
 /**
  * Modifier: Background theme color
  */
+
+.Card--bgBlueBlack {
+  background-color: var(--color-blue-black);
+  color: var(--color-text-on-dark);
+}
+
+.Card--bgWarmGray {
+  background-color: var(--color-warm-gray);
+}
 
 .Card--bgSlateBlue {
   background-color: var(--color-slate-blue);
