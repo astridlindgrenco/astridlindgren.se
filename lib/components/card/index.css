@@ -134,7 +134,23 @@
      .Card--horisontal.Card--title:not(.Card--body) .Card-body {
        margin: calc(var(--baseline-px) * 4) 0 calc(var(--baseline-px) * 8) 0;
      }
+
+     /* If horisontal card has body, left align text */
+     .Card--horisontal.Card--body .Card-content {
+       text-align: left;
+     }
  }
+
+/**
+ * Modifier: reverse order of image and body
+ * This only applies to horisontally layouted cards
+ */
+
+@media (min-width: 960px) {
+  .Card--reversed {
+    flex-direction: row-reverse;
+  }
+}
 
 /**
  * Modifier: Background theme color
