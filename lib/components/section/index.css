@@ -63,13 +63,18 @@
   padding: 0;
   overflow: hidden;
 }
-@media (--viewport-sm-max ) {
+
+@media (--viewport-sm-max) {
   .Section--fillSmall > .Section-body {
     padding: 0;
     overflow: hidden;
   }
-  .Section--fillSmall .Section-bodyHead {
-    padding: 0 calc(var(--grid-gutter) / 2);
+}
+
+@media (--viewport-lg) and (--viewport-xxl-max) {
+  .Section--fillLarge > .Section-body {
+    padding: 0;
+    overflow: hidden;
   }
 }
 
