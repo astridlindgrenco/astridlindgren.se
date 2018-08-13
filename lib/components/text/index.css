@@ -17,6 +17,10 @@
   }
 }
 
+.Text--intro {
+  margin-bottom: calc(var(--baseline-px) * 4)
+}
+
 .Text--full {
   width: 100%;
 }
@@ -87,6 +91,7 @@
   font-weight: 600;
   color: var(--color-link);
   transition: color 50ms var(--ease-out);
+  text-decoration: underline;
 }
 
 .Text:not(.Text--adaptive) a:hover {
@@ -354,8 +359,10 @@ ul.Text--links a::after {
     line-height: 32px;
   }
 
-  .Text--centerLarge {
-    margin: 0 auto;
+  .Text--centerLarge,
+  .Text--intro {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
   }
 

@@ -82,7 +82,7 @@
   --color-interactive-dark: var(--color-white);
 
   --color-link: var(--color-interactive);
-  --color-link-enter: var(--color-interactive-dark);
+  --color-link-enter: var(--color-interactive);
 
   --color-hover-dark: rgba(0, 0, 0, 0.04);
   --color-hover-dark-on-fill: rgba(0, 0, 0, 0.09);
