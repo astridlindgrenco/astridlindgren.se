@@ -1,6 +1,6 @@
 /* @define Card */
 
-@import '../base';
+@import ../base;
 
 :root {
 }
@@ -13,11 +13,11 @@
 
 /*
  * Element: Content
- * Category, heading, body etc
+ * Category heading body etc
  */
 
 .Card-content {
-  padding: calc(var(--baseline-px) * 4);
+  padding: calc(var(--baseline-px) * 6);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -52,7 +52,6 @@
   flex: 1 1;
   flex-basis: 0%;
   margin-top: var(--baseline-px);
-  line-height: var(---base-line-height);
 }
 @media (--viewport-sm) {
   .Card-body {
@@ -102,9 +101,111 @@
   }
 
 /**
- * Modifiers
+ * Modifier: Horisontal layout
  */
 
- .Card--horisontal {
-   flex-direction: row;
+ @media (min-width: 960px) {
+   .Card--horisontal {
+     flex-direction: row;
+   }
+     .Card--horisontal .Card-content {
+       padding: calc(var(--baseline-px) * 12);
+       display: flex;
+       flex-basis: auto;
+       align-self: center;
+       width: 50%;
+       border: 0;
+     }
+     .Card--horisontal .Card-media {
+       display: flex;
+       flex-basis: auto;
+       position: relative;
+       width: 50%;
+     }
+
+     .Card--horisontal .Card-image {
+       width: 100%;
+       height: 100%;
+     }
+     .Card--horisontal .Card-imageElm {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+     }
+     .Card--horisontal.Card--title:not(.Card--body) .Card-body {
+       margin: calc(var(--baseline-px) * 4) 0 calc(var(--baseline-px) * 8) 0;
+     }
+
+     /* If horisontal card has body, left align text */
+     .Card--horisontal.Card--body .Card-content {
+       text-align: left;
+     }
  }
+
+/**
+ * Modifier: reverse order of image and body
+ * This only applies to horisontally layouted cards
+ */
+
+@media (min-width: 960px) {
+  .Card--reversed {
+    flex-direction: row-reverse;
+  }
+}
+
+/**
+ * Modifier: Background theme color
+ */
+
+.Card--bgBlueBlack {
+  background-color: var(--color-blue-black);
+  color: var(--color-text-on-dark);
+}
+
+.Card--bgWarmGray {
+  background-color: var(--color-warm-gray);
+}
+
+.Card--bgSlateBlue {
+  background-color: var(--color-slate-blue);
+  color: var(--color-text-on-dark);
+}
+
+.Card--bgLightBlue {
+  background-color: var(--color-light-blue);
+}
+
+.Card--bgDarkBlue {
+  background-color: var(--color-dark-blue);
+  color: var(--color-text-on-dark);
+}
+
+.Card--bgSlateGreen {
+  background-color: var(--color-slate-green);
+  color: var(--color-text-on-dark);
+}
+
+.Card--bgLightGreen {
+  background-color: var(--color-light-green);
+}
+
+.Card--bgYellow {
+  background-color: var(--color-yellow);
+}
+
+.Card--bgLightOrange {
+  background-color: var(--color-light-orange);
+}
+
+.Card--bgPeach {
+  background-color: var(--color-peach);
+}
+
+.Card--bgLightRed {
+  background-color: var(--color-light-red);
+}
+
+.Card--bgDarkRed {
+  background-color: var(--color-dark-red);
+  color: var(--color-text-on-dark);
+}

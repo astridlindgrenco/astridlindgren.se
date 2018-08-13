@@ -16,6 +16,8 @@
 @custom-media --viewport-lg-max (max-width: 1023px);
 @custom-media --viewport-xl (min-width: 1250px);
 @custom-media --viewport-xl-max (max-width: 1249px);
+@custom-media --viewport-xxl (min-width: 1439px);
+@custom-media --viewport-xxl-max (max-width: 1440px);
 
 /** For SUIT CSS Grid */
 @custom-media --sm-viewport (min-width:0px) and (max-width:480px);

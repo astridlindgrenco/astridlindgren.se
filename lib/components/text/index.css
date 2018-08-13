@@ -7,6 +7,7 @@
   font-family: var(--font-family-body);
   line-height: 1.6666;
   font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
 }
 
 @media print {
@@ -16,12 +17,8 @@
   }
 }
 
-.Text--wide {
-  max-width: 39em;
-}
-
 .Text--full {
-  max-width: none;
+  width: 100%;
 }
 
 .Text--bold {
@@ -32,18 +29,9 @@
   margin: 0 !important;
 }
 
-.Text--growing {
-}
-
-.Text--growingLate {
-}
-
 .Text--center {
   margin: 0 auto;
   text-align: center;
-}
-
-.Text--growingTitles {
 }
 
 .Text--adaptive {
@@ -259,19 +247,19 @@ ul.Text--links a::after {
 }
 
 .Text :matches(h1, .Text-h1) {
-  font-size: 32px;
+  font-size: 48px;
   line-height: 32px;
   text-align: center;
 }
 
 .Text :matches(h2, .Text-h2) {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 40px;
+  line-height: 40px;
 }
 
 .Text :matches(h3, .Text-h3) {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 32px;
+  line-height: 32px;
 }
 
 .Text :matches(h4, .Text-h4) {
@@ -290,13 +278,7 @@ ul.Text--links a::after {
 /** Links in headers */
 
 .Text :matches(h1, h2, h3, h4, .Text-h1, .Text-h2, .Text-h3, .Text-h4) a {
-  background: var(--color-link);
-  color: #fff;
-  white-space: nowrap;
-  /*padding: 0.15em 0.18em 0.08em;*/
-  margin: 0;
-  font-weight: normal;
-  transition: background-color 140ms var(--ease-out);
+
 }
 
 :root[data-focus-source="key"] .Text :matches(h1, h2, h3, h4, .Text-h1, .Text-h2, .Text-h3, .Text-h4) a:focus {
@@ -305,8 +287,7 @@ ul.Text--links a::after {
 }
 
 .Text :matches(h1, h2, h3, h4, .Text-h1, .Text-h2, .Text-h3, .Text-h4) a:hover {
-  background: var(--color-link-enter);
-  color: #fff;
+
 }
 
 /**
@@ -336,7 +317,7 @@ ul.Text--links a::after {
 
 .Text-small,
 .Text small {
-  font-size: 14px;
+  font-size: 16px;
   line-height: inherit;
 }
 
