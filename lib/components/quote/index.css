@@ -5,14 +5,26 @@
 .Quote {
   margin: 0 auto;
   text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
 }
 
 /**
  * Body
  */
 
-.Quote-body {
-  font-size: 24px;
+ .Quote-body {
+  font-size: 40px;
+  line-height: 140%;
+  /* Add TODO DemiBold */
+}
+
+/**
+ * For handling quote characters
+ */
+
+div.Quote-body p:first-child, div.Quote-body p:last-child {
+  display: inline;
 }
 
 /**
@@ -20,5 +32,19 @@
  */
 
 .Quote-cite {
-  text-align: right;
+  margin-top: 1.4em;
+  font-size: 16px;
+}
+
+/**
+ * More...
+ */
+
+ .Quote-more {
+  margin-top: 1.4em;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: underline;
+  /* Add TODO DemiBold */
 }

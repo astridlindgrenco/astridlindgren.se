@@ -5,6 +5,7 @@
 .Category {
   margin: 0 auto;
   margin-bottom: calc(var(--grid-gutter) / 2);
+  text-align: center;
 }
 
 /**
