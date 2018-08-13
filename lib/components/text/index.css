@@ -76,10 +76,6 @@
   color: var(--color-text-light-large);
 }
 
-.Text-decorative {
-  color: #ddd;
-}
-
 /**
  * Misc inline elements
  */
@@ -261,6 +257,12 @@ ul.Text--links a::after {
   margin: 8px 0;
 }
 
+.Text :matches(.Text-huge) {
+  font-size: 48px;
+  line-height: 32px;
+  text-align: center;
+}
+
 /** Links in headers */
 
 .Text :matches(h1, h2, h3, h4, .Text-h1, .Text-h2, .Text-h3, .Text-h4) a {
@@ -344,6 +346,12 @@ ul.Text--links a::after {
   .Text--intro {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+  }
+
+  .Text :matches(.Text-huge) {
+    font-size: 96px;
+    line-height: 96px;
     text-align: center;
   }
 
