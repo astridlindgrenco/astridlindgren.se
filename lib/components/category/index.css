@@ -25,3 +25,11 @@
 .Category-divider {
 
 }
+
+/**
+ * Modifier: Has no divider
+ */
+
+.Category--noDivider {
+  margin-bottom: var(--grid-gutter);
+}
