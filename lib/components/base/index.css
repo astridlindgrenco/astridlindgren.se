@@ -21,8 +21,8 @@
 
 /** For SUIT CSS Grid */
 @custom-media --sm-viewport (min-width:0px) and (max-width:480px);
-@custom-media --md-viewport (min-width:481px) and (max-width:768px);
-@custom-media --lg-viewport (min-width:769px);
+@custom-media --md-viewport (min-width:481px) and (max-width:1023px);
+@custom-media --lg-viewport (min-width:1024px);
 
 /**
  * Configure SUIT CSS Grid component
