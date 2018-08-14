@@ -64,6 +64,9 @@
     font-size: 32px;
     line-height: 40px;
   }
+  .Card:not(.Card--title):not(.Card--horisontal):not(.Card--image) .Card-body {
+    font-weight: 600;
+  }
 }
 
 /*
@@ -104,12 +107,17 @@
  * Modifier: Horisontal layout
  */
 
+ @media (--viewport-xxl) {
+   .Card--horisontal .Card-content {
+     padding: calc(var(--baseline-px) * 12);
+   }
+ }
  @media (min-width: 960px) {
    .Card--horisontal {
      flex-direction: row;
    }
      .Card--horisontal .Card-content {
-       padding: calc(var(--baseline-px) * 12);
+       padding: 5%;
        display: flex;
        flex-basis: auto;
        align-self: center;

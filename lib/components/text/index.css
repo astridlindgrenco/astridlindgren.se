@@ -259,9 +259,10 @@ ul.Text--links a::after {
 
 .Text :matches(.Text-huge) {
   font-size: 48px;
-  line-height: 32px;
+  line-height: 48px;
   text-align: center;
 }
+
 
 /** Links in headers */
 
