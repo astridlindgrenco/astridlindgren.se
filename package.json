@@ -20,7 +20,7 @@
     "babel-core": "^6.26.3",
     "dotenv": "^4.0.0",
     "nodemon": "^1.18.3",
-    "source-map-support": "^0.5.3",
+    "source-map-support": "^0.5.8",
     "standard": "^10.0.3"
   },
   "dependencies": {
@@ -63,7 +63,7 @@
     "suitcss-utils-flex": "^2.0.1",
     "suitcss-utils-size": "^2.0.1",
     "suitcss-utils-text": "^1.0.0",
-    "uglify-js": "^3.4.3",
+    "uglify-js": "^3.4.7",
     "uglifyify": "^5.0.1",
     "uglifyjs": "^2.4.11",
     "unassertify": "^2.1.1",
