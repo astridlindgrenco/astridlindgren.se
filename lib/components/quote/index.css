@@ -16,7 +16,9 @@
  .Quote-body {
   font-size: 40px;
   line-height: 140%;
-  /* Add TODO DemiBold */
+  max-width: var(--page-width-narrow);
+  font-weight: 600;
+  margin: 0 auto;
 }
 
 /**
