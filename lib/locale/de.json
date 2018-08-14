@@ -1,5 +1,7 @@
 {
   "Languages": "Sprachen",
   "de": "Deutsch",
-  "Home": "Zur Startseite"
+  "Home": "Zur Startseite",
+  "left-quote": "&bdquo;",
+  "right-quote": "&rdquo;"
 }
