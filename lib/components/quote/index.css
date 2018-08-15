@@ -13,20 +13,12 @@
  * Body
  */
 
- .Quote-body {
+.Quote-body {
   font-size: 40px;
   line-height: 140%;
   max-width: var(--page-width-narrow);
   font-weight: 600;
   margin: 0 auto;
-}
-
-/**
- * For handling quote characters
- */
-
-div.Quote-body p:first-child, div.Quote-body p:last-child {
-  display: inline;
 }
 
 /**
@@ -42,11 +34,11 @@ div.Quote-body p:first-child, div.Quote-body p:last-child {
  * More...
  */
 
- .Quote-more {
+.Quote-more {
   margin-top: 1.4em;
   font-size: 22px;
   line-height: 36px;
   text-align: center;
   text-decoration: underline;
-  /* Add TODO DemiBold */
+  font-weight: 600;
 }
