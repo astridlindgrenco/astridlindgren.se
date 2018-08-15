@@ -1,0 +1,25 @@
+/* @define Navgation */
+
+@import '../base';
+
+.subnavigation {
+  width: 100%;
+  padding: 0.25em 0.5em;
+  background-color: #222;
+  color: whitesmoke;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 82%;
+}
+
+.subnavigation-link {
+  padding: 0 0.5em;
+}
+
+.subnavigation-link--active {
+  font-weight: 700;
+  color: white;
+}

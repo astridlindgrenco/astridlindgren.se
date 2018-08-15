@@ -10,6 +10,7 @@
 @import "../components/category";
 @import "../components/quote";
 @import "../components/hero";
+@import "../components/subnavigation";
 
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";
