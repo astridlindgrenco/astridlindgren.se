@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 82%;
+  font-size: 16px;
 }
 
 .subnavigation-link {
@@ -22,4 +22,5 @@
 .subnavigation-link--active {
   font-weight: 700;
   color: white;
+  text-decoration: underline;
 }

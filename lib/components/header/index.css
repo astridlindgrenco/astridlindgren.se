@@ -32,7 +32,7 @@
     justify-content: center;
   }
   .Header-navItem {
-    font-size: 14px;
+    font-size: 15px;
   }
 
     .Header-navList--primary {
@@ -48,6 +48,10 @@
 
   .Header-link {
     padding: var(--baseline-px);
+  }
+  .Header-link--active {
+    font-weight: 700;
+    text-decoration: underline;
   }
 
     /**
