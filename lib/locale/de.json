@@ -1,7 +1,9 @@
 {
-  "Languages": "Sprachen",
   "de": "Deutsch",
   "Home": "Zur Startseite",
+  "Language": "Sprachen",
+  "Search": "Suche",
+  "Searchbox": "Suchen Sie nach Jahren, Büchern oder Zeichen",
   "left-quote": "&bdquo;",
   "right-quote": "&rdquo;"
 }

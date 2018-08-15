@@ -1,8 +1,9 @@
 {
-  "Languages": "Språk",
   "sv": "Svenska",
-  "Edit": "Redigera",
   "Home": "Till startsidan",
+  "Language": "Språk",
+  "Search": "Sök",
+  "Searchbox": "Sök årtal, böcker eller karaktärer",
   "left-quote": "&rdquo;",
   "right-quote": "&rdquo;"
 }
