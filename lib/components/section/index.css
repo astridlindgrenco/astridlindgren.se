@@ -93,28 +93,29 @@
  * Modifier: Has margins to other content
  */
  .Section--marginVerSmall {
-   margin: calc(var(--baseline-px) * 2) auto;
+   margin: calc(var(--baseline-px) * 4) auto;
  }
  @media (--viewport-md) {
-   .Section--marginVerSmall {
-     margin: calc(var(--baseline-px) * 4) auto;
-   }
- }
- @media (--viewport-xl) {
    .Section--marginVerSmall {
      margin: calc(var(--baseline-px) * 6) auto;
    }
  }
+ @media (--viewport-xl) {
+   .Section--marginVerSmall {
+     margin: calc(var(--baseline-px) * 12) auto;
+   }
+ }
+
  .Section--marginVerLarge {
-   margin: calc(var(--baseline-px) * 6) auto;
+   margin: calc(var(--baseline-px) * 8) auto;
  }
  @media (--viewport-md) {
    .Section--marginVerLarge {
-     margin: calc(var(--baseline-px) * 8) auto;
+     margin: calc(var(--baseline-px) * 12) auto;
    }
  }
  @media (--viewport-xl) {
    .Section--marginVerLarge {
-     margin: calc(var(--baseline-px) * 10) auto;
+     margin: calc(var(--baseline-px) * 14) auto;
    }
  }
