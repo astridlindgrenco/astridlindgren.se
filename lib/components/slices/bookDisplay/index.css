@@ -1,0 +1,35 @@
+/* @define BookDisplay */
+
+@import '../../base';
+
+.BookDisplay {
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}
+
+.BookDisplay-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.BookDisplay-book {
+  width: 100px;
+  height: 150px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.BookDisplay-more {
+  margin-top: 1.4em;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.BookDisplay-shelf {
+  /* TODO */
+}

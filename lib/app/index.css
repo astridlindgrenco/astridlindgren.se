@@ -12,6 +12,7 @@
 @import "../components/quote";
 @import "../components/hero";
 @import "../components/subnavigation";
+@import "../components/slices/bookDisplay";
 
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";
