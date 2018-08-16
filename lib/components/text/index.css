@@ -18,7 +18,8 @@
 }
 
 .Text--intro {
-  margin-bottom: calc(var(--baseline-px) * 4)
+  margin-bottom: calc(var(--baseline-px) * 4);
+  line-height: 40px;
 }
 
 .Text--full {
@@ -26,7 +27,7 @@
 }
 
 .Text--bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .Text--compact * {
@@ -239,7 +240,7 @@ ul.Text--links a::after {
 
 .Text :matches(h2, .Text-h2) {
   font-size: 40px;
-  line-height: 40px;
+  line-height: 48px;
 }
 
 .Text :matches(h3, .Text-h3) {
@@ -296,6 +297,7 @@ ul.Text--links a::after {
 
 .Text-large {
   font-size: 32px;
+  line-height: 40px;
 }
 
 .Text-label {
@@ -354,8 +356,8 @@ ul.Text--links a::after {
   }
 
   .Text :matches(.Text-huge) {
-    font-size: 96px;
-    line-height: 96px;
+    font-size: 72px;
+    line-height: 72px;
     text-align: center;
   }
 
@@ -366,27 +368,37 @@ ul.Text--links a::after {
    */
 
   .Text--growing {
-    font-size: 19px;
+    font-size: 32px;
+    line-height: 48px;
   }
 
   .Text--growing .Text-large {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   .Text--growingTitles :matches(h2, .Text-h2) {
     font-size: 56px;
+    line-height: 56px;
   }
 
   .Text--growingTitles :matches(h3, .Text-h3) {
-    font-size: 48px;
+    font-size: 40px;
+    line-height: 48px;
   }
 
   .Text--growingTitles :matches(h4, .Text-h4) {
     font-size: 32px;
+    line-height: 40px;
   }
 }
 
 @media (--viewport-xl) {
+
+  .Text :matches(.Text-huge) {
+    font-size: 96px;
+    line-height: 96px;
+  }
+
   .Text--growingLate {
     font-size: 19px;
   }
