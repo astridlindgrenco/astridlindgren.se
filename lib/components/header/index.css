@@ -162,7 +162,7 @@
 
 
 /** Small screen friendly header */
-@media (max-width: 899px) {
+@media (max-width: 940px) {
   .Header {
     margin: var(--baseline-px) 0;
     flex-direction: column;

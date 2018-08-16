@@ -25,13 +25,6 @@
 @custom-media --lg-viewport (min-width:1024px);
 
 /**
- * Configure SUIT CSS Grid component
- */
-:root {
- --Grid-gutterSize: var(--grid-gutter)
-}
-
-/**
  * Easing curves
  */
 

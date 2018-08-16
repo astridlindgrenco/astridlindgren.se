@@ -118,6 +118,9 @@
 .Text :matches(p, ul, ol) {
   margin: calc(var(--baseline-px) * 3) 0;
 }
+.Text--spaced :matches(p, ul, ol) {
+  margin: calc(var(--baseline-px) * 5) 0;
+}
 
 .Text :matches(img, pre, .Text-embed, [data-oembed]) {
   margin: calc(var(--baseline-px) * 2) 0;

@@ -1,0 +1,26 @@
+/* @define Grid */
+
+@import "../base";
+@import "suitcss-components-grid";
+
+/**
+ * Extend and override SUIT Grid
+ */
+
+ .Grid--withGutter {
+   margin: 0 calc(-0.5 * var(--grid-gutter-sm));
+ }
+
+ .Grid--withGutter > * {
+   padding: 0 calc(0.5 * var(--grid-gutter-sm));
+ }
+
+ @media (--viewport-xl) {
+   .Grid--withGutter {
+     margin: 0 calc(-0.5 * var(--grid-gutter));
+   }
+
+   .Grid--withGutter > * {
+     padding: 0 calc(0.5 * var(--grid-gutter));
+   }
+ }

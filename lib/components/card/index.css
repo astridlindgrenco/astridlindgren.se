@@ -109,7 +109,6 @@
 
  @media (--viewport-xxl) {
    .Card--horisontal .Card-content {
-     padding: calc(var(--baseline-px) * 12);
    }
  }
  @media (min-width: 960px) {
@@ -117,7 +116,6 @@
      flex-direction: row;
    }
      .Card--horisontal .Card-content {
-       padding: 5%;
        display: flex;
        flex-basis: auto;
        align-self: center;

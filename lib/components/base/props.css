@@ -7,6 +7,7 @@
   --baseline-px: 8px;
   --baseline: calc(var(--baseline-px) * 2);
   --grid-gutter: 40px;
+  --grid-gutter-sm: 32px;
 
   /**
    * Basic type

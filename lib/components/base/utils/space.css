@@ -1,0 +1,18 @@
+/* @define utilities */
+
+@import "../index";
+
+.u-paddedBox {
+  padding: calc(var(--baseline-px) * 6) !important;
+}
+
+@media (min-width: 960px) {
+  .u-paddedBox {
+    padding: 5% !important;
+  }
+}
+@media (--viewport-xxl) {
+ .u-paddedBox {
+   padding: calc(var(--baseline-px) * 12) !important;
+ }
+}

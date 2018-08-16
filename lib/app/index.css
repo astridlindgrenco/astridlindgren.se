@@ -1,6 +1,7 @@
 @import "normalize.css";
 
 @import "../components/base";
+@import "../components/grid";
 @import "../components/text";
 @import "../components/header";
 @import "../components/section";
@@ -15,4 +16,3 @@
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";
 @import "suitcss-utils-text";
-@import "suitcss-components-grid";

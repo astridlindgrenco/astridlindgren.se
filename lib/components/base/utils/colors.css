@@ -3,11 +3,50 @@
 .u-bgWhite { background-color: #fff !important; }
 .u-colorWhite { color: #fff !important; }
 
-.u-bgLightGray { background-color: var(--color-gray-light) !important; }
-.u-colorLightGray { color: var(--color-gray-light) !important; }
+.u-bgLightGray { background-color: var(--color-light-gray) !important; }
+.u-colorLightGray { color: var(--color-light-gray) !important; }
+
+.u-bgWarmGray { background-color: var(--color-warm-gray) !important; }
+.u-colorWarmGray { color: var(--color-warm-gray) !important; }
 
 .u-bgGray { background-color: var(--color-gray) !important; }
 .u-colorGray { color: var(--color-gray) !important; }
 
 .u-bgGrayDark { background-color: var(--color-gray-dark) !important; }
 .u-colorGrayDark { color: var(--color-gray-dark) !important; }
+
+.u-bgBlueBlack { background-color: var(--color-blue-black) !important; }
+.u-colorBlueBlack { color: var(--color-blue-black) !important; }
+
+.u-bgWarmGray { background-color: var(--color-warm-gray) !important; }
+.u-colorWarmGray { color: var(--color-warm-gray) !important; }
+
+.u-bgSlateBlue { background-color: var(--color-slate-blue) !important; }
+.u-colorSlateBlue { color: var(--color-slate-blue) !important; }
+
+.u-bgLightBlue { background-color: var(--color-light-blue) !important; }
+.u-colorLightBlue { color: var(--color-light-blue) !important; }
+
+.u-bgDarkBlue { background-color: var(--color-dark-blue) !important; }
+.u-colorDarkBlue { color: var(--color-dark-blue) !important; }
+
+.u-bgSlateGreen { background-color: var(--color-slate-green) !important; }
+.u-colorSlateGreen { color: var(--color-slate-green);}
+
+.u-bgLightGreen { background-color: var(--color-light-green) !important; }
+.u-colorLightGreen { color: var(--color-light-green) !important; }
+
+.u-bgYellow { background-color: var(--color-yellow) !important; }
+.u-colorYellow { color: var(--color-yellow) !important; }
+
+.u-bgLightOrange { background-color: var(--color-light-orange) !important; }
+.u-colorLightOrange { color: var(--color-light-orange) !important; }
+
+.u-bgPeach { background-color: var(--color-peach) !important; }
+.u-colorPeach { color: var(--color-peach) !important; }
+
+.u-bgLightRed { background-color: var(--color-light-red) !important; }
+.u-colorLightRed { color: var(--color-light-red) !important; }
+
+.u-bgDarkRed { background-color: var(--color-dark-red) !important; }
+.u-colorDarkRed { color: var(--color-dark-red) !important; }
