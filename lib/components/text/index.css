@@ -356,8 +356,8 @@ ul.Text--links a::after {
   }
 
   .Text :matches(.Text-huge) {
-    font-size: 96px;
-    line-height: 96px;
+    font-size: 72px;
+    line-height: 72px;
     text-align: center;
   }
 
@@ -393,6 +393,12 @@ ul.Text--links a::after {
 }
 
 @media (--viewport-xl) {
+
+  .Text :matches(.Text-huge) {
+    font-size: 96px;
+    line-height: 96px;
+  }
+
   .Text--growingLate {
     font-size: 19px;
   }

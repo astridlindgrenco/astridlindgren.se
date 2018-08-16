@@ -67,8 +67,14 @@
 .Card-moreLink {
   display: inline-block;
   text-decoration: underline;
-  margin-top: calc(var(--baseline-px) * 3);
+  margin-top: calc(var(--baseline-px) * 6);
   font-weight: 600;
+}
+
+@media (--viewport-lg) {
+  .Card-moreLink {
+    margin-top: calc(var(--baseline-px) * 3);
+  }
 }
 
 
@@ -98,46 +104,46 @@
  * Modifier: Horisontal layout
  */
 
- @media (--viewport-xxl) {
+@media (--viewport-xxl) {
+ .Card--horisontal .Card-content {
+ }
+}
+@media (--viewport-lg) {
+ .Card--horisontal {
+   flex-direction: row;
+ }
    .Card--horisontal .Card-content {
+     display: flex;
+     flex-basis: auto;
+     align-self: center;
+     width: 50%;
+     border: 0;
    }
- }
- @media (min-width: 960px) {
-   .Card--horisontal {
-     flex-direction: row;
+   .Card--horisontal .Card-media {
+     display: flex;
+     flex-basis: auto;
+     position: relative;
+     width: 50%;
    }
-     .Card--horisontal .Card-content {
-       display: flex;
-       flex-basis: auto;
-       align-self: center;
-       width: 50%;
-       border: 0;
-     }
-     .Card--horisontal .Card-media {
-       display: flex;
-       flex-basis: auto;
-       position: relative;
-       width: 50%;
-     }
 
-     .Card--horisontal .Card-image {
-       width: 100%;
-       height: 100%;
-     }
-     .Card--horisontal .Card-imageElm {
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
-     }
-     .Card--horisontal.Card--title:not(.Card--body) .Card-body {
-       margin: calc(var(--baseline-px) * 4) 0 calc(var(--baseline-px) * 8) 0;
-     }
+   .Card--horisontal .Card-image {
+     width: 100%;
+     height: 100%;
+   }
+   .Card--horisontal .Card-imageElm {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+   }
+   .Card--horisontal.Card--title:not(.Card--body) .Card-body {
+     margin: calc(var(--baseline-px) * 4) 0 calc(var(--baseline-px) * 8) 0;
+   }
 
-     /* If horisontal card has body, left align text */
-     .Card--horisontal.Card--body .Card-content {
-       text-align: left;
-     }
- }
+   /* If horisontal card has body, left align text */
+   .Card--horisontal.Card--body .Card-content {
+     text-align: left;
+   }
+}
 
 /**
  * Modifier: reverse order of image and body
