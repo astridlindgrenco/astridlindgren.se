@@ -1,0 +1,47 @@
+/* @define Link Block */
+
+@import '../base';
+
+.LinkBlock {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+/**
+ * Element: image
+ */
+
+.LinkBlock-img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+ * Element: link
+ */
+
+.LinkBlock-label {
+  width: 100%;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: underline;
+  padding: calc(var(--baseline-px) * 3) 0 calc(var(--baseline-px) * 5) 0;
+}
+@media (--viewport-md) {
+  .LinkBlock-label {
+    padding: calc(var(--baseline-px) * 5) 0 0 0;
+  }
+}
+
+/**
+ * Modifier: No image
+ */
+
+.LinkBlock--noImage .LinkBlock-label {
+  flex-direction: row;
+  font-weight: 700;
+  padding: calc(var(--baseline-px) * 8) calc(var(--baseline-px) * 3);
+}

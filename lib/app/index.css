@@ -13,6 +13,7 @@
 @import "../components/hero";
 @import "../components/subnavigation";
 @import "../components/slices/bookDisplay";
+@import "../components/linkblock";
 
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";
