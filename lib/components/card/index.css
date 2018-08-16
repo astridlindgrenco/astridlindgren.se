@@ -59,15 +59,6 @@
   }
 }
 .Card--title .Card-body { margin-top: 0 }
-@media (--viewport-xl) {
-  .Card:not(.Card--title):not(.Card--image) .Card-body {
-    font-size: 32px;
-    line-height: 40px;
-  }
-  .Card:not(.Card--title):not(.Card--horisontal):not(.Card--image) .Card-body {
-    font-weight: 600;
-  }
-}
 
 /*
  * Element: Call-To-Action
