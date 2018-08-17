@@ -12,20 +12,52 @@
 
 .Section-body {
   margin: 0 auto;
-  padding: 0 var(--page-margins-small);
+  padding-left: var(--page-margins-small);
+  padding-right: var(--page-margins-small);
 }
 @media (--viewport-md) {
   .Section-body {
-    padding: 0 var(--page-margins-medium);
+    padding-left: var(--page-margins-medium);
+    padding-right: var(--page-margins-medium);
   }
 }
 @media (--viewport-lg) {
   .Section-body {
     max-width: calc(var(--page-width-wide) + (var(--page-margins-large) * 2));
-    padding: 0 var(--page-margins-large);
+    padding-left: var(--page-margins-large);
+    padding-right: var(--page-margins-large);
   }
 }
 
+/**
+ * Element: header
+ */
+
+.Section-header {
+  text-align: center;
+  margin-bottom: calc(var(--baseline-px) * 6);
+}
+
+@media (--viewport-lg) {
+  .Section-header {
+    margin-bottom: calc(var(--baseline-px) * 12);
+  }
+}
+
+/**
+ * Element: footer
+ */
+
+.Section-footer {
+  text-align: center;
+  margin-top: calc(var(--baseline-px) * 6);
+}
+
+@media (--viewport-lg) {
+  .Section-footer {
+    margin-top: calc(var(--baseline-px) * 12);
+  }
+}
 
 /**
  * Modifier: If section should be full width
@@ -93,29 +125,43 @@
  * Modifier: Has margins to other content
  */
  .Section--marginVerSmall {
-   margin: calc(var(--baseline-px) * 4) auto;
+   padding-top: calc(var(--baseline-px) * 4);
+   padding-bottom: calc(var(--baseline-px) * 4);
  }
  @media (--viewport-md) {
    .Section--marginVerSmall {
-     margin: calc(var(--baseline-px) * 6) auto;
+     padding-top: calc(var(--baseline-px) * 6);
+     padding-bottom: calc(var(--baseline-px) * 6);
    }
  }
  @media (--viewport-xl) {
    .Section--marginVerSmall {
-     margin: calc(var(--baseline-px) * 12) auto;
+     padding-top: calc(var(--baseline-px) * 12);
+     padding-bottom: calc(var(--baseline-px) * 12);
    }
  }
 
  .Section--marginVerLarge {
-   margin: calc(var(--baseline-px) * 8) auto;
+   padding-top: calc(var(--baseline-px) * 8);
+   padding-bottom: calc(var(--baseline-px) * 8);
  }
  @media (--viewport-md) {
    .Section--marginVerLarge {
-     margin: calc(var(--baseline-px) * 12) auto;
+     padding-top: calc(var(--baseline-px) * 12);
+     padding-bottom: calc(var(--baseline-px) * 12);
    }
  }
  @media (--viewport-xl) {
    .Section--marginVerLarge {
-     margin: calc(var(--baseline-px) * 14) auto;
+     padding-top: calc(var(--baseline-px) * 14);
+     padding-bottom: calc(var(--baseline-px) * 14);
    }
  }
+
+ /**
+  * Modifier: has and hasn't background color
+  */
+
+.Section--marginVerSmall:not(.Section--hasBgColor) + .Section--marginVerSmall:not(.Section--hasBgColor) {
+  padding-top: 0;
+}

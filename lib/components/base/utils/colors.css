@@ -14,21 +14,25 @@
 
 .u-bgGrayDark { background-color: var(--color-gray-dark) !important; }
 .u-colorGrayDark { color: var(--color-gray-dark) !important; }
+.u-colorForGrayDark { color: var(--color-gray-dark) !important; }
 
 .u-bgBlueBlack { background-color: var(--color-blue-black) !important; }
 .u-colorBlueBlack { color: var(--color-blue-black) !important; }
+.u-colorForBlueBlack { color: var(--color-white) !important; }
 
 .u-bgWarmGray { background-color: var(--color-warm-gray) !important; }
 .u-colorWarmGray { color: var(--color-warm-gray) !important; }
 
 .u-bgSlateBlue { background-color: var(--color-slate-blue) !important; }
 .u-colorSlateBlue { color: var(--color-slate-blue) !important; }
+.u-colorForSlateBlue { color: var(--color-white) !important; }
 
 .u-bgLightBlue { background-color: var(--color-light-blue) !important; }
 .u-colorLightBlue { color: var(--color-light-blue) !important; }
 
 .u-bgDarkBlue { background-color: var(--color-dark-blue) !important; }
 .u-colorDarkBlue { color: var(--color-dark-blue) !important; }
+.u-colorForDarkBlue { color: var(--color-white) !important; }
 
 .u-bgSlateGreen { background-color: var(--color-slate-green) !important; }
 .u-colorSlateGreen { color: var(--color-slate-green);}
@@ -50,3 +54,4 @@
 
 .u-bgDarkRed { background-color: var(--color-dark-red) !important; }
 .u-colorDarkRed { color: var(--color-dark-red) !important; }
+.u-colorForDarkRed { color: var(--color-white) !important; }
