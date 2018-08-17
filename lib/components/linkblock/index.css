@@ -47,20 +47,13 @@
 }
 
 
-@media (--sm-viewport) {
-  /*.LinkBlock--lowPriority {
-    flex-direction: row;
-    font-weight: 700;
-    padding: calc(var(--baseline-px) * 8) calc(var(--baseline-px) * 3);
-  }*/
-}
 @media (--md-viewport) {
   .LinkBlock--lowPriority {
     display: none;
   }
 }
 @media (--viewport-sm) {
-  .LinkBlock:not(.LinkBlock--noImage) .LinkBlock {
+  .LinkBlock:not(.LinkBlock--noImage) {
     background-color: transparent !important;
   }
 }
