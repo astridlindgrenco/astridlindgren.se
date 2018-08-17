@@ -26,6 +26,35 @@
   }
 }
 
+/**
+ * Element: header
+ */
+
+.Section-header {
+  text-align: center;
+  margin-bottom: calc(var(--baseline-px) * 6);
+}
+
+@media (--viewport-lg) {
+  .Section-header {
+    margin-bottom: calc(var(--baseline-px) * 12);
+  }
+}
+
+/**
+ * Element: footer
+ */
+
+.Section-footer {
+  text-align: center;
+  margin-top: calc(var(--baseline-px) * 6);
+}
+
+@media (--viewport-lg) {
+  .Section-footer {
+    margin-top: calc(var(--baseline-px) * 12);
+  }
+}
 
 /**
  * Modifier: If section should be full width

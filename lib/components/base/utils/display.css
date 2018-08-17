@@ -4,6 +4,22 @@
   display: none !important;
 }
 
+@media (--viewport-sm-max) {
+  .u-sm-hidden {
+    display: none !important;
+  }
+}
+@media (--viewport-md-max) {
+  .u-md-hidden {
+    display: none !important;
+  }
+}
+@media (--viewport-lg-max) {
+  .u-lg-hidden {
+    display: none !important;
+  }
+}
+
 .u-hiddenVisually {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
