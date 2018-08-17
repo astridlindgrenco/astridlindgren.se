@@ -5,8 +5,9 @@
 .BookDisplay {
   margin: 0 auto;
   text-align: center;
-  letter-spacing: 0.5px;
   margin-bottom: 25px;
+  background-color: #cbe5f9;
+  padding: 20px;
 }
 
 .BookDisplay-title {
@@ -15,10 +16,18 @@
 }
 
 .BookDisplay-book {
-  width: 100px;
-  height: 150px;
-  margin: 20px;
   display: inline-block;
+  margin: 20px;
+  text-align: center;
+}
+.BookDisplay-book-cover {
+  height: 240px;
+}
+.BookDisplay-book-title {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.1px;
+  width: 175px;
 }
 
 .BookDisplay-more {
@@ -31,5 +40,6 @@
 }
 
 .BookDisplay-shelf {
-  /* TODO */
+  display: flex;
+  justify-content: center;
 }
