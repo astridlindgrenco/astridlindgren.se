@@ -39,6 +39,12 @@
   text-align: center;
 }
 
+@media (--viewport-lg) {
+  .Text--indented {
+    padding-left: 15%;
+  }
+}
+
 .Text--adaptive {
   color: inherit;
 }
