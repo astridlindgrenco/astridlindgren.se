@@ -1,0 +1,46 @@
+/* @define Display */
+
+@import '../base';
+
+.Display {
+  position: relative;
+  margin: 0 auto;
+}
+
+.Display-item {
+  text-align: center;
+}
+
+.Display-cover {
+
+}
+.Display-cover img {
+  max-width: 100%;
+}
+
+.Display-info {
+
+}
+
+/**
+ * Modifier: Mask items left and right
+ */
+
+.Display--masked .Display::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+.Display--masked .Display::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  background: linear-gradient(-90deg, rgba(255,255,255,0), rgba(255,255,255,1));
+}

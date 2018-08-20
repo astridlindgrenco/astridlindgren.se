@@ -24,3 +24,37 @@
      padding: 0 calc(0.5 * var(--grid-gutter));
    }
  }
+
+
+/**
+ * Horisontal scroll area
+ */
+
+.Grid--shelf {
+  display: flex;
+  flex-flow: row;
+  overflow: scroll;
+}
+.Grid--shelf > * {
+  flex: 10 0 auto;
+  width: calc((100% / 2.5) - (4% * 2));
+  margin: 0 4%;
+}
+@media (--viewport-md) {
+  .Grid--shelf > * {
+    width: calc((100% / 4.5) - (2% * 2));
+    margin: 0 2%;
+  }
+}
+@media (--viewport-lg) {
+  .Grid--shelf > * {
+    width: calc((100% / 5.5) - (2% * 2));
+    margin: 0 2%;
+  }
+}
+@media (--viewport-xl) {
+  .Grid--shelf > * {
+    width: calc((100% / 6.5) - (2% * 2));
+    margin: 0 2%;
+  }
+}
