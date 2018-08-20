@@ -16,6 +16,10 @@
   },
   "author": "http://www.itch.se",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astridlindgrenco/astridlindgren.se.git"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "dotenv": "^4.0.0",
