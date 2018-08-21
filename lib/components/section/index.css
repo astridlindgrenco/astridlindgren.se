@@ -35,7 +35,7 @@
 
 .Section-header {
   text-align: center;
-  margin-bottom: calc(var(--baseline-px) * 6);
+  margin-bottom: calc(var(--baseline-px) * 8);
 }
 
 @media (--viewport-lg) {
@@ -50,7 +50,7 @@
 
 .Section-footer {
   text-align: center;
-  margin-top: calc(var(--baseline-px) * 6);
+  margin-top: calc(var(--baseline-px) * 8);
 }
 
 @media (--viewport-lg) {
