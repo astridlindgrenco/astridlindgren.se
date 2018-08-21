@@ -35,32 +35,48 @@
   flex-flow: row;
   overflow: scroll;
 }
-.Grid--shelf > * {
+.Grid--shelf > .Grid-cell {
   flex: 10 0 auto;
-  width: calc((100% / 1.5) - (4% * 2));
-  margin: 0 4%;
+  margin: 0 2%;
 }
-@media (--viewport-sm) {
-  .Grid--shelf > * {
-    width: calc((100% / 2.5) - (2% * 2));
-    margin: 0 2%;
-  }
+
+@media (--viewport-sm-max) {
+  .u-xs-shelfOf1 { width: calc((100% / 1.5) - (4% * 2)); margin: 0 4%; }
+  .u-xs-shelfOf2 { width: calc((100% / 2.5) - (4% * 2)); margin: 0 4%; }
+  .u-xs-shelfOf3 { width: calc((100% / 3.5) - (4% * 2)); margin: 0 4%; }
+  .u-xs-shelfOf4 { width: calc((100% / 4.5) - (4% * 2)); margin: 0 4%; }
+  .u-xs-shelfOf5 { width: calc((100% / 5.5) - (4% * 2)); margin: 0 4%; }
+  .u-xs-shelfOf6 { width: calc((100% / 6.5) - (4% * 2)); margin: 0 4%; }
 }
-@media (--viewport-md) {
-  .Grid--shelf > * {
-    width: calc((100% / 4.5) - (2% * 2));
-    margin: 0 2%;
-  }
+@media (--viewport-sm) and (--viewport-md-max) {
+  .u-sm-shelfOf1 { width: calc((100% / 1.5) - (2% * 2)); }
+  .u-sm-shelfOf2 { width: calc((100% / 2.5) - (2% * 2)); }
+  .u-sm-shelfOf3 { width: calc((100% / 3.5) - (2% * 2)); }
+  .u-sm-shelfOf4 { width: calc((100% / 4.5) - (2% * 2)); }
+  .u-sm-shelfOf5 { width: calc((100% / 5.5) - (2% * 2)); }
+  .u-sm-shelfOf6 { width: calc((100% / 6.5) - (2% * 2)); }
 }
-@media (--viewport-lg) {
-  .Grid--shelf > * {
-    width: calc((100% / 5.5) - (2% * 2));
-    margin: 0 2%;
-  }
+@media (--viewport-md) and (--viewport-lg-max) {
+  .u-md-shelfOf1 { width: calc((100% / 1.5) - (2% * 2)); }
+  .u-md-shelfOf2 { width: calc((100% / 2.5) - (2% * 2)); }
+  .u-md-shelfOf3 { width: calc((100% / 3.5) - (2% * 2)); }
+  .u-md-shelfOf4 { width: calc((100% / 4.5) - (2% * 2)); }
+  .u-md-shelfOf5 { width: calc((100% / 5.5) - (2% * 2)); }
+  .u-md-shelfOf6 { width: calc((100% / 6.5) - (2% * 2)); }
+}
+@media (--viewport-lg) and (--viewport-xl-max) {
+  .u-lg-shelfOf1 { width: calc((100% / 1.5) - (2% * 2)); }
+  .u-lg-shelfOf2 { width: calc((100% / 2.5) - (2% * 2)); }
+  .u-lg-shelfOf3 { width: calc((100% / 3.5) - (2% * 2)); }
+  .u-lg-shelfOf4 { width: calc((100% / 4.5) - (2% * 2)); }
+  .u-lg-shelfOf5 { width: calc((100% / 5.5) - (2% * 2)); }
+  .u-lg-shelfOf6 { width: calc((100% / 6.5) - (2% * 2)); }
 }
 @media (--viewport-xl) {
-  .Grid--shelf > * {
-    width: calc((100% / 6.5) - (2% * 2));
-    margin: 0 2%;
-  }
+  .u-xl-shelfOf1 { width: calc((100% / 1.5) - (2% * 2)); }
+  .u-xl-shelfOf2 { width: calc((100% / 2.5) - (2% * 2)); }
+  .u-xl-shelfOf3 { width: calc((100% / 3.5) - (2% * 2)); }
+  .u-xl-shelfOf4 { width: calc((100% / 4.5) - (2% * 2)); }
+  .u-xl-shelfOf5 { width: calc((100% / 5.5) - (2% * 2)); }
+  .u-xl-shelfOf6 { width: calc((100% / 6.5) - (2% * 2)); }
 }
