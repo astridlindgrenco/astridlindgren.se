@@ -6,9 +6,16 @@
   font-display: block;
 }
 
-:root {
-  --font-pippi: 'Pippi', 'Avenir Next', sans-serif;
+@font-face {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: bold;
+  src: url("./avenir-next-regular.woff") format("woff");
+  font-display: block;
+}
 
-  --font-family-body: 'Avenir Next', sans-serif;
-  --font-family-heading: 'Avenir Next', sans-serif;
+:root {
+  --font-pippi: 'Pippi', 'Avenir Next', 'Avenir', sans-serif;
+  --font-family-body: 'Avenir Next', 'Avenir', sans-serif;
+  --font-family-heading: 'Avenir Next', 'Avenir', sans-serif;
 }
