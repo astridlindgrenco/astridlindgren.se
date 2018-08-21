@@ -4,7 +4,7 @@ var serve = require('koa-static')
 var compress = require('koa-compress')
 var helmet = require('koa-helmet')
 var noTrailingSlash = require('koa-no-trailing-slash')
-//var app = require('./lib/app')
+// var app = require('./lib/app')
 var router = require('./lib/router')
 var errors = require('./lib/errors')
 var assets = require('./lib/middleware/assets')
@@ -48,8 +48,8 @@ if (process.env.NODE_ENV !== 'production') {
  * Capture special routes before any other middleware
  */
 
-//server.use(api)
-//server.use(redirects)
+// server.use(api)
+// server.use(redirects)
 
 /**
  * Remove trailing slashes before continuing
@@ -68,13 +68,13 @@ server.use(serve('public', { maxage: 1000 * 60 * 60 * 24 * 365 }))
  * Add on Universal Analytics for server process tracking
  */
 
-//server.use(analytics(process.env.GOOGLE_ANALYTICS_ID))
+// server.use(analytics(process.env.GOOGLE_ANALYTICS_ID))
 
 /**
  * Set up request cache mechanism
  */
 
-//server.use(cache)
+// server.use(cache)
 
 /**
  * Parse request body
@@ -93,7 +93,7 @@ server.use(stores)
  * Handle rendering response
  */
 
-//server.use(render())
+// server.use(render())
 
 /**
  * Hook up the Prismic api
