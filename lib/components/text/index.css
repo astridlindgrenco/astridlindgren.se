@@ -6,8 +6,8 @@
   color: var(--color-text);
   font-family: var(--font-family-body);
   line-height: 1.6666;
-  font-size: var(--base-font-size);
-  line-height: var(--base-line-height);
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
 }
 
 @media print {
@@ -19,7 +19,7 @@
 
 .Text--intro {
   margin-bottom: calc(var(--baseline-px) * 4);
-  line-height: 40px;
+  line-height: 32px;
 }
 
 .Text--full {
@@ -377,6 +377,16 @@ ul.Text--links a::after {
 /**
  * Wider viewports
  */
+
+@media (--viewport-sm) {
+  .Text {
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+  }
+  .Text--intro {
+    line-height: 40px;
+  }
+}
 
 @media (--viewport-lg) {
   .Text-large {

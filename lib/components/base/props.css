@@ -13,6 +13,8 @@
    * Basic type
    */
 
+   --small-font-size: 16px;
+   --small-line-height: 24px;
    --base-font-size: 24px;
    --base-line-height: 32px;
 
@@ -23,7 +25,7 @@
    --page-width-wide: 1440px;
    --page-width-narrow: 970px;
 
-   --page-margins-small: calc(var(--baseline-px) * 2);
+   --page-margins-small: calc(var(--baseline-px) * 3);
    --page-margins-medium: calc(var(--baseline-px) * 4);
    --page-margins-large: calc(var(--baseline-px) * 6);
 

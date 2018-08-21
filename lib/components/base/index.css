@@ -48,13 +48,20 @@
   cursor: default;
   background: var(--color-document);
   color: var(--color-text);
-  font-size: var(--base-font-size);
-  line-height: var(--base-line-height);
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
   font-weight: 500;
   text-rendering: geometricPrecision;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (--viewport-sm) {
+  :root {
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+  }
 }
 
 *,

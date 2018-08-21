@@ -125,36 +125,19 @@
  * Modifier: Has margins to other content
  */
  .Section--marginVerSmall {
-   padding-top: calc(var(--baseline-px) * 4);
-   padding-bottom: calc(var(--baseline-px) * 4);
+   padding-top: calc(var(--baseline-px) * 6);
+   padding-bottom: calc(var(--baseline-px) * 6);
  }
  @media (--viewport-md) {
    .Section--marginVerSmall {
-     padding-top: calc(var(--baseline-px) * 6);
-     padding-bottom: calc(var(--baseline-px) * 6);
+     padding-top: calc(var(--baseline-px) * 8);
+     padding-bottom: calc(var(--baseline-px) * 8);
    }
  }
  @media (--viewport-xl) {
    .Section--marginVerSmall {
      padding-top: calc(var(--baseline-px) * 12);
      padding-bottom: calc(var(--baseline-px) * 12);
-   }
- }
-
- .Section--marginVerLarge {
-   padding-top: calc(var(--baseline-px) * 8);
-   padding-bottom: calc(var(--baseline-px) * 8);
- }
- @media (--viewport-md) {
-   .Section--marginVerLarge {
-     padding-top: calc(var(--baseline-px) * 12);
-     padding-bottom: calc(var(--baseline-px) * 12);
-   }
- }
- @media (--viewport-xl) {
-   .Section--marginVerLarge {
-     padding-top: calc(var(--baseline-px) * 14);
-     padding-bottom: calc(var(--baseline-px) * 14);
    }
  }
 
