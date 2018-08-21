@@ -8,18 +8,21 @@
 }
 
 .Display-item {
+  display: inline-block;
   text-align: center;
+  max-width: 300px;
 }
 
 .Display-cover {
-
+  display: inline-block;
 }
 .Display-cover img {
+  display: block;
   max-width: 100%;
 }
 
 .Display-info {
-
+  margin-top: calc(var(--baseline-px) * 3);
 }
 
 /**

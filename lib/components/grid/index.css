@@ -37,8 +37,14 @@
 }
 .Grid--shelf > * {
   flex: 10 0 auto;
-  width: calc((100% / 2.5) - (4% * 2));
+  width: calc((100% / 1.5) - (4% * 2));
   margin: 0 4%;
+}
+@media (--viewport-sm) {
+  .Grid--shelf > * {
+    width: calc((100% / 2.5) - (2% * 2));
+    margin: 0 2%;
+  }
 }
 @media (--viewport-md) {
   .Grid--shelf > * {
