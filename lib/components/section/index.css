@@ -60,6 +60,19 @@
 }
 
 /**
+ * Element: Toggle button
+ * See expandable modifier
+ */
+
+.Section-toggle {
+  display: block;
+  background: black;
+  padding: 8px;
+  color: #fff;
+  margin: calc(var(--baseline-px) * 2) auto;
+}
+
+/**
  * Modifier: If section should be full width
  */
 
@@ -156,3 +169,30 @@
 .Section--marginVerSmall:not(.Section--hasBgColor) + .Section--marginVerSmall:not(.Section--hasBgColor) {
   padding-top: 0;
 }
+
+/**
+ * Modifier: Expanded/collapsed
+ * Controlled in JS container
+ */
+
+.Section--isExpandableReady {
+  overflow: auto;
+  transition: padding 150ms ease-out,
+              background-color 150ms ease-out;
+}
+.Section--isExpandableReady .Section-body {
+  transition: opacity 150ms ease-out,
+              height 250ms 150ms ease-out;
+}
+.Section--isExpanded {
+}
+
+.Section--isCollapsed {
+  background-color: rgba(255,255,255,0) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+  .Section--isCollapsed .Section-body {
+    height: 0 !important;
+    overflow: hidden !important;
+  }
