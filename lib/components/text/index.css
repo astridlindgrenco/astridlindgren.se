@@ -26,6 +26,10 @@
   width: 100%;
 }
 
+.Text--semiBold {
+  font-weight: 600;
+}
+
 .Text--bold {
   font-weight: 700;
 }
@@ -238,7 +242,7 @@ ul.Text--links a::after {
   font-family: var(--font-family-heading);
   font-weight: 600;
   line-height: 24px;
-  margin: 56px 0 -8px;
+  margin: 48px 0 -8px;
 }
 
 .Text :matches(h1, .Text-h1) {
@@ -258,16 +262,20 @@ ul.Text--links a::after {
 }
 
 .Text :matches(h4, .Text-h4) {
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: -8px;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: -16px;
 }
 
 .Text :matches(h5, h6) {
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
   font-size: inherit;
   line-height: inherit;
-  margin: 8px 0;
+  margin-top: 16px;
+  margin-bottom: -16px;
 }
 
 .Text :matches(.Text-huge) {
