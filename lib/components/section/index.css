@@ -88,6 +88,14 @@
 
 
 /**
+ * Modifier: No max width
+ */
+
+.Section--unconstrained .Section-body {
+  max-width: none;
+}
+
+/**
  * Modifier: Fill section body to full width
  */
 
