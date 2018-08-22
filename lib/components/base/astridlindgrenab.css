@@ -1,0 +1,57 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3625671, 2018-08-22T09:21:11-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: AvenirNextLTPro-Bold by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold/
+ *
+ * Webfont: AvenirNextLTPro-BoldIt by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold-italic/
+ *
+ * Webfont: AvenirNextLTPro-Demi by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-demi/
+ *
+ * Webfont: AvenirNextLTPro-DemiIt by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-demi-italic/
+ *
+ * Webfont: AvenirNextLTPro-MediumIt by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-medium-italic/
+ *
+ * Webfont: AvenirNextLTPro-Medium by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-medium/
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3625671
+ * Licensed pageviews: 500,000
+ * Webfonts copyright: Copyright &#x00A9; 2004 - 2017 Monotype GmbH. All rights reserved.
+ *
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3752c7");
+
+
+@font-face {font-family: 'AvenirNext';font-weight: bold;font-style: normal;src: url('webfonts/3752C7_0_0.eot');src: url('webfonts/3752C7_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_0_0.woff2') format('woff2'),url('webfonts/3752C7_0_0.woff') format('woff'),url('webfonts/3752C7_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirNext';font-weight: bold;font-style: italic;src: url('webfonts/3752C7_1_0.eot');src: url('webfonts/3752C7_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_1_0.woff2') format('woff2'),url('webfonts/3752C7_1_0.woff') format('woff'),url('webfonts/3752C7_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirNext';font-weight: 600;font-style: normal;src: url('webfonts/3752C7_2_0.eot');src: url('webfonts/3752C7_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_2_0.woff2') format('woff2'),url('webfonts/3752C7_2_0.woff') format('woff'),url('webfonts/3752C7_2_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirNext';font-weight: 600;font-style: italic;src: url('webfonts/3752C7_3_0.eot');src: url('webfonts/3752C7_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_3_0.woff2') format('woff2'),url('webfonts/3752C7_3_0.woff') format('woff'),url('webfonts/3752C7_3_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirNext';font-weight: normal;font-style: italic;src: url('webfonts/3752C7_4_0.eot');src: url('webfonts/3752C7_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_4_0.woff2') format('woff2'),url('webfonts/3752C7_4_0.woff') format('woff'),url('webfonts/3752C7_4_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirNext';font-weight: normal;font-style: normal;src: url('webfonts/3752C7_5_0.eot');src: url('webfonts/3752C7_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_5_0.woff2') format('woff2'),url('webfonts/3752C7_5_0.woff') format('woff'),url('webfonts/3752C7_5_0.ttf') format('truetype');}

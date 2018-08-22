@@ -1,3 +1,5 @@
+@import "../astridlindgrenab.css";
+
 @font-face {
   font-family: "Pippi";
   font-style: normal;
@@ -6,16 +8,8 @@
   font-display: block;
 }
 
-@font-face {
-  font-family: "Avenir";
-  font-style: normal;
-  font-weight: bold;
-  src: url("./avenir-next-regular.woff") format("woff");
-  font-display: block;
-}
-
 :root {
-  --font-pippi: 'Pippi', 'Avenir Next', 'Avenir', sans-serif;
-  --font-family-body: 'Avenir Next', 'Avenir', sans-serif;
-  --font-family-heading: 'Avenir Next', 'Avenir', sans-serif;
+  --font-pippi: 'Pippi', 'AvenirNext', 'Avenir Next', sans-serif;
+  --font-family-body: 'AvenirNext', 'Avenir Next', sans-serif;
+  --font-family-heading: 'AvenirNext', 'Avenir Next', sans-serif;
 }
