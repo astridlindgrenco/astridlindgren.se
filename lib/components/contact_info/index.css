@@ -1,0 +1,9 @@
+@import '../base';
+
+.contact_info_block {
+  margin: 25px 0px 0px 0px;
+  padding: 75px 10vw;
+
+  background: #ecece6;
+  color: #222;
+}

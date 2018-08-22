@@ -6,10 +6,12 @@
 @import "../components/header";
 @import "../components/section";
 @import "../components/card";
+@import "../components/contact_info";
 @import "../components/logo";
 @import "../components/searchbox";
 @import "../components/category";
 @import "../components/quote";
+@import "../components/footer";
 @import "../components/hero";
 @import "../components/subnavigation";
 @import "../components/linkblock";

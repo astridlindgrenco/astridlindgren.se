@@ -1,0 +1,44 @@
+@import '../base';
+
+footer {
+  width: 100vw;
+
+  background-color: #222;
+  color: #fafaf5;
+
+  font-weight: 400;
+  font-size: 18px;
+}
+.footer--logo {
+  display: block;
+  max-width: 285px;
+  margin: 0px auto;
+  padding: 62px 0px 0px 0px;
+  filter: invert(100%);
+}
+.footer--content {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+
+  padding: 62px 10vw 125px 10vw;
+  margin: 0px auto;
+}
+.footer--content--linksblock {
+  display: block;
+  height: 100%;
+  /*width: 100%;*/
+  margin: 0px 55px
+}
+.footer--content--linksblock--title { display: block; text-transform: uppercase }
+.footer--content--linksblock--link { display: block; text-transform: capitalize }
+
+.footer--copyright {
+  padding: 15px;
+
+  color: #222;
+  background: #fafaf5;
+
+  font-size: 14px;
+  text-align: center;
+}
