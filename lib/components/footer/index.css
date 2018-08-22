@@ -11,14 +11,14 @@ footer {
   font-weight: 400;
   font-size: 18px;
 }
-.footer--logo {
+.Footer-logo {
   display: block;
   max-width: 285px;
   margin: 0px auto;
   padding: 62px 0px 0px 0px;
   filter: invert(100%);
 }
-.footer--content {
+.Footer-content {
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -26,16 +26,16 @@ footer {
   padding: 62px 10vw 125px 10vw;
   margin: 0px auto;
 }
-.footer--content--linksblock {
+.Footer-content-linksblock {
   display: block;
   height: 100%;
   /*width: 100%;*/
   margin: 0px 55px
 }
-.footer--content--linksblock--title { display: block; text-transform: uppercase }
-.footer--content--linksblock--link { display: block; text-transform: capitalize }
+.Footer-content-linksblock-title { display: block; text-transform: uppercase }
+.Footer-content-linksblock-link { display: block; text-transform: capitalize }
 
-.footer--copyright {
+.Footer-copyright {
   padding: 15px;
 
   color: #222;
@@ -45,19 +45,19 @@ footer {
   text-align: center;
 }
 
-@media (--viewport-md-max) {
-  .footer--logo {
+@media (-viewport-md-max) {
+  .Footer-logo {
     margin: 0px calc(5vw + 50px);
     padding-bottom: 50px;
   }
-  .footer--content {
+  .Footer-content {
     display: block;
     padding: 5vw;
   }
-  .footer--content--linksblock {
+  .Footer-content-linksblock {
     padding-bottom: 25px;
   }
-  .footer--content--linksblock--title {
+  .Footer-content-linksblock-title {
     font-weight: 600;
   }
 }

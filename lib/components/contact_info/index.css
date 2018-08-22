@@ -1,6 +1,6 @@
 @import '../base';
 
-.contact_info_block {
+.ContactInfoBlock {
   overflow: hidden;
   max-width: 100vw;
 
@@ -11,12 +11,12 @@
   color: #222;
 }
 
-.contact_info_block--content {
+.ContactInfoBlock-content {
   display: flex;
   flex-flow: row;
   justify-content: center;
 }
-.contact_info_block--content h1 {
+.ContactInfoBlock-content h1 {
   display: block;
   width: 30%;
   min-width: 350px;
@@ -25,19 +25,19 @@
   font-size: 32px;
   line-height: 38px;
 }
-.contact_info_block--content--text {
+.ContactInfoBlock-content-text {
   width: 70%;
 }
 
-@media (--viewport-md-max) {
-  .contact_info_block {
+@media (-viewport-md-max) {
+  .ContactInfoBlock {
     padding: 100px 24px;
   }
-  .contact_info_block--content {
+  .ContactInfoBlock-content {
     display: block;
     padding: 5vw 0px;
   }
-  .contact_info_block--content h1 {
+  .ContactInfoBlock-content h1 {
     padding-bottom: 25px;
   }
 }
