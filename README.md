@@ -73,8 +73,8 @@ A few words from the coders of this website:
 - Target production environment is the Jelastic PAAS hosted by Elastx. Normally production get's updated within minutes whenever the git master branch is updated. Build and deploy is part of a Jelastic command pipe wich essentially runs:
   1. Stop node
   2. Pull from git
-  3. npm install
-  4. npm start
+  3. yarn
+  4. yarn start
 
 ## Special thanks
 
