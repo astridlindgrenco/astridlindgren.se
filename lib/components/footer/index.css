@@ -1,4 +1,5 @@
-@import '../base';
+@import '../base/index.css';
+@import '../base/props.css';
 
 footer {
   overflow: hidden;
@@ -45,7 +46,7 @@ footer {
   text-align: center;
 }
 
-@media (-viewport-md-max) {
+@media (max-width: 767px) {
   .Footer-logo {
     margin: 0px calc(5vw + 50px);
     padding-bottom: 50px;

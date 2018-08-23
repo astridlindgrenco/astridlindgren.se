@@ -29,7 +29,7 @@
   width: 70%;
 }
 
-@media (-viewport-md-max) {
+@media (max-width: 767px) {
   .ContactInfoBlock {
     padding: 100px 24px;
   }
