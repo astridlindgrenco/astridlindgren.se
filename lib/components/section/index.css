@@ -60,32 +60,54 @@
 }
 
 /**
+ * Element: Toggle button
+ * See expandable modifier
+ */
+
+.Section-toggle {
+  display: block;
+  overflow: visible;
+  white-space: nowrap;
+  width: 32px;
+  height: 32px;
+  line-height: 16px;
+  background: var(--color-black);
+  color: var(--color-black);
+  padding: 8px;
+  margin: calc(var(--baseline-px) * 8) auto;
+  border-radius: 50%;
+  transition: color 250ms ease;
+}
+  .Section-toggle::before {
+    content: '+';
+    display: inline-block;
+    width: 16px;
+    margin-right: 16px;
+    color: var(--color-white) !important;
+  }
+  .Section-toggle--isExpanded::before {
+    content: '—'
+  }
+  .Section-toggle:focus {
+    outline: none;
+  }
+
+.Section-toggle--hideLabel {
+  color: rgba(0,0,0,0);
+}
+  .Section-toggle--hideLabel:hover,
+  .Section-toggle--hideLabel.Section-toggle--isExpanded {
+    color: var(--color-black);
+  }
+
+
+/**
  * Modifier: If section should be full width
  */
 
 .Section--fullWidth {
   max-width: none;
 }
-
-/**
- * Modifier: If has (any) theme background
- * 1. Prevent stacked paddings
- */
-
-.Section--themed {
-
-}
-  .Section--themeBlack {
-    background: var(--background-black);
-    color: var(--color-text-on-dark);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
-  }
-  .Section--themeMint + [class*=Section--theme] {
-    padding-top: 0; /* 1 */
-  }
-
 
 /**
  * Modifier: No max width
@@ -156,3 +178,30 @@
 .Section--marginVerSmall:not(.Section--hasBgColor) + .Section--marginVerSmall:not(.Section--hasBgColor) {
   padding-top: 0;
 }
+
+/**
+ * Modifier: Expanded/collapsed
+ * Controlled in JS container
+ */
+
+.Section--isExpandableReady {
+  overflow: auto;
+  transition: padding 150ms var(--ease-out),
+              background-color 150ms var(--ease-out);
+}
+.Section--isExpandableReady .Section-body {
+  transition: opacity 150ms var(--ease-out),
+              height 350ms 150ms var(--ease-out);
+}
+.Section--isExpanded {
+}
+
+.Section--isCollapsed {
+  background-color: rgba(255,255,255,0) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+  .Section--isCollapsed .Section-body {
+    height: 0 !important;
+    overflow: hidden !important;
+  }
