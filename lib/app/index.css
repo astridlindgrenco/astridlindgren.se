@@ -1,6 +1,7 @@
 @import "normalize.css";
 
 @import "../components/base";
+@import "../components/base/error.css";
 @import "../components/grid";
 @import "../components/text";
 @import "../components/header";

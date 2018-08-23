@@ -1,0 +1,11 @@
+.ErrorSection {
+  min-height: 25vh;
+}
+.ErrorSection h1 {
+  padding: 45px 0px;
+  font-size: 5vh;
+  line-height: 100%;
+}
+.ErrorSection-content {
+
+}

@@ -1,3 +1,5 @@
+'use strict'
+
 var Koa = require('koa')
 var body = require('koa-body')
 var serve = require('koa-static')
