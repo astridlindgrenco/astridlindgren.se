@@ -66,11 +66,40 @@
 
 .Section-toggle {
   display: block;
-  background: black;
+  overflow: visible;
+  white-space: nowrap;
+  width: 32px;
+  height: 32px;
+  line-height: 16px;
+  background: var(--color-black);
+  color: var(--color-black);
   padding: 8px;
-  color: #fff;
-  margin: calc(var(--baseline-px) * 2) auto;
+  margin: calc(var(--baseline-px) * 8) auto;
+  border-radius: 50%;
+  transition: color 250ms ease;
 }
+  .Section-toggle::before {
+    content: '+';
+    display: inline-block;
+    width: 16px;
+    margin-right: 16px;
+    color: var(--color-white) !important;
+  }
+  .Section-toggle--isExpanded::before {
+    content: '—'
+  }
+  .Section-toggle:focus {
+    outline: none;
+  }
+
+.Section-toggle--hideLabel {
+  color: rgba(0,0,0,0);
+}
+  .Section-toggle--hideLabel:hover,
+  .Section-toggle--hideLabel.Section-toggle--isExpanded {
+    color: var(--color-black);
+  }
+
 
 /**
  * Modifier: If section should be full width
@@ -79,26 +108,6 @@
 .Section--fullWidth {
   max-width: none;
 }
-
-/**
- * Modifier: If has (any) theme background
- * 1. Prevent stacked paddings
- */
-
-.Section--themed {
-
-}
-  .Section--themeBlack {
-    background: var(--background-black);
-    color: var(--color-text-on-dark);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
-  }
-  .Section--themeMint + [class*=Section--theme] {
-    padding-top: 0; /* 1 */
-  }
-
 
 /**
  * Modifier: No max width
@@ -177,12 +186,12 @@
 
 .Section--isExpandableReady {
   overflow: auto;
-  transition: padding 150ms ease-out,
-              background-color 150ms ease-out;
+  transition: padding 150ms var(--ease-out),
+              background-color 150ms var(--ease-out);
 }
 .Section--isExpandableReady .Section-body {
-  transition: opacity 150ms ease-out,
-              height 250ms 150ms ease-out;
+  transition: opacity 150ms var(--ease-out),
+              height 350ms 150ms var(--ease-out);
 }
 .Section--isExpanded {
 }
