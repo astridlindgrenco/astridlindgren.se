@@ -21,7 +21,7 @@
 }
 
 .SubNav-link--active, .SubNav-link:hover {
-  text-shadow: -0.06ex 0 white, 0.06ex 0 white;
+  font-weight: bold;
   color: white;
   text-decoration: underline;
 }
