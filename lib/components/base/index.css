@@ -45,7 +45,6 @@
   width: 100%;
   overflow-x: hidden;
   font-family: var(--font-family-body);
-  cursor: default;
   background: var(--color-document);
   color: var(--color-text);
   font-size: var(--small-font-size);

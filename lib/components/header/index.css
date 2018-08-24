@@ -49,8 +49,8 @@
   .Header-link {
     padding: var(--baseline-px);
   }
-  .Header-link--active {
-    font-weight: 700;
+  .Header-link--active, .Header-link:hover {
+    text-shadow: -0.06ex 0 black, 0.06ex 0 black;
   }
 
     /**

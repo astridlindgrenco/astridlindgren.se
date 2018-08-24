@@ -20,8 +20,8 @@
   padding: 0 0.5em;
 }
 
-.SubNav-link--active {
-  font-weight: 700;
+.SubNav-link--active, .SubNav-link:hover {
+  text-shadow: -0.06ex 0 white, 0.06ex 0 white;
   color: white;
   text-decoration: underline;
 }
