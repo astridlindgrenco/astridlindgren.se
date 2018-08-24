@@ -1,0 +1,19 @@
+/* @define Booklist */
+
+@import '../base';
+
+.Booklist {
+
+}
+
+.Booklist-list {
+
+}
+
+.Booklist-listBook {
+
+}
+
+.Booklist-cover--listview {
+  width: 200px;
+}

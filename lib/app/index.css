@@ -18,6 +18,7 @@
 @import "../components/linkblock";
 @import "../components/display";
 @import "../components/mynewsdesk";
+@import "../components/booklist";
 
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";
