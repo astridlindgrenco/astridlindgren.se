@@ -8,6 +8,7 @@ var helmet = require('koa-helmet')
 var noTrailingSlash = require('koa-no-trailing-slash')
 // var app = require('./lib/app')
 var router = require('./lib/router')
+var render = require('./lib/render')
 var errors = require('./lib/errors')
 var assets = require('./lib/middleware/assets')
 var stores = require('./lib/middleware/stores')
@@ -114,8 +115,10 @@ if (process.env.NODE_ENV !== 'development') {
   server.use(compress())
 }
 
+server.use(render)
 server.use(errors)
 server.use(router)
+
 /**
  * Lift off
  */
