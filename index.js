@@ -17,18 +17,6 @@ var navigation = require('./lib/middleware/navigation')
 
 var server = new Koa()
 
-process.env.AL_URL = 'http://localhost:3000'
-process.env.PORT = 3000
-process.env.AL_NAME = 'Astrid Lindgren Company'
-process.env.AL_URL = 'http://localhost:3000'
-process.env.AL_LANG = 'sv'
-process.env.PRISMIC_API = 'https://astridlindgren.cdn.prismic.io/api/v2'
-process.env.PRISMIC_ACCESS_TOKEN = 'MC5XMmhoN3lzQUFIWmFZT2df.77-977-977-9CCV2PB3vv70SZe-_vRrvv73vv71877-977-9T2Tvv70Xeu-_vSzvv71R77-9fO-_ve-_vTI'
-process.env.PRISMIC_CLIENT_ID = 'W2hh7ysAAHZaYOg-'
-process.env.PRISMIC_CLIENT_SECRET = '0ed358c12a1eba8c5d7adb040a76a95c'
-process.env.PRISMIC_HOOK = '/prismic-hook'
-process.env.PRISMIC_PREVIEW = '/prismic-preview'
-
 /**
  * Compile and serve assets on demand during development
  */
