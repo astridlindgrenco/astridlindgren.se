@@ -1,8 +1,8 @@
-/* @define MyNewsdesk */
+/* @define Newsdesk */
 
 @import '../base';
 
-.MyNewsdesk-body {
+.Newsdesk-body {
   margin: 0 auto;
   height: auto;
 }

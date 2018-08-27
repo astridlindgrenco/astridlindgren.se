@@ -17,7 +17,7 @@
 @import "../components/subnavigation";
 @import "../components/linkblock";
 @import "../components/display";
-@import "../components/mynewsdesk";
+@import "../components/newsdesk";
 @import "../components/booklist";
 
 @import "suitcss-utils-flex";
