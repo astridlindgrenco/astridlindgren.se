@@ -9,3 +9,7 @@
 .ErrorSection-content {
 
 }
+.ErrorSection-content-wrapper {
+  display: flex;
+  justify-content: left;
+}
