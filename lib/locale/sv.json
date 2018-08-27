@@ -9,5 +9,16 @@
   "left-quote": "&rdquo;",
   "right-quote": "&rdquo;",
   "booklist": "boklista",
-  "newsdesk": "nyhetsrummet"
+  "newsdesk": "nyhetsrummet",
+  "sort by": "Sortera",
+  "by author year": "Efter årtal",
+  "by book title": "Efter titel",
+  "ascending text": "Från A till Ö",
+  "ascending number": "Stigande",
+  "descending text": "Från Ö till A",
+  "descending number": "Fallande",
+  "Author": "Författare",
+  "Illustrator": "Illustratör",
+  "Photographer": "Fotograf",
+  "": ""
 }

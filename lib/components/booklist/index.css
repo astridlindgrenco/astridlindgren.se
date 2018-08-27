@@ -17,3 +17,9 @@
 .Booklist-cover--listview {
   width: 200px;
 }
+
+.Booklist-sortAndFilter {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em 0 1em 0;
+}
