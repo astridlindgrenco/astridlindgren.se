@@ -1,8 +1,13 @@
 {
-  "Home": "Home",
-  "Language": "Language",
+  "en": "English",
+  "Home": "To start page",
+  "Language": "Languages",
   "Search": "Search",
-  "Searchbox": "Searchbox",
+  "Searchbox": "Search Years, Books, or Characters",
   "Show more": "Show more",
-  "Show less": "Show less"
+  "Show less": "Show less",
+  "left-quote": "&lsquo;",
+  "right-quote": "&rsquo;",
+  "booklist": "booklist",
+  "newsdesk": "newsdesk"
 }
