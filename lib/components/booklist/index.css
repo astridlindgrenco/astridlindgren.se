@@ -23,3 +23,7 @@
   justify-content: center;
   margin: 0.5em 0 1em 0;
 }
+
+.Booklist-sortAndFilter > * {
+  margin: 0 0.5em
+}
