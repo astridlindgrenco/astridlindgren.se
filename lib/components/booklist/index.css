@@ -18,6 +18,11 @@
   width: 200px;
 }
 
+.Booklist-cover--gridview {
+  width: 100%;
+  padding: 1em 0;
+}
+
 .Booklist-sortAndFilter {
   display: flex;
   justify-content: center;
