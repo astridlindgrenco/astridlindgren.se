@@ -124,5 +124,20 @@ server.use(router)
  */
 
 server.listen(process.env.PORT, () => {
-  console.info(`🚀  Server listening at localhost:${process.env.PORT}`)
+  // Add time to console.log
+  // FIXME: logging framework?
+  if (console && console.log) {
+    let date = new Date()
+
+    var old = console.log
+    console.log = function () {
+      Array.prototype.unshift.call(arguments, '[' + date.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit'
+      }) + ']')
+      old.apply(this, arguments)
+    }
+  }
+
+  console.log(`[Server] 🚀 Listening on localhost:${process.env.PORT}`)
 })
