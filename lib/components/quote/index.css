@@ -90,3 +90,39 @@
     font-size: 24px;
   }
 }
+
+
+/* Quote Page */
+.QuotePage-group .Quote:last-child {
+  margin-bottom: 4em;
+}
+
+.QuotePage-group-title {
+  margin-bottom: 1em;
+}
+.QuotePage-group-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+
+}
+.QuotePage-group-title div {
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.QuotePage .Quote {
+  width: 100% !important;
+
+  text-align: left;
+}
+.QuotePage .Quote-body {
+  font-size: 24px;
+}
+.QuotePage .Quote-cite {
+  margin: 0px 0px 2em 0px;
+
+  font-size: 18px;
+  text-align: left;
+}

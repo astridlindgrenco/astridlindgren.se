@@ -9,7 +9,7 @@
   "left-quote": "&rdquo;",
   "right-quote": "&rdquo;",
   "booklist": "boklista",
-  "newsdesk": "pressnyheter",
+  "newsdesk": "nyhetsrummet",
   "sort by": "Sortera",
   "by author year": "Efter årtal",
   "by book title": "Efter titel",
@@ -20,5 +20,6 @@
   "Author": "Författare",
   "Illustrator": "Illustratör",
   "Photographer": "Fotograf",
+  "quotes": "citat",
   "": ""
 }
