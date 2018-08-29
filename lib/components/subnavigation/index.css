@@ -32,9 +32,10 @@
     position: relative;
     overflow: hidden;
 
-    padding: 1.5em;
+    padding: 0px 1.5em;
 
-    line-height: 22px;
+    line-height: 3em;
+    height: 3em;
   }
   .SubNav-link {
     padding: 0px 0px 0px 1.5em;
@@ -45,8 +46,8 @@
 
   .SubNav-container {
     position: absolute;
+    height: 100%;
 
-    box-sizing: content-box;
     max-width: 100%;
     overflow-x: scroll;
 

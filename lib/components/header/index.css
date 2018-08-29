@@ -175,7 +175,8 @@
     width: 100%;
 
     opacity: 0;
-    transition: all 1s, opacity 250ms;
+    visibility: hidden;
+    transition: all 1s, opacity 250ms, visibility 1s;
   }
   .Header-navList,
   .Header-aside {
@@ -225,12 +226,13 @@
 
   .Header--withOpenNav .Header-nav {
     opacity: 1;
+    visibility: visible;
 
     height: auto;
     max-height: 1000px;
     margin-top: calc(var(--baseline-px) * 3);
   }
-  .Header-navItem {
+  .Header--withOpenNav .Header-navItem {
     display: block;
     width: 100%;
     margin: 0 !important;
