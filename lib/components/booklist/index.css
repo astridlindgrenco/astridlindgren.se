@@ -55,8 +55,56 @@
 .Booklist-sortAndFilter {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0.5em 0 1em 0;
 }
 .Booklist-sortAndFilter > * {
   margin: 0 0.5em
+}
+
+
+.Booklist-toggle > * {
+  margin: 0 0 1.5rem;
+  box-sizing: border-box;
+  font-size: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.Booklist-toggle input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+.Booklist-toggle input + label {
+  margin: -5px;
+  padding: .75rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #DDD;
+  background-color: #FFF;
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transition: border-color .15s ease-out, color .25s ease-out, background-color .15s ease-out, box-shadow .15s ease-out;
+}
+.Booklist-toggle input + label:first-of-type {
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+}
+.Booklist-toggle input:checked + label {
+  background-color: #4B9DEA;
+  color: #FFF;
+  box-shadow: 0 0 10px rgba(102, 179, 251, 0.5);
+  border-color: #4B9DEA;
+  z-index: 1;
+}
+.Booklist-toggle input + label:last-of-type {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
 }
