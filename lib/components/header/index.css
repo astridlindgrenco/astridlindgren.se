@@ -169,7 +169,7 @@
   }
 
   .Header-nav {
-    z-index: -1;
+    z-index: 1;
     display: block;
     max-height: 0px;
     width: 100%;
