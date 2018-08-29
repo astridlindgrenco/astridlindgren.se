@@ -18,10 +18,50 @@
 
 .SubNav-link {
   padding: 0 0.5em;
+  transition: 250ms;
 }
 
 .SubNav-link--active, .SubNav-link:hover {
   font-weight: bold;
   color: white;
   text-decoration: underline;
+}
+
+@media (--viewport-md-max) {
+  .SubNav {
+    position: relative;
+    overflow: hidden;
+
+    padding: 0px 1.5em;
+
+    line-height: 3em;
+    height: 3em;
+  }
+  .SubNav-link {
+    padding: 0px 0px 0px 1.5em;
+  }
+  .SubNav-link:hover {
+    font-weight: normal;
+  }
+
+  .SubNav-container {
+    position: absolute;
+    height: 100%;
+
+    max-width: 100%;
+    overflow-x: scroll;
+
+    animation: slideIn 0.75s forwards;
+    animation-delay: 0s;
+  }
+  .SubNav-container .SubNav-link:last-child {
+    margin-right: 2em;
+  }
+}
+
+@keyframes slideIn {
+  0% { left: 110vw; }
+  /*65% { left: -10%; max-width: 110%; }*/
+  80% { left: -10px; max-width: 105%; }
+  100% { left: 0px; max-width: 100%; }
 }

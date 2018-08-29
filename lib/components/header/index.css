@@ -169,7 +169,14 @@
   }
 
   .Header-nav {
-    display: none;
+    z-index: 1;
+    display: block;
+    max-height: 0px;
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s, opacity 250ms, visibility 1s;
   }
   .Header-navList,
   .Header-aside {
@@ -218,8 +225,11 @@
   }
 
   .Header--withOpenNav .Header-nav {
-    display: block;
-    width: 100%;
+    opacity: 1;
+    visibility: visible;
+
+    height: auto;
+    max-height: 1000px;
     margin-top: calc(var(--baseline-px) * 3);
   }
   .Header--withOpenNav .Header-navItem {
@@ -227,16 +237,16 @@
     width: 100%;
     margin: 0 !important;
   }
-  .Header--withOpenNav .Header-link {
+  .Header-link {
     display: block;
     border-top: 1px solid var(--color-gray-light);
     padding: var(--baseline-px) 0 var(--baseline-px) 2px;
   }
-    .Header--withOpenNav .Header-navList--secondary {
+  .Header-navList--secondary {
       border-top: 1px solid rgba(0,0,0,0.1);
       padding-top: var(--baseline-px);
     }
-    .Header--withOpenNav .Header-navList--secondary .Header-link {
+  .Header-navList--secondary .Header-link {
       border: 0;
       padding: var(--baseline-px) 0;
     }
