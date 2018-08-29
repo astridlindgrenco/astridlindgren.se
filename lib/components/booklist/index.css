@@ -21,7 +21,7 @@
 
 .Booklist-cover--gridview {
   width: 100%;
-  padding: 1em 0;
+  padding: 0.8em 0;
 }
 
 .Booklist-sortAndFilter {
@@ -32,4 +32,16 @@
 
 .Booklist-sortAndFilter > * {
   margin: 0 0.5em
+}
+
+@media (--viewport-md-max) {
+  .Booklist-sortAndFilter {
+    display: block;
+    margin: 1em 0px;
+  }
+
+  .Booklist-sortAndFilter > * {
+    display: block;
+    margin: 0px 0px 0.5em 0px
+  }
 }
