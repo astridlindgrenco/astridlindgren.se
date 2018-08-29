@@ -67,6 +67,7 @@
     "suitcss-utils-flex": "^2.0.1",
     "suitcss-utils-size": "^2.0.1",
     "suitcss-utils-text": "^1.0.0",
+    "sync-request": "^6.0.0",
     "uglify-js": "^3.4.7",
     "uglifyify": "^5.0.1",
     "uglifyjs": "^2.4.11",
