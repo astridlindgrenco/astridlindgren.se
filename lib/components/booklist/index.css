@@ -18,18 +18,45 @@
   width: 100%;
   margin: 0 1em 1em 0;
 }
+.Booklist-title--listview {
+  font-size: 24px;
+}
+.Booklist-authors--listview {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Booklist-authors--listview p {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+.Booklist-authors--listview p:first-child {
+  margin-right: 0.25em;
+}
+.Booklist-authorYear--listview p {
+  margin-bottom: 0.25em;
+}
+
 
 .Booklist-cover--gridview {
   width: 100%;
-  padding: 1em 0;
+  padding-top: 1em;
 }
+.Booklist-title--gridview {
+  font-size: 16px;
+}
+.Booklist-authors--gridview {
+  font-size: 82%;
+}
+.Booklist-authorYear--gridview {
+  font-size: 82%;
+}
+
 
 .Booklist-sortAndFilter {
   display: flex;
   justify-content: center;
   margin: 0.5em 0 1em 0;
 }
-
 .Booklist-sortAndFilter > * {
   margin: 0 0.5em
 }
