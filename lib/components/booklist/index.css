@@ -42,7 +42,7 @@
   padding-top: 1em;
 }
 .Booklist-title--gridview {
-  font-size: 16px;
+  font-size: 24px;
 }
 .Booklist-authors--gridview {
   font-size: 82%;
@@ -56,21 +56,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.5em 0 1em 0;
+  margin: 2em 0;
+  flex-wrap: wrap;
 }
 .Booklist-sortAndFilter > * {
-  margin: 0 0.5em
+  margin: 0 0.5em;
 }
 
 
-.Booklist-toggle > * {
-  margin: 0 0 1.5rem;
-  box-sizing: border-box;
-  font-size: 0;
+.Booklist-toggleGroup {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.Booklist-toggleGroup > * {
+  margin: 0.5em;
 }
 .Booklist-toggle input {
   width: 0;
@@ -80,12 +81,12 @@
 }
 .Booklist-toggle input + label {
   margin: -5px;
-  padding: .75rem 2rem;
+  padding: .5rem 1.5rem;
   box-sizing: border-box;
   position: relative;
   display: inline-block;
   border: solid 1px #DDD;
-  background-color: #FFF;
+  background-color: white;
   font-size: 1rem;
   line-height: 140%;
   font-weight: 600;
@@ -98,10 +99,10 @@
   border-right: none;
 }
 .Booklist-toggle input:checked + label {
-  background-color: #4B9DEA;
-  color: #FFF;
-  box-shadow: 0 0 10px rgba(102, 179, 251, 0.5);
-  border-color: #4B9DEA;
+  background-color: var(--color-dark-blue);
+  color: var(--color-warm-gray);
+  box-shadow: 0 0 10px var(--black);
+  border-color: var(--color-dark-blue);
   z-index: 1;
 }
 .Booklist-toggle input + label:last-of-type {
