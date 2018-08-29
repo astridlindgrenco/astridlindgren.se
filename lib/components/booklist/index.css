@@ -18,20 +18,96 @@
   width: 100%;
   margin: 0 1em 1em 0;
 }
+.Booklist-title--listview {
+  font-size: 24px;
+}
+.Booklist-authors--listview {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Booklist-authors--listview p {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+.Booklist-authors--listview p:first-child {
+  margin-right: 0.25em;
+}
+.Booklist-authorYear--listview p {
+  margin-bottom: 0.25em;
+}
+
 
 .Booklist-cover--gridview {
   width: 100%;
   padding: 0.8em 0;
 }
+.Booklist-title--gridview {
+  font-size: 24px;
+}
+.Booklist-authors--gridview {
+  font-size: 82%;
+}
+.Booklist-authorYear--gridview {
+  font-size: 82%;
+}
+
 
 .Booklist-sortAndFilter {
   display: flex;
   justify-content: center;
-  margin: 0.5em 0 1em 0;
+  align-items: center;
+  margin: 2em 0;
+  flex-wrap: wrap;
+}
+.Booklist-sortAndFilter > * {
+  margin: 0 0.5em;
 }
 
-.Booklist-sortAndFilter > * {
-  margin: 0 0.5em
+
+.Booklist-toggleGroup {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.Booklist-toggleGroup > * {
+  margin: 0.5em;
+}
+.Booklist-toggle input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+.Booklist-toggle input + label {
+  margin: -5px;
+  padding: .5rem 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #DDD;
+  background-color: white;
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transition: border-color .15s ease-out, color .25s ease-out, background-color .15s ease-out, box-shadow .15s ease-out;
+}
+.Booklist-toggle input + label:first-of-type {
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+}
+.Booklist-toggle input:checked + label {
+  background-color: var(--color-dark-blue);
+  color: var(--color-warm-gray);
+  box-shadow: 0 0 10px var(--black);
+  border-color: var(--color-dark-blue);
+  z-index: 1;
+}
+.Booklist-toggle input + label:last-of-type {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
 }
 
 @media (--viewport-md-max) {
