@@ -247,7 +247,7 @@ ul.Text--links a::after {
 
 .Text :matches(h1, .Text-h1) {
   font-size: 48px;
-  line-height: 32px;
+  line-height: 52px;
   text-align: center;
 }
 
