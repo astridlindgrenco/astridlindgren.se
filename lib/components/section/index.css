@@ -195,6 +195,7 @@
               height 350ms 150ms var(--ease-out);
 }
 .Section--isExpanded {
+  max-width: 100%;
 }
 
 .Section--isCollapsed {
