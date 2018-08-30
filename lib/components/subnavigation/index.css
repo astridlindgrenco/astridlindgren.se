@@ -121,6 +121,6 @@
   font-weight: normal;
   font-size: 24px;
 }
-.SubNav-CharacterMenu .SubNav-link--active {
+.SubNav-CharacterMenu .SubNav-link--active, .SubNav-CharacterMenu .SubNav-link:hover {
   font-weight: bold;
 }
