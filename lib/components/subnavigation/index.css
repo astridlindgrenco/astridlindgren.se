@@ -80,7 +80,8 @@
 .SubNav-CharacterMenu {
   position: absolute;
   top: calc(100% - 18vh); left: 0px; right: 0px;
-  width: 65vw;
+  width: 100%;
+  max-width: 1200px;
   height: 18vh;
   margin: 0 auto;
   padding: 0px 5vh;
@@ -91,7 +92,8 @@
 .SubNav-CharacterMenu-background {
   position: absolute;
   top: calc(calc(100% - 18vh) + 15px); left: 0px; right: -25px;
-  width: 65vw;
+  width: 100%;
+  max-width: 1200px;
   height: 18vh;
   margin: 0 auto;
 
