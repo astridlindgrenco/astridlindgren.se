@@ -27,7 +27,7 @@
   text-decoration: underline;
 }
 
-@media (--viewport-md-max) {
+@media (--viewport-lg-max) {
   .SubNav {
     position: relative;
     overflow: hidden;
@@ -46,14 +46,18 @@
 
   .SubNav-container {
     position: absolute;
-    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 
+    height: 100%;
     max-width: 100%;
-    overflow-x: scroll;
 
     animation: slideIn 0.75s forwards;
     animation-delay: 0s;
+    -webkit-overflow-scrolling: touch;
   }
+  .SubNav-container .SubNav-link { flex: 0 0 auto; }
   .SubNav-container .SubNav-link:last-child {
     margin-right: 2em;
   }
@@ -64,4 +68,47 @@
   /*65% { left: -10%; max-width: 110%; }*/
   80% { left: -10px; max-width: 105%; }
   100% { left: 0px; max-width: 100%; }
+}
+
+
+/* Character menu
+========================================== */
+.SubNav-CharacterMenu-Wrapper {
+  padding-bottom: 10vh;
+}
+
+.SubNav-CharacterMenu {
+  position: absolute;
+  top: calc(100% - 18vh); left: 0px; right: 0px;
+  width: 50vw;
+  height: 18vh;
+  margin: 0 auto;
+  padding: 0px 5vh;
+
+  color: #fff;
+  background-color: purple;
+}
+
+.SubNav-CharacterMenu-Title {
+  padding: 2vh 0px;
+  margin-top: 2vh;
+
+  line-height: 32px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.SubNav-CharacterMenu .SubNav-container {
+  display: flex;
+  justify-content: center;
+}
+.SubNav-CharacterMenu .SubNav-link {
+  line-height: 42px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 24px;
+}
+.SubNav-CharacterMenu .SubNav-link--active {
+  font-weight: bold;
 }
