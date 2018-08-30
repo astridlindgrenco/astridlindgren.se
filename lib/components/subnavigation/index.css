@@ -80,13 +80,23 @@
 .SubNav-CharacterMenu {
   position: absolute;
   top: calc(100% - 18vh); left: 0px; right: 0px;
-  width: 50vw;
+  width: 65vw;
   height: 18vh;
   margin: 0 auto;
   padding: 0px 5vh;
 
   color: #fff;
   background-color: purple;
+}
+.SubNav-CharacterMenu-background {
+  position: absolute;
+  top: calc(calc(100% - 18vh) + 15px); left: 0px; right: -25px;
+  width: 65vw;
+  height: 18vh;
+  margin: 0 auto;
+
+  background-color: purple;
+  filter: brightness(125%);
 }
 
 .SubNav-CharacterMenu-Title {
