@@ -81,7 +81,7 @@
   position: absolute;
   top: calc(100% - 18vh); left: 0px; right: 0px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1250px;
   height: 18vh;
   margin: 0 auto;
   padding: 0px 5vh;
@@ -93,7 +93,7 @@
   position: absolute;
   top: calc(calc(100% - 18vh) + 15px); left: 0px; right: -25px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1250px;
   height: 18vh;
   margin: 0 auto;
 
@@ -105,7 +105,7 @@
   padding: 2vh 0px;
   margin-top: 2vh;
 
-  line-height: 32px;
+  line-height: 28px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
