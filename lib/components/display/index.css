@@ -25,6 +25,25 @@
   margin-top: calc(var(--baseline-px) * 3);
 }
 
+.Display-title h2 {
+  text-transform: uppercase;
+  font-size: 82%;
+}
+
+.Display-booktitle {
+  line-height: 50%;
+}
+
+.Display-krumelur {
+  width: 1em;
+  margin: 0.5em;
+}
+
+.Display-knallpuff {
+  width: 10em;
+  margin: 0.5em;
+}
+
 /**
  * Modifier: Crop cover to be round
  */
