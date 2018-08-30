@@ -43,7 +43,6 @@
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
   font-family: var(--font-family-body);
   background: var(--color-document);
   color: var(--color-text);
@@ -70,6 +69,7 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: none;
 }
 
 /**
