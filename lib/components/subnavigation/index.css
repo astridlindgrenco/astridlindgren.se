@@ -80,7 +80,8 @@
 .SubNav-CharacterMenu {
   position: absolute;
   top: calc(100% - 18vh); left: 0px; right: 0px;
-  width: 50vw;
+  width: 100%;
+  max-width: 1250px;
   height: 18vh;
   margin: 0 auto;
   padding: 0px 5vh;
@@ -88,12 +89,23 @@
   color: #fff;
   background-color: purple;
 }
+.SubNav-CharacterMenu-background {
+  position: absolute;
+  top: calc(calc(100% - 18vh) + 15px); left: 0px; right: -25px;
+  width: 100%;
+  max-width: 1250px;
+  height: 18vh;
+  margin: 0 auto;
+
+  background-color: purple;
+  filter: brightness(125%);
+}
 
 .SubNav-CharacterMenu-Title {
   padding: 2vh 0px;
   margin-top: 2vh;
 
-  line-height: 32px;
+  line-height: 28px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
@@ -109,6 +121,6 @@
   font-weight: normal;
   font-size: 24px;
 }
-.SubNav-CharacterMenu .SubNav-link--active {
+.SubNav-CharacterMenu .SubNav-link--active, .SubNav-CharacterMenu .SubNav-link:hover {
   font-weight: bold;
 }
