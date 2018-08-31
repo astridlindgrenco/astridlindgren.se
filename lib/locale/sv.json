@@ -11,6 +11,7 @@
   "booklist": "boklista",
   "newsdesk": "nyhetsrummet",
   "sort by": "Sortera",
+  "view by": "Visa som",
   "by author year": "Efter årtal",
   "by book title": "Efter titel",
   "ascending text": "Från A till Ö",
@@ -19,7 +20,9 @@
   "descending number": "Fallande",
   "Author": "Författare",
   "Illustrator": "Illustratör",
-  "Photographer": "Fotograf",
   "quotes": "citat",
-  "": ""
+  "Cover of a book": "Ett bokomslag",
+  "Photograpers": "Fotografi",
+  "by": "av",
+  "book": "bok"
 }
