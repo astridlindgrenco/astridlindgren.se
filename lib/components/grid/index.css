@@ -35,6 +35,7 @@
   flex-flow: row;
   overflow: auto;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .Grid--shelf > .Grid-cell {
   flex: 10 0 auto;

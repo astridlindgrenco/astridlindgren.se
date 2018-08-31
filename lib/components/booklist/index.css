@@ -24,6 +24,7 @@
 .Booklist-authors--listview {
   display: flex;
   flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
 }
 .Booklist-authors--listview p {
   margin-top: 0.25em;
@@ -58,6 +59,7 @@
   align-items: end;
   margin: 2em 0px;
   flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
 }
 .Booklist-sortAndFilter > * {
   margin: 0px 1em 0px 0px;
