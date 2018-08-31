@@ -207,3 +207,10 @@
     height: 0 !important;
     overflow: hidden !important;
   }
+
+
+.Section--noPadding {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  background: red;
+}

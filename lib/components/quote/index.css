@@ -93,6 +93,34 @@
 
 
 /* Quote Page */
+.QuotePage-filter {
+  height: calc(2em + 22px);
+
+  line-height: 22px;
+}
+.QuotePage-filter input {
+  width: 12vw;
+  padding: 0px 0px 2px 0px;
+  margin: 0px;
+
+  color: #666;
+  border: none;
+  background: none;
+
+  border-bottom: 1px solid;
+
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+.QuotePage-filter input::placeholder {
+  color: #666;
+
+  text-transform: uppercase;
+}
+.QuotePage-filter * {
+  width: 12vw;
+}
+
 .QuotePage-group .Quote:last-child {
   margin-bottom: 4em;
 }

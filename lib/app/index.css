@@ -20,6 +20,8 @@
 @import "../components/newsdesk";
 @import "../components/booklist";
 
+@import "../components/select";
+
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";
 @import "suitcss-utils-text";
