@@ -64,11 +64,12 @@
  * Element: Call-To-Action
  */
 
-.Card-moreLink {
+a.Card-moreLink {
   display: inline-block;
   text-decoration: underline;
   margin-top: calc(var(--baseline-px) * 6);
   font-weight: 600;
+  cursor: pointer !important;
 }
 
 @media (--viewport-lg) {
