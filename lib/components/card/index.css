@@ -53,6 +53,9 @@
   flex-basis: 0%;
   margin-top: var(--baseline-px);
 }
+.Card-body .Text {
+  align-self: start;
+}
 @media (--viewport-sm) {
   .Card-body {
     margin-top: calc(var(--baseline-px) * 2);
