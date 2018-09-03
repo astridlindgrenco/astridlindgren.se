@@ -37,7 +37,7 @@
   font-family: "Bullerbyn";
   font-style: normal;
   font-weight: bold;
-  src: url("./BellMTStd-Bold.otf") format("opentype");
+  src: url("") format("opentype");
   font-display: block;
 }
 
@@ -54,7 +54,7 @@
   font-family: "Karlsson";
   font-style: normal;
   font-weight: bold;
-  src: url("./pippilangstrump-webfont.woff") format("woff");
+  src: url("") format("woff");
   font-display: block;
 }
 
@@ -71,7 +71,7 @@
   --font-family-heading: 'AvenirNext', 'Avenir Next', sans-serif;
 }
 
-.font-pippi { font-family:  var(--font-pippi) !important; text-transform: lowercase /* Fix font uppercase problem */; }
+.font-pippi { font-family:  var(--font-pippi) !important; text-transform: lowercase !important /* Fix font uppercase problem */; }
 .font-emil { font-family:  var(--font-emil) !important; }
 .font-ronja { font-family:  var(--font-ronja) !important; }
 .font-broderna { font-family:  var(--font-broderna) !important; }
