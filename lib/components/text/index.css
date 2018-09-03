@@ -42,6 +42,12 @@
   margin: 0 auto;
   text-align: center;
 }
+  .Text--center :matches(ul, ol) {
+    text-align: left;
+    max-width: 450px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 
 @media (--viewport-lg) {
   .Text--indented {
@@ -129,10 +135,13 @@
  * 1. Prismic wrapps images in paragraphs with this class
  */
 
-.Text :matches(p, ul, ol) {
+.Text p {
   margin: calc(var(--baseline-px) * 3) 0;
 }
-.Text--spaced :matches(p, ul, ol) {
+.Text :matches(ul, ol) {
+  margin: calc(var(--baseline-px) * 5) 0;
+}
+.Text--spaced p {
   margin: calc(var(--baseline-px) * 5) 0;
 }
 
@@ -198,35 +207,18 @@
  * Link list
  */
 
-ul.Text--links li {
+ul.Text-linkList li {
   padding: 0 0 8px 0;
 }
 
-ul.Text--links li::before {
+ul.Text-linkList li::before {
   content: none;
 }
 
-.Text ul.Text--links a {
+.Text ul.Text-linkList a {
   padding: 0;
   margin: 0;
   display: inline-block;
-}
-
-ul.Text--links a::after {
-  content: attr(href);
-  display: block;
-  overflow: hidden;
-  max-width: 100%;
-  color: var(--color-text-light);
-  font-size: 14px;
-  font-weight: normal;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  transition: color 50ms var(--ease-out);
-}
-
-.Text ul.Text--links a:hover::after {
-  color: var(--color-text);
 }
 
 /**
