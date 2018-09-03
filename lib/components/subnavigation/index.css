@@ -148,7 +148,8 @@
   .SubNav-CharacterMenu:target .SubNav-title { display: none }
   .SubNav-CharacterMenu:target .SubNav-close { display: block }
 
-  .Subnav-toggle-icon { display: block; position: absolute; right: 5vw; top: 0px; font-size: 48px; line-height: calc(10vw + 24px) }
+  .Subnav-toggle-icon { display: block; position: absolute; right: 5vw; top: calc(5vw + 5px); transition: 250ms; }
+  .Subnav-toggle-icon--close { transform: rotate(180deg) }
 
   .SubNav-CharacterMenu .SubNav-container { overflow-y: auto; position: relative; display: block; width: 100%; height: 100%; }
   .SubNav-CharacterMenu-Title {
