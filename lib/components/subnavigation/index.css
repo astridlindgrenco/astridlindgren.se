@@ -100,6 +100,14 @@
   background-color: purple;
   filter: brightness(125%);
 }
+@media (max-width: 1400px) {
+  .SubNav-CharacterMenu {
+    max-width: 75vw;
+  }
+  .SubNav-CharacterMenu-background {
+    display: none;
+  }
+}
 
 .SubNav-CharacterMenu-Title {
   padding: 2vh 0px;
@@ -123,4 +131,31 @@
 }
 .SubNav-CharacterMenu .SubNav-link--active, .SubNav-CharacterMenu .SubNav-link:hover {
   font-weight: bold;
+}
+
+@media (max-width: 1400px) {
+  .SubNav-CharacterMenu { top: calc(100% - 15vh + 5px); height: calc(10vw + 24px); transition: 500ms; }
+  .SubNav-CharacterMenu:target { height: 100vh }
+
+  .SubNav-CharacterMenu .SubNav-title { display: block }
+  .SubNav-CharacterMenu .SubNav-close { display: none }
+  .SubNav-CharacterMenu:target .SubNav-title { display: none }
+  .SubNav-CharacterMenu:target .SubNav-close { display: block }
+
+  .Subnav-toggle-icon { position: absolute; right: 5vw; top: 0px; font-size: 48px; line-height: calc(10vw + 48px) }
+
+  .SubNav-CharacterMenu .SubNav-container { overflow-y: auto; position: relative; display: block; width: 100%; height: 100%; }
+  .SubNav-CharacterMenu-Title {
+    padding: 5vw 0px;
+    margin: 0px;
+  }
+  .SubNav-CharacterMenu .SubNav-link {
+    display: block;
+    width: 100%;
+    padding: 5vw 0px;
+
+    text-align: center;
+    font-size: 14px;
+  }
+  .SubNav-indicator { display: none; }
 }
