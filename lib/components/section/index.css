@@ -101,7 +101,6 @@
     color: var(--color-black);
   }
 
-
 /**
  * Modifier: If section should be full width
  */
@@ -172,6 +171,23 @@
    }
  }
 
+/**
+ * Modifier: Pulls uppwards towards previous section
+ */
+ .Section--pullTop {
+   margin-top: calc((var(--baseline-px) * 3) * -1);
+ }
+ @media (--viewport-md) {
+   .Section--pullTop {
+     margin-top: calc((var(--baseline-px) * 4) * -1);
+   }
+ }
+ @media (--viewport-xl) {
+   .Section--pullTop {
+     margin-top: calc((var(--baseline-px) * 6) * -1);
+   }
+ }
+
  /**
   * Modifier: has and hasn't background color
   */
@@ -213,4 +229,12 @@
   padding-bottom: 0px;
   padding-top: 0px;
   background: red;
+}
+
+/**
+ * Modifier: Top aligned toggle button
+ */
+
+.Section-toggle--topAlign {
+  margin-top: 0
 }
