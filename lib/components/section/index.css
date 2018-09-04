@@ -66,28 +66,30 @@
 
 .Section-toggle {
   display: block;
-  overflow: visible;
-  white-space: nowrap;
-  width: 32px;
-  height: 32px;
-  line-height: 16px;
-  background: var(--color-black);
+  text-align: center;
   color: var(--color-black);
-  padding: 8px;
   margin: calc(var(--baseline-px) * 8) auto;
-  border-radius: 50%;
   transition: color 250ms ease;
+  text-transform: uppercase;
+  font-size: 15px;
   cursor: pointer;
 }
   .Section-toggle::before {
     content: '+';
-    display: inline-block;
-    width: 16px;
-    margin-right: 16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 18px;
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--color-black);
+    margin: 0 auto 8px auto;
     color: var(--color-white) !important;
   }
   .Section-toggle--isExpanded::before {
-    content: '—'
+    content: '—';
+    line-height: 16px;
   }
   .Section-toggle:focus {
     outline: none;
