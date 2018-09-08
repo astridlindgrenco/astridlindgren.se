@@ -19,6 +19,7 @@
 @import "../components/display";
 @import "../components/newsdesk";
 @import "../components/booklist";
+@import "../components/filter";
 @import "../components/sorting";
 
 @import "../components/select";
