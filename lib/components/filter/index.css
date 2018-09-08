@@ -12,6 +12,17 @@
   font-weight: 600;
 }
 
+/**
+ * Element: Filter control
+ */
+
+.Filter-control {
+
+}
+.Filter-control--disabled {
+  opacity: 0.5;
+}
+
 @media (--viewport-md-max) {
 
 }
