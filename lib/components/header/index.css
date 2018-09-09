@@ -49,8 +49,11 @@
   .Header-link {
     padding: var(--baseline-px);
   }
-  .Header-link--active, .Header-link:hover {
-    font-weight: bold;
+  .Header-link--active {
+    font-weight: 700;
+  }
+  .Header-link:hover {
+    text-decoration: underline;
   }
 
     /**
