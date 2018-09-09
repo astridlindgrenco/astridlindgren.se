@@ -22,9 +22,11 @@
   text-decoration: none;
 }
 
-.SubNav-link--active, .SubNav-link:hover {
-  font-weight: bold;
-  color: white;
+.SubNav-link--active {
+  font-weight: 700;
+}
+.SubNav-link:hover {
+  color: var(--color-white);
   text-decoration: underline;
 }
 
