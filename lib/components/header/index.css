@@ -9,6 +9,7 @@
   padding: calc(var(--baseline-px) * 2) 0;
   margin: calc(var(--baseline-px) * 2) 0;
 }
+.Header a { text-decoration: none !important; }
 
 .Header-logo {
   width: 100px;
