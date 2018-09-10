@@ -48,6 +48,11 @@
   text-decoration: underline;
   font-weight: 600;
 }
+@media (--viewport-md-max) {
+  .Quote-more {
+    font-size: 1.4em;
+  }
+}
 
 /**
  * Modifier: Long cite

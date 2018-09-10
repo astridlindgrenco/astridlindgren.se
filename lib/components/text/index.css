@@ -3,7 +3,6 @@
 @import "../base";
 
 .Text {
-  color: var(--color-text);
   font-family: var(--font-family-body);
   line-height: 1.6666;
   font-size: var(--small-font-size);
@@ -18,7 +17,8 @@
 }
 
 .Text--intro {
-  margin-bottom: calc(var(--baseline-px) * 4);
+  margin-top: calc(var(--baseline-px) * 8);
+  margin-bottom: calc(var(--baseline-px) * 8);
   line-height: 32px;
 }
 
