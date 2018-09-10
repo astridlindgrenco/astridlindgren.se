@@ -23,6 +23,8 @@
 
 @import "../components/select";
 
+@import "../components/slices/q_and_a/";
+
 @import "suitcss-utils-flex";
 @import "suitcss-utils-size";
 @import "suitcss-utils-text";
