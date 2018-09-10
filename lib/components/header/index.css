@@ -156,7 +156,7 @@
       top: calc(var(--baseline-px) * 5);
     }
   }
-  @media (min-width: 900px) {
+  @media (min-width: 940px) {
     .Header-action--menu,
     .Header-actionLabel {
       display: none;
@@ -165,7 +165,7 @@
 
 
 /** Small screen friendly header */
-@media (max-width: 940px) {
+@media (max-width: 939px) {
   .Header {
     margin: var(--baseline-px) 0;
     flex-direction: column;
