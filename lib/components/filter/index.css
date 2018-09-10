@@ -26,13 +26,13 @@
 
   color: #666;
 
-  padding: 0px calc(var(--baseline-px) * 4) var(--baseline-px) var(--baseline-px);
+  padding: var(--baseline-px) calc(var(--baseline-px) * 4) var(--baseline-px) var(--baseline-px);
   width: 100%;
   margin: 0px;
 
-  border-radius: 0px;
-  border: none;
-  border-bottom: 1px solid;
+  border-radius: 0;
+  border: 1px solid transparent;
+  border-bottom-color: var(--color-gray);
   background: none;
 
   font-size: 16px;
@@ -43,13 +43,17 @@
     linear-gradient(45deg, transparent 50%, #666 50%),
     linear-gradient(135deg, #666 50%, transparent 50%);
   background-position:
-    calc(100% - 20px) var(--baseline-px),
-    calc(100% - 15px) var(--baseline-px),
-    calc(100% - 2.5em) 0.5em;
+    calc(100% - 20px) calc(var(--baseline-px) * 1.5),
+    calc(100% - 15px) calc(var(--baseline-px) * 1.5);
   background-size:
     5px 5px,
     5px 5px;
   background-repeat: no-repeat;
+}
+.Filter-select--hasChanged {
+  font-weight: 600;
+  color: var(--color-black);
+  border-color: var(--color-gray);
 }
 
 /**
@@ -59,6 +63,11 @@
 .Filter-submit {
   background: var(--color-slate-blue);
   color: var(--color-white);
+  padding: calc(var(--baseline-px) * 2) calc(var(--baseline-px) * 3);
+  margin-top: calc(var(--baseline-px) * 3);
+}
+.Filter-submit--disabled {
+  opacity: 0.3;
 }
 
 /**
@@ -80,6 +89,7 @@
   display: block;
   font-size: 16px;
   font-weight: 600;
+  margin-bottom: calc(var(--baseline-px) * -0.5);
 }
 
 @media (--viewport-md-max) {
