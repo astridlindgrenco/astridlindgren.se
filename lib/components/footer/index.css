@@ -48,7 +48,7 @@ footer {
   margin: 0px 55px
 }
 .Footer-content-linksblock-title { display: block; text-transform: uppercase }
-.Footer-content-linksblock-link { display: block; text-transform: capitalize }
+.Footer-content-linksblock-link { display: block; text-transform: capitalize; text-decoration: none !important; }
 
 .Footer-copyright {
   padding: 15px;
