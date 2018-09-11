@@ -19,6 +19,7 @@
 .SubNav-link {
   padding: 0 0.5em;
   transition: 250ms;
+  text-decoration: none;
 }
 
 .SubNav-link--active, .SubNav-link:hover {
