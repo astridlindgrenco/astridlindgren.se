@@ -101,4 +101,6 @@ footer {
   .Footer-content-linksblock-title {
     font-weight: 600;
   }
+
+  .Footer-footer { display: none; }
 }
