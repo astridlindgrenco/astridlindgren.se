@@ -14,40 +14,48 @@
 
 }
 
-.Booklist-cover--listview {
+.Booklist-book {
+  margin-bottom: calc(var(--baseline-px) * 4);
+}
+
+/*
+ * Modifier: List view
+ */
+
+.Booklist--listview .Booklist-cover {
   width: 100%;
   margin: 0 1em 1em 0;
 }
-.Booklist-title--listview {
+.Booklist--listview .Booklist-title {
   font-size: 24px;
 }
-.Booklist-authors--listview {
+.Booklist--listview .Booklist-authors {
   display: flex;
   flex-wrap: wrap;
   -webkit-overflow-scrolling: touch;
 }
-.Booklist-authors--listview p {
+.Booklist--listview .Booklist-authors p {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
-.Booklist-authors--listview p:first-child {
+.Booklist--listview .Booklist-authors p:first-child {
   margin-right: 0.25em;
 }
-.Booklist-authorYear--listview p {
+.Booklist--listview .Booklist-authorYear p {
   margin-bottom: 0.25em;
 }
 
 
-.Booklist-cover--gridview {
+.Booklist--gridview .Booklist-cover {
   width: 100%;
-  padding: 0.8em 0;
+  margin-bottom: calc(var(--baseline-px) * 2);
 }
-.Booklist-title--gridview {
+.Booklist--gridview .Booklist-title {
   font-size: 24px;
 }
-.Booklist-authors--gridview {
+.Booklist--gridview .Booklist-authors {
   font-size: 82%;
 }
-.Booklist-authorYear--gridview {
+.Booklist--gridview .Booklist-authorYear {
   font-size: 82%;
 }
