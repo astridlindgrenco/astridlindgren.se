@@ -185,10 +185,12 @@
   .Filter-sortAndFilter  {
     display: block;
   }
-
   .Filter-toggle {
-    display: block;
-    margin: 0px 0px 0.5em 0px
+    padding-left: 0;
+    margin-left: -8px;
+  }
+  .Filter-sortLeft{
+    margin-bottom: 8px;
   }
 }
 
@@ -201,4 +203,40 @@
 }
 .Filter-activeDisplay .Filter-submit {
   margin-top: calc(var(--baseline-px) * 2);
+}
+
+/**
+ * Modifier: Collapsed section
+ */
+
+@media (--viewport-sm-max) {
+  .Filter-header {
+    display: flex;
+    cursor: pointer;
+  }
+  .Filter-header::after {
+    content: '—';
+    display: block;
+    flex-basis: auto;
+    width: 32px;
+    height: 32px;
+    line-height: 16px;
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--color-black);
+    margin-left: 8px;
+    transform: scale(0.75) translateY(-4px);
+    color: var(--color-white) !important;
+  }
+  .Filter--collapsed .Filter-header::after {
+    content: '+';
+    line-height: 18px;
+  }
+  .Filter--collapsed .Filter-header {
+    margin-bottom: 0;
+  }
+  .Filter--collapsed .Filter-form {
+    display: none;
+  }
 }
