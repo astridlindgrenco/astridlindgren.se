@@ -210,11 +210,11 @@
  */
 
 @media (--viewport-sm-max) {
-  .Filter-header {
+  .Filter:not(.Filter--activeFilter) .Filter-header {
     display: flex;
     cursor: pointer;
   }
-  .Filter-header::after {
+  .Filter:not(.Filter--activeFilter) .Filter-header::after {
     content: '—';
     display: block;
     flex-basis: auto;
@@ -229,14 +229,14 @@
     transform: scale(0.75) translateY(-4px);
     color: var(--color-white) !important;
   }
-  .Filter--collapsed .Filter-header::after {
+  .Filter--collapsed:not(.Filter--activeFilter) .Filter-header::after {
     content: '+';
     line-height: 18px;
   }
-  .Filter--collapsed .Filter-header {
+  .Filter--collapsed:not(.Filter--activeFilter) .Filter-header {
     margin-bottom: 0;
   }
-  .Filter--collapsed .Filter-form {
+  .Filter--collapsed:not(.Filter--activeFilter) .Filter-form {
     display: none;
   }
 }
