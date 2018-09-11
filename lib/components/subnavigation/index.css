@@ -144,7 +144,7 @@
   .SubNav-CharacterMenu { top: calc(100% - 15vh + 5px); height: calc(10vw + 24px); transition: 500ms; }
   .SubNav-CharacterMenu:target { height: 100vh }
 
-  .SubNav-CharacterMenu .SubNav-title { display: block }
+  .SubNav-CharacterMenu .SubNav-title { display: block; text-decoration: none; }
   .SubNav-CharacterMenu .SubNav-close { display: none }
   .SubNav-CharacterMenu:target .SubNav-title { display: none }
   .SubNav-CharacterMenu:target .SubNav-close { display: block }
