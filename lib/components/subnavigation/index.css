@@ -139,6 +139,7 @@
 .SubNav-CharacterMenu .SubNav-link--active, .SubNav-CharacterMenu .SubNav-link:hover {
   font-weight: bold;
 }
+.SubNav-CharacterMenu .SubNav-title { text-decoration: none; }
 
 @media (--viewport-lg-max) {
   .SubNav-CharacterMenu { top: calc(100% - 15vh + 5px); height: calc(10vw + 24px); transition: 500ms; }
