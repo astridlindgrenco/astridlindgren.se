@@ -27,7 +27,7 @@
   margin: 0 1em 1em 0;
 }
 .Booklist--listview .Booklist-title {
-  font-size: 24px;
+
 }
 .Booklist--listview .Booklist-authors {
   display: flex;
@@ -44,6 +44,9 @@
 .Booklist--listview .Booklist-authorYear p {
   margin-bottom: 0.25em;
 }
+@media (--viewport-md) {
+
+}
 
 
 .Booklist--gridview .Booklist-cover {
@@ -51,11 +54,13 @@
   margin-bottom: calc(var(--baseline-px) * 2);
 }
 .Booklist--gridview .Booklist-title {
-  font-size: 24px;
+  margin-bottom: 8px;
 }
-.Booklist--gridview .Booklist-authors {
-  font-size: 82%;
+.Booklist--gridview .Booklist-authors,
+.Booklist--gridview .Booklist-authorYear {
+  margin: 0;
 }
 .Booklist--gridview .Booklist-authorYear {
-  font-size: 82%;
+  margin-top: 8px;
+  color: var(--color-gray);
 }
