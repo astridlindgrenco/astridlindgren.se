@@ -71,7 +71,7 @@ footer {
   display: block;
   height: 100%;
   /*width: 100%;*/
-  margin: 0px 55px
+  margin: 0px 55px;
 }
 .Footer-content-linksblock-title { display: block; text-transform: uppercase }
 .Footer-content-linksblock-link { display: block; text-transform: capitalize; text-decoration: none !important; }
