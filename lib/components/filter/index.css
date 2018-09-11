@@ -68,8 +68,8 @@
 .Filter-submit {
   background: var(--color-slate-blue);
   color: var(--color-white);
-  padding: calc(var(--baseline-px) * 2) calc(var(--baseline-px) * 3);
-  margin-top: calc(var(--baseline-px) * 3);
+  padding: calc(var(--baseline-px) * 2) calc(var(--baseline-px) * 4);
+  margin-top: calc(var(--baseline-px) * 2);
 }
 .Filter-submit--disabled {
   opacity: 0.3;
@@ -107,6 +107,16 @@
  * Element: Sorting filter
  */
 
+.Filter-sorting {
+  margin-top: calc(var(--baseline-px) * 6);
+  margin-bottom: calc(var(--baseline-px) * 3);
+}
+@media (--viewport-sm) {
+  .Filter-sorting {
+    margin-top: calc(var(--baseline-px) * 12);
+    margin-bottom: calc(var(--baseline-px) * 5);
+  }
+}
 
 .Filter-sortAndFilter {
   display: flex;
@@ -118,45 +128,53 @@
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  margin: 0px 1em 0px 0px;
 }
 .Filter-toggle {
-  margin: 0.5em 1em 0px 0px;
+  margin-left: calc(var(--grid-gutter) / 2);
 }
-.Filter-toggle input {
+.Filter-toggleInput {
   width: 0;
   height: 0;
   position: absolute;
   left: -9999px;
 }
-.Filter-toggle input + label {
-  margin: -5px;
-  padding: .5rem .75rem;
-  box-sizing: border-box;
+.Filter-toggleLabel {
   position: relative;
+  padding: 8px;
   display: inline-block;
-  border: solid 1px #DDD;
-  background-color: white;
-  font-size: 18px;
-  line-height: 100%;
-  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
   text-align: center;
-  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-  transition: all .15s ease-in-out;
   cursor: pointer;
 }
-.Filter-toggle input + label:first-of-type {
+  .Filter-toggleLabel::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 2px;
+    background-color: transparent;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: background-color 200ms ease-in-out,
+                transform 200ms ease-in-out;
+  }
+
+.Filter-toggleInput + .Filter-toggleLabel:first-of-type {
   border-right: none;
 }
-.Filter-toggle input:checked + label {
-  background-color: var(--color-dark-blue);
-  color: var(--color-warm-gray);
-  box-shadow: 0 0 10px var(--black);
-  border-color: var(--color-dark-blue);
+.Filter-toggleInput:checked + .Filter-toggleLabel {
+  font-weight: 700;
   z-index: 1;
 }
-.Filter-toggle input + label:last-of-type {
-  border-left: none;
+.Filter-toggleInput:checked + .Filter-toggleLabel::after {
+  background-color: var(--color-black);
+  transform: scaleX(1);
+}
+
+.Filter-toggleInput + .Filter-toggleLabel:last-of-type {
+
 }
 
 @media (--viewport-md-max) {
@@ -168,4 +186,15 @@
     display: block;
     margin: 0px 0px 0.5em 0px
   }
+}
+
+/*
+ * Element: active filter display
+ */
+
+.Filter-activeDisplay {
+
+}
+.Filter-activeDisplay .Filter-submit {
+  margin-top: calc(var(--baseline-px) * 2);
 }
