@@ -18,7 +18,6 @@
 
 .Text--intro {
   margin-top: calc(var(--baseline-px) * 8);
-  margin-bottom: calc(var(--baseline-px) * 8);
   line-height: 32px;
 }
 
