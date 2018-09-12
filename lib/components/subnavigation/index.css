@@ -28,7 +28,7 @@
   text-decoration: underline;
 }
 
-@media (--viewport-lg-max) {
+@media (max-width: 1400px) {
   .SubNav {
     position: relative;
     overflow: hidden;
