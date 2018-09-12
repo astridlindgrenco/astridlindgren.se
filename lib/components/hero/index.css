@@ -21,10 +21,12 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (--viewport-md-max) {
+.Hero-image .Booklist-cover--gridview {
+  padding: 0px !important;
+}
+
+@media (max-width: 1400px) {
   .Hero-image {
-    height: 25vh;
-    min-height: 25vh;
-    max-height: 25vh;
+    min-height: 15vh;
   }
 }
