@@ -1,0 +1,66 @@
+/* @define Worklist */
+
+@import '../base';
+
+.Worklist {
+
+}
+
+.Worklist-list {
+
+}
+
+.Worklist-listWork {
+
+}
+
+.Worklist-item {
+  margin-bottom: calc(var(--baseline-px) * 4);
+}
+
+/*
+ * Modifier: List view
+ */
+
+.Worklist--listview .Worklist-cover {
+  width: 100%;
+  margin: 0 1em 1em 0;
+}
+.Worklist--listview .Worklist-title {
+
+}
+.Worklist--listview .Worklist-detail {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+}
+.Worklist--listview .Worklist-detail p {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+.Worklist--listview .Worklist-detail p:first-child {
+  margin-right: 0.25em;
+}
+.Worklist--listview .Worklist-authorYear p {
+  margin-bottom: 0.25em;
+}
+@media (--viewport-md) {
+
+}
+
+
+.Worklist--gridview .Worklist-cover {
+  width: 100%;
+  margin-bottom: calc(var(--baseline-px) * 2);
+}
+.Worklist--gridview .Worklist-title {
+  margin-bottom: 8px;
+}
+.Worklist--gridview .Worklist-detail,
+.Worklist--gridview .Worklist-authorYear {
+  margin: 0;
+}
+.Worklist--gridview .Worklist-authorYear {
+  margin-top: 8px;
+  color: var(--color-gray);
+}
