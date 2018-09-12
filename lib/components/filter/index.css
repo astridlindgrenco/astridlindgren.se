@@ -120,7 +120,7 @@
   }
 }
 
-.Filter-sortAndFilter {
+.Filter-listOptions {
   display: flex;
   flex-wrap: wrap;
   -webkit-overflow-scrolling: touch;
@@ -184,7 +184,7 @@
 }
 
 @media (--viewport-md-max) {
-  .Filter-sortAndFilter  {
+  .Filter-listOptions  {
     display: block;
   }
   .Filter-toggle {
