@@ -102,5 +102,6 @@ footer {
     font-weight: 600;
   }
 
-  .Footer-footer { display: none; }
+  .Footer-breadcrums{ display: none; }
+  .Footer-social { position: relative; display: flex; justify-content: center; }
 }
