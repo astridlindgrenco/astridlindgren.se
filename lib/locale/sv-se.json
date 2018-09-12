@@ -6,8 +6,6 @@
   "Searchbox": "Sök årtal, böcker eller karaktärer",
   "Show more": "Visa mer",
   "Show less": "Visa mindre",
-  "Show filter": "Visa filter",
-  "Hide filter": "Dölj filter",
   "Show all": "Visa allt",
   "All": "Alla",
   "left-quote": "&rdquo;",
@@ -38,6 +36,10 @@
   "by": "av",
   "book": "bok",
   "back": "Tillbaka",
+  "Filter": "Filtrera",
+  "Filtering on": "Filtrerar på",
+  "Show filter": "Visa filter",
+  "Hide filter": "Dölj filter",
   "clear filter": "Rensa filter",
   "found no books": "Hittade inga böcker"
 }
