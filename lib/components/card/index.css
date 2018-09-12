@@ -56,9 +56,9 @@
 .Card-body .Text {
   align-self: start;
 }
-@media (--viewport-sm) {
-  .Card-body {
-    margin-top: calc(var(--baseline-px) * 2);
+@media (--viewport-lg-max) {
+  .Card {
+    margin-top: calc(var(--baseline-px) * 4);
   }
 }
 .Card--title .Card-body { margin-top: 0 }
@@ -75,9 +75,9 @@ a.Card-moreLink {
   cursor: pointer !important;
 }
 
-@media (--viewport-lg) {
+@media (--viewport--max-lg) {
   .Card-moreLink {
-    margin-top: calc(var(--baseline-px) * 3);
+    margin-top: calc(var(--baseline-px) * 6);
   }
 }
 

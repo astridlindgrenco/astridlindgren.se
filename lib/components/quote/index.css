@@ -71,12 +71,9 @@
 .Quote--long {
   text-align: left;
 }
-@media (--lg-viewport) {
+@media (--viewport-lg-max) {
   .Quote--long {
-    width: 55%;
-  }
-  .Quote--long .Quote-body {
-    font-size: 32px;
+    text-align: center;
   }
 }
 
