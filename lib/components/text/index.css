@@ -64,6 +64,10 @@
     margin-right: auto !important;
   }
 
+.Text--left :matches(.Text-h1, .Text-h2, .Text-h3, .Text-h4, p) {
+  text-align: left;
+}
+
 @media (--viewport-lg) {
   .Text--indented {
     padding-left: 15%;
@@ -480,4 +484,12 @@ ul.Text-linkList li::before {
   .Text--growingLate .Text-large {
     font-size: 24px;
   }
+}
+
+/**
+ * Simple image
+ */
+
+.Image {
+  max-width: 100%;
 }

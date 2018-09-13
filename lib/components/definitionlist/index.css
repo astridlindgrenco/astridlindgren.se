@@ -1,0 +1,39 @@
+/* @define DefinitionList */
+
+@import '../base';
+
+.DefinitionList {
+  overflow: hidden;
+}
+
+/**
+ * Title
+ */
+
+.DefinitionList-title {
+  font-weight: 600;
+  margin-bottom: calc(var(--baseline-px) / 2);
+}
+@media (--viewport-sm) {
+.DefinitionList-title {
+  float: left;
+}
+  .DefinitionList-title:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+/**
+ * Data
+ */
+
+.DefinitionList-data {
+  margin-bottom: calc(var(--baseline-px) / 2);
+  margin-left: var(--baseline-px);
+}
+@media (--viewport-sm) {
+  .DefinitionList-data {
+    float: left;
+    margin-left: calc(var(--baseline-px) * 2);
+  }
+}
