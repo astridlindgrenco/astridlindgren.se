@@ -67,10 +67,15 @@
  */
 
 .Filter-submit {
+  display: inline-block;
   background: var(--color-slate-blue);
   color: var(--color-white);
   padding: calc(var(--baseline-px) * 2) calc(var(--baseline-px) * 4);
   margin-top: calc(var(--baseline-px) * 2);
+  text-decoration: none;
+}
+.Filter-submit:hover {
+  background: var(--color-slate-blue);
 }
 .Filter-submit--disabled {
   opacity: 0.3;
