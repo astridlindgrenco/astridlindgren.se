@@ -74,6 +74,11 @@
   margin-top: calc(var(--baseline-px) * 2);
   text-decoration: none;
 }
+@media (--viewport-sm) {
+  .Filter-submit {
+    margin-top: 0;
+  }
+}
 .Filter-submit:hover {
   background: var(--color-slate-blue);
 }
@@ -209,7 +214,11 @@
 
 }
 .Filter-activeDisplay .Filter-submit {
-  margin-top: calc(var(--baseline-px) * 2);
+  margin-top: calc(var(--baseline-px) * 3);
+}
+
+.Filter-activeDisplay .Filter-activeFilter {
+  margin: 0;
 }
 
 /**
