@@ -21,9 +21,6 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.Hero-image .Booklist-cover--gridview {
-  padding: 0px !important;
-}
 
 @media (max-width: 1400px) {
   .Hero-image {
