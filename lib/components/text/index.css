@@ -24,6 +24,18 @@
 
   font-weight: bold;
 }
+@media (--viewport-xl-max) {
+  .Text--intro {
+    margin-top: calc(var(--baseline-px) * 4);
+    margin-bottom: calc(var(--baseline-px) * 4);
+  }
+}
+@media (--viewport-lg-max) {
+  .Text--intro {
+    margin-top: calc(var(--baseline-px));
+    margin-bottom: calc(var(--baseline-px));
+  }
+}
 
 .Text--full {
   width: 100%;
