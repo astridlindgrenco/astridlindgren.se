@@ -19,10 +19,10 @@
 .Text--intro {
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   margin-top: calc(var(--baseline-px) * 8);
   margin-bottom: calc(var(--baseline-px) * 8);
-  line-height: 32px;
+
+  font-weight: bold;
 }
 
 .Text--full {
@@ -382,9 +382,6 @@ ul.Text-linkList li::before {
   .Text {
     font-size: var(--base-font-size);
     line-height: var(--base-line-height);
-  }
-  .Text--intro {
-    line-height: 40px;
   }
   .Text--smaller {
     font-size: 21px;
