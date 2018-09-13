@@ -56,3 +56,11 @@
 .u-bgDarkRed { background-color: var(--color-dark-red) !important; }
 .u-colorDarkRed { color: var(--color-dark-red) !important; }
 .u-colorForDarkRed { color: var(--color-white) !important; }
+
+.u-bgDarkGreen { background-color: #009F67 !important; }
+.u-colorDarkGreen { color: #009F67 !important; }
+.u-colorForDarkGreen { color: var(--color-white) !important; }
+
+.u-bgPippiYellow{ background-color: #ffd800 !important; }
+.u-colorPippiYellow { color: #ffd800 !important; }
+.u-colorForPippiYellow { color: var(--color-black) !important; }
