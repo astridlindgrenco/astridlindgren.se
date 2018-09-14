@@ -21,7 +21,8 @@ const dotenv = dedent`
   PRISMIC_ACCESS_TOKEN=
   PRISMIC_CLIENT_ID=
   PRISMIC_CLIENT_SECRET=
-  PRISMIC_HOOK=/prismic-hook
+  PRISMIC_HOOK_URL=/prismic-update
+  PRISMIC_HOOK_SECRET=
   PRISMIC_PREVIEW=/prismic-preview
 
   GOOGLE_ANALYTICS_ID=
