@@ -75,3 +75,6 @@ jspm_packages
 /nbproject/private/
 nbproject/project.properties
 nbproject/project.xml
+
+# Cache
+/cache.json
