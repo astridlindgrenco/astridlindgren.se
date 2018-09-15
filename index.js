@@ -15,8 +15,14 @@ var stores = require('./lib/middleware/stores')
 var prismic = require('./lib/middleware/prismic')
 var lang = require('./lib/middleware/lang')
 var navigation = require('./lib/middleware/navigation')
+const NodeCache = require('node-cache')
 
 var server = new Koa()
+
+/**
+ *  Cache for navigation links
+ */
+server.context.db = new NodeCache()
 
 /**
  * Compile and serve assets on demand during development
@@ -122,7 +128,6 @@ server.use(router)
 /**
  * Lift off
  */
-
 server.listen(process.env.PORT, () => {
   // Add time to console.log
   // FIXME: logging framework?
