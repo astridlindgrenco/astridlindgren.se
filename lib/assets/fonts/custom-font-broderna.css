@@ -1,0 +1,10 @@
+
+@font-face {
+  font-family: "Broderna";
+  font-style: normal;
+  font-weight: bold;
+  src: url("./BellMTStd-Bold.otf") format("opentype");
+  font-display: block;
+}
+
+.u-font-broderna { font-family: 'Broderna', 'AvenirNext', 'Avenir Next', sans-serif !important; }

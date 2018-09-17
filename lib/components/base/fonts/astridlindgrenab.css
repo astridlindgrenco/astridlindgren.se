@@ -39,19 +39,19 @@
 @import url("//hello.myfonts.net/count/3752c7");
 
 
-@font-face {font-family: 'AvenirNext';font-weight: bold;font-style: normal;src: url('webfonts/3752C7_0_0.eot');src: url('webfonts/3752C7_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_0_0.woff2') format('woff2'),url('webfonts/3752C7_0_0.woff') format('woff'),url('webfonts/3752C7_0_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirNext';font-weight: 700;font-style: normal;src: url('webfonts/3752C7_0_0.eot');src: url('webfonts/3752C7_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_0_0.woff2') format('woff2'),url('webfonts/3752C7_0_0.woff') format('woff'),url('webfonts/3752C7_0_0.ttf') format('truetype');}
 
 
-@font-face {font-family: 'AvenirNext';font-weight: bold;font-style: italic;src: url('webfonts/3752C7_1_0.eot');src: url('webfonts/3752C7_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_1_0.woff2') format('woff2'),url('webfonts/3752C7_1_0.woff') format('woff'),url('webfonts/3752C7_1_0.ttf') format('truetype');}
+/*@font-face {font-family: 'AvenirNext';font-weight: 700;font-style: italic;src: url('webfonts/3752C7_1_0.eot');src: url('webfonts/3752C7_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_1_0.woff2') format('woff2'),url('webfonts/3752C7_1_0.woff') format('woff'),url('webfonts/3752C7_1_0.ttf') format('truetype');}*/
 
 
 @font-face {font-family: 'AvenirNext';font-weight: 600;font-style: normal;src: url('webfonts/3752C7_2_0.eot');src: url('webfonts/3752C7_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_2_0.woff2') format('woff2'),url('webfonts/3752C7_2_0.woff') format('woff'),url('webfonts/3752C7_2_0.ttf') format('truetype');}
 
 
-@font-face {font-family: 'AvenirNext';font-weight: 600;font-style: italic;src: url('webfonts/3752C7_3_0.eot');src: url('webfonts/3752C7_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_3_0.woff2') format('woff2'),url('webfonts/3752C7_3_0.woff') format('woff'),url('webfonts/3752C7_3_0.ttf') format('truetype');}
+/*@font-face {font-family: 'AvenirNext';font-weight: 600;font-style: italic;src: url('webfonts/3752C7_3_0.eot');src: url('webfonts/3752C7_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_3_0.woff2') format('woff2'),url('webfonts/3752C7_3_0.woff') format('woff'),url('webfonts/3752C7_3_0.ttf') format('truetype');}*/
 
 
-@font-face {font-family: 'AvenirNext';font-weight: normal;font-style: italic;src: url('webfonts/3752C7_4_0.eot');src: url('webfonts/3752C7_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_4_0.woff2') format('woff2'),url('webfonts/3752C7_4_0.woff') format('woff'),url('webfonts/3752C7_4_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirNext';font-weight: 500;font-style: italic;src: url('webfonts/3752C7_4_0.eot');src: url('webfonts/3752C7_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_4_0.woff2') format('woff2'),url('webfonts/3752C7_4_0.woff') format('woff'),url('webfonts/3752C7_4_0.ttf') format('truetype');}
 
 
-@font-face {font-family: 'AvenirNext';font-weight: normal;font-style: normal;src: url('webfonts/3752C7_5_0.eot');src: url('webfonts/3752C7_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_5_0.woff2') format('woff2'),url('webfonts/3752C7_5_0.woff') format('woff'),url('webfonts/3752C7_5_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirNext';font-weight: 500;font-style: normal;src: url('webfonts/3752C7_5_0.eot');src: url('webfonts/3752C7_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3752C7_5_0.woff2') format('woff2'),url('webfonts/3752C7_5_0.woff') format('woff'),url('webfonts/3752C7_5_0.ttf') format('truetype');}
