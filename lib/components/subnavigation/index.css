@@ -143,6 +143,11 @@
 }
 .SubNav-CharacterMenu .SubNav-title { text-decoration: none; }
 
+@media (max-width: 1400px) {
+  .SubNav-container {
+    width: 100%;
+  }
+}
 @media (--viewport-lg-max) {
   .SubNav-CharacterMenu { top: calc(100% - 15vh + 5px); height: calc(10vw + 24px); transition: 500ms; }
   .SubNav-CharacterMenu:target { height: 100vh }
