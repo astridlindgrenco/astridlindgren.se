@@ -2,9 +2,6 @@
 
 @import '../base';
 
-:root {
-}
-
 .Card {
   display: flex;
   flex-direction: column;
@@ -56,11 +53,6 @@
 .Card-body .Text {
   align-self: start;
 }
-@media (--viewport-lg-max) {
-  .Card {
-    margin-top: calc(var(--baseline-px) * 4);
-  }
-}
 .Card--title .Card-body { margin-top: 0 }
 
 /*
@@ -105,13 +97,19 @@ a.Card-moreLink {
   }
 
 /**
+ * Modifier: Vertical layout
+ */
+
+@media (--viewport-lg-max) {
+  .Card--vertical {
+    margin-top: calc(var(--baseline-px) * 4);
+  }
+}
+
+/**
  * Modifier: Horisontal layout
  */
 
-@media (--viewport-xxl) {
- .Card--horisontal .Card-content {
- }
-}
 @media (--viewport-lg) {
  .Card--horisontal {
    flex-direction: row;
