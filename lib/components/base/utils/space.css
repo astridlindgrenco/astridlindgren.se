@@ -8,7 +8,7 @@
 
 @media (min-width: 960px) {
   .u-paddedBox {
-    padding: 5% !important;
+    padding: calc(var(--baseline-px) * 8) !important;
   }
 }
 @media (--viewport-xxl) {
