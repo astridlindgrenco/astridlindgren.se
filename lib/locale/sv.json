@@ -42,5 +42,6 @@
   "Show filter": "Visa filter",
   "Hide filter": "Dölj filter",
   "clear filter": "Rensa filter",
-  "found no books": "Hittade inga böcker"
+  "found no books": "Hittade inga böcker",
+  "isbn": "ISBN"
 }
