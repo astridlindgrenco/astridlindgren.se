@@ -104,12 +104,12 @@
 
 .Text-muted,
 .Text--muted {
-  color: var(--color-text-light);
+  color: var(--color-text-secondary);
 }
 
 .Text-muted:matchs(h1, h2, h3, h4, h5, h6),
 .Text--muted :matchs(h1, h2, h3, h4, h5, h6) {
-  color: var(--color-text-light-large);
+  color: var(--color-text-secondary-large);
 }
 
 /**

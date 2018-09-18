@@ -75,7 +75,7 @@ a.Card-moreLink {
   cursor: pointer !important;
 }
 
-@media (--viewport--max-lg) {
+@media (--viewport-lg-max) {
   .Card-moreLink {
     margin-top: calc(var(--baseline-px) * 6);
   }

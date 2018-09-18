@@ -80,6 +80,8 @@
 
   --color-text: var(--color-black);
   --color-text-on-dark: var(--color-white);
+  --color-text-secondary: var(--color-gray-dark);
+  --color-text-secondary-large: var(--color-gray);
 
   --color-interactive: var(--color-black);
   --color-interactive-dark: var(--color-white);

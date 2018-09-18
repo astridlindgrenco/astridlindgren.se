@@ -4,8 +4,8 @@
 .u-colorWhite { color: #fff !important; }
 .u-colorForWhite { color: var(--color-black) !important; }
 
-.u-bgLightGray { background-color: var(--color-light-gray) !important; }
-.u-colorLightGray { color: var(--color-light-gray) !important; }
+.u-bgLightGray { background-color: var(--color-gray-light) !important; }
+.u-colorLightGray { color: var(--color-gray-light) !important; }
 
 .u-bgWarmGray { background-color: var(--color-warm-gray) !important; }
 .u-colorWarmGray { color: var(--color-warm-gray) !important; }
