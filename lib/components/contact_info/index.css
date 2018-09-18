@@ -1,44 +1,11 @@
 @import '../base';
 
-.ContactInfoBlock {
-  overflow: hidden;
-  max-width: 100vw;
-
-  margin: 0px;
-  margin-top: calc(var(--baseline-px) * 8);
-  padding: 100px 10vw;
-
-  background: #9eccd1;
-  color: #222;
-}
-
-.ContactInfoBlock-content {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-}
-.ContactInfoBlock-content h1 {
-  display: block;
-  width: 30%;
-  min-width: 350px;
-
+.ContactInfoBlock-header {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 38px;
-}
-.ContactInfoBlock-content-text {
-  width: 70%;
 }
 
-@media (max-width: 767px) {
-  .ContactInfoBlock {
-    padding: 100px 24px;
-  }
-  .ContactInfoBlock-content {
-    display: block;
-    padding: 5vw 0px;
-  }
-  .ContactInfoBlock-content h1 {
-    padding-bottom: 25px;
+@media (--viewport-md-max) {
+  .ContactInfoBlock-header {
+    padding-bottom: calc(var(--baseline-px) * 3);
   }
 }
