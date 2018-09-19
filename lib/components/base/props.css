@@ -25,9 +25,9 @@
    --page-width-wide: 1440px;
    --page-width-narrow: 970px;
 
-   --page-margins-small: calc(var(--baseline-px) * 3);
-   --page-margins-medium: calc(var(--baseline-px) * 4);
-   --page-margins-large: calc(var(--baseline-px) * 6);
+   --page-margins-small: 24px;
+   --page-margins-medium: 32px;
+   --page-margins-large: 48px;
 
   /**
   * Layer stacking
@@ -80,6 +80,8 @@
 
   --color-text: var(--color-black);
   --color-text-on-dark: var(--color-white);
+  --color-text-secondary: var(--color-gray-dark);
+  --color-text-secondary-large: var(--color-gray);
 
   --color-interactive: var(--color-black);
   --color-interactive-dark: var(--color-white);

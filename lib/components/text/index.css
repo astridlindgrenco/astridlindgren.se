@@ -26,14 +26,14 @@
 }
 @media (--viewport-xl-max) {
   .Text--intro {
-    margin-top: calc(var(--baseline-px) * 4);
-    margin-bottom: calc(var(--baseline-px) * 4);
+    margin-top: calc(var(--baseline-px) * 6);
+    margin-bottom: calc(var(--baseline-px) * 6);
   }
 }
 @media (--viewport-lg-max) {
   .Text--intro {
-    margin-top: calc(var(--baseline-px));
-    margin-bottom: calc(var(--baseline-px));
+    margin-top: calc(var(--baseline-px) * 2);
+    margin-bottom: calc(var(--baseline-px) * 2);
   }
 }
 
@@ -104,12 +104,12 @@
 
 .Text-muted,
 .Text--muted {
-  color: var(--color-text-light);
+  color: var(--color-text-secondary);
 }
 
 .Text-muted:matchs(h1, h2, h3, h4, h5, h6),
 .Text--muted :matchs(h1, h2, h3, h4, h5, h6) {
-  color: var(--color-text-light-large);
+  color: var(--color-text-secondary-large);
 }
 
 /**

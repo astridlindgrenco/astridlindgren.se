@@ -66,6 +66,13 @@ body {
   }
 }
 
+/*
+ * 1. Fix overflowing images in IE
+ */
+img {
+  max-width: 100%; /* 1 */
+}
+
 *,
 *::before,
 *::after {

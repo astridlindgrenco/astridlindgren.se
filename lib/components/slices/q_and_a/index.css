@@ -10,12 +10,13 @@
   cursor: pointer;
 
   padding-bottom: 0.25em;
+  user-select: none;
 }
 
 
 /* General details styling */
 summary::-webkit-details-marker {
-  display: none
+  display: none;
 }
 
 details > summary:before {
