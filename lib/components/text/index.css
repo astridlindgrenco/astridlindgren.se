@@ -26,14 +26,14 @@
 }
 @media (--viewport-xl-max) {
   .Text--intro {
-    margin-top: calc(var(--baseline-px) * 4);
-    margin-bottom: calc(var(--baseline-px) * 4);
+    margin-top: calc(var(--baseline-px) * 6);
+    margin-bottom: calc(var(--baseline-px) * 6);
   }
 }
 @media (--viewport-lg-max) {
   .Text--intro {
-    margin-top: calc(var(--baseline-px));
-    margin-bottom: calc(var(--baseline-px));
+    margin-top: calc(var(--baseline-px) * 2);
+    margin-bottom: calc(var(--baseline-px) * 2);
   }
 }
 
