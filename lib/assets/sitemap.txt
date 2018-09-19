@@ -5,6 +5,7 @@ http://localhost:3000/sv/karaktarerna/lotta-pa-brakmakargatan
 http://localhost:3000/en/astrids-characters/lotta-and-her-family-live-in-a-yellow-house-on-potmaker
 http://localhost:3000/sv/karaktarerna/pippi-langstrump/pippi-langstrump-efraim-langstrump
 http://localhost:3000/sv/karaktarerna/pippi-langstrump/pippi-langstrump-prussiluskan
+http://localhost:3000/sv/karaktarerna/pippi-langstrump/pippi-langstrump-dunderkarlsson-och-blom
 http://localhost:3000/sv/karaktarerna/pippi-langstrump/pippi-langstrump-herr-nilsson
 http://localhost:3000/sv/karaktarerna/pippi-langstrump/pippi-langstrump-kling-klang
 http://localhost:3000/sv/astrid-lindgren/foraldrarna
@@ -12,17 +13,19 @@ http://localhost:3000/sv/karaktarerna/pippi-langstrump
 http://localhost:3000/sv/karaktarerna/pippi-langstrump/pippi-langstrump-tommy-annika
 http://localhost:3000/sv/karaktarerna/pippi-langstrump/pippi-roligheter
 http://localhost:3000/sv/nils-karlsson-pyssling-flyttar-in
-http://localhost:3000/sv/boklista
+http://localhost:3000/sv/verken/boklista
 http://localhost:3000/sv/karaktarerna/pippi-langstrump/skola-bibliotek
+http://localhost:3000/sv/det-drojde-ett-tag-efter-den-forsta-pippi-filmen-1949
 http://localhost:3000/sv/i-ett-alldeles-vanligt-hus-pa-en-alldeles-vanlig-gata
 http://localhost:3000/sv/raben--sjogren5
 http://localhost:3000/sv/mio-min-mio
-http://localhost:3000/sv/britt-mari-lattar-sitt-hjarta-ar-astrid-lindgrens-debutbo
+http://localhost:3000/sv/verken/britt-mari-lattar-sitt-hjarta-ar-astrid-lindgrens-debutbo
 http://localhost:3000/sv/vargsangen
 http://localhost:3000/sv/astrid-lindgren
 http://localhost:3000/sv/i-den-tredje-fristaende-kati-boken-gar-farden-till
 http://localhost:3000/sv/raben--sjogren6
 http://localhost:3000/sv/karaktarerna/pippi-langstrump/pippi-langstrump-lilla-gubben
+http://localhost:3000/sv/verken/masterdetektiven-blomkvist-var-den-forsta-filmen-som
 http://localhost:3000/sv/astrid-lindgren/utvalda-artal
 http://localhost:3000/sv/karaktarerna/mio
 http://localhost:3000/sv/verken
@@ -43,6 +46,7 @@ http://localhost:3000/sv/pa-kaptensgatan-i-en-liten-trevlig-lya-bor-kati.-hon
 http://localhost:3000/sv/kajsa-kavat
 http://localhost:3000/sv/jag-vill-inte-ga-och-lagga-mig
 http://localhost:3000/sv/kanner-du-pippi-langstrump
+http://localhost:3000/sv/per-gunwall
 http://localhost:3000/sv/astrid-lindgren-skrev-manga-manus-till-teaterpjaser.
 http://localhost:3000/sv/norstedts1
 http://localhost:3000/sv/den-andra-boken-om-barnen-i-bullerbyn-som-har-roligt
@@ -50,6 +54,7 @@ http://localhost:3000/sv/karaktarerna/pippi-langstrump/sanger-filmer
 http://localhost:3000/sv/ansostestsida
 http://localhost:3000/sv/bara-roligt-i-bullerbyn
 http://localhost:3000/sv/raben--sjogren2
+http://localhost:3000/sv/rasmus-pa-luffen
 http://localhost:3000/sv/astrid-lindgren/skolan
 http://localhost:3000/sv/astrid-lindgren/syskonen
 http://localhost:3000/de/tysk-test
@@ -79,8 +84,9 @@ http://localhost:3000/sv/foretaget/foretaget-film
 http://localhost:3000/en/astrids-characters
 http://localhost:3000/sv/foretaget/foretaget-forlaget
 http://localhost:3000/sv/karaktarerna/madicken/historien-bakom-madicken
+http://localhost:3000/sv/ronja-rovardotter
 http://localhost:3000/sv/karaktarerna/bullerbyn
-http://localhost:3000/sv/filmlista
+http://localhost:3000/sv/verken/filmlista
 http://localhost:3000/sv/pippi-langstrump-gar-ombord
 http://localhost:3000/sv/karaktarerna/karlsson-pa-taket
 http://localhost:3000/sv/tema
