@@ -113,49 +113,49 @@ a.Card-moreLink {
 }
 
 /**
- * Modifier: Horisontal layout
+ * Modifier: horizontal layout
  */
 
 @media (--viewport-lg) {
- .Card--horisontal {
+ .Card--horizontal {
    flex-direction: row;
  }
-   .Card--horisontal .Card-content {
+   .Card--horizontal .Card-content {
      display: flex;
      flex-basis: auto;
      align-self: center;
      width: 50%;
      border: 0;
    }
-   .Card--horisontal .Card-media {
+   .Card--horizontal .Card-media {
      display: flex;
      flex-basis: auto;
      position: relative;
      width: 50%;
    }
 
-   .Card--horisontal .Card-image {
+   .Card--horizontal .Card-image {
      width: 100%;
      height: 100%;
    }
-   .Card--horisontal .Card-imageElm {
+   .Card--horizontal .Card-imageElm {
      width: 100%;
      height: 100%;
      object-fit: cover;
    }
-   .Card--horisontal.Card--title:not(.Card--body) .Card-body {
+   .Card--horizontal.Card--title:not(.Card--body) .Card-body {
      margin: calc(var(--baseline-px) * 4) 0 calc(var(--baseline-px) * 8) 0;
    }
 
-   /* If horisontal card has body, left align text */
-   .Card--horisontal.Card--body .Card-content {
+   /* If horizontal card has body, left align text */
+   .Card--horizontal.Card--body .Card-content {
      text-align: left;
    }
 }
 
 /**
  * Modifier: reverse order of image and body
- * This only applies to horisontally layouted cards
+ * This only applies to horizontally layouted cards
  */
 
 @media (min-width: 960px) {
