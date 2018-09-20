@@ -2,10 +2,14 @@
 
 @import '../base';
 
+/**
+ * 1. FLexbox fix for IE11
+ */
 .Card {
   display: flex;
   flex-direction: column;
   background: #fff;
+  width: 100%; /* 1 */
 }
 
 /*
@@ -41,13 +45,15 @@
 
 /*
  * Element: Body
+ * 1. Temporarily removed due to bugs in IE
  */
 
 .Card-body {
-  display: flex;
+  /* 1 */
+  /*display: flex;
   align-items: center;
   flex: 1 1;
-  flex-basis: 0%;
+  flex-basis: 0%;*/
   margin-top: var(--baseline-px);
 }
 .Card-body .Text {

@@ -1,22 +1,21 @@
 'use strict'
+const Koa = require('koa')
+const body = require('koa-body')
+const serve = require('koa-static')
+const compress = require('koa-compress')
+const helmet = require('koa-helmet')
+const noTrailingSlash = require('koa-no-trailing-slash')
+// const app = require('./lib/app')
+const router = require('./lib/router')
+const render = require('./lib/render')
+const errors = require('./lib/errors')
+const assets = require('./lib/middleware/assets')
+const stores = require('./lib/middleware/stores')
+const prismic = require('./lib/middleware/prismic')
+const lang = require('./lib/middleware/lang')
+const navigation = require('./lib/middleware/navigation')
 
-var Koa = require('koa')
-var body = require('koa-body')
-var serve = require('koa-static')
-var compress = require('koa-compress')
-var helmet = require('koa-helmet')
-var noTrailingSlash = require('koa-no-trailing-slash')
-// var app = require('./lib/app')
-var router = require('./lib/router')
-var render = require('./lib/render')
-var errors = require('./lib/errors')
-var assets = require('./lib/middleware/assets')
-var stores = require('./lib/middleware/stores')
-var prismic = require('./lib/middleware/prismic')
-var lang = require('./lib/middleware/lang')
-var navigation = require('./lib/middleware/navigation')
-
-var server = new Koa()
+const server = new Koa()
 
 /**
  * Compile and serve assets on demand during development
@@ -128,7 +127,7 @@ server.listen(process.env.PORT, () => {
   if (console && console.log) {
     let date = new Date()
 
-    var old = console.log
+    const old = console.log
     console.log = function () {
       Array.prototype.unshift.call(arguments, '[' + date.toLocaleTimeString([], {
         hour: '2-digit',

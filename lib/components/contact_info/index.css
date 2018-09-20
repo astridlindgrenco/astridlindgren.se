@@ -4,6 +4,11 @@
   font-weight: 600;
 }
 
+.ContactInfoBlock .Text p a {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
 @media (--viewport-md-max) {
   .ContactInfoBlock-header {
     padding-bottom: calc(var(--baseline-px) * 3);

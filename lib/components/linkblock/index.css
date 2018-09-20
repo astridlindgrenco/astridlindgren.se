@@ -12,11 +12,12 @@
 
 /**
  * Element: image
+ * 1. FLexbox fix for IE11
  */
-
 .LinkBlock-img {
   display: block;
-  max-width: 100%;
+  width: 100%; /* 1 */
+  object-fit: contain; /* 1 */
 }
 
 /**

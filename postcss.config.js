@@ -11,7 +11,7 @@ module.exports = (ctx) => ({
       { url: 'copy', useHash: true }
     ]),
     require('postcss-flexbugs-fixes')(),
-    require('autoprefixer')({browsers: [ 'last 2 versions', 'ie >= 9', 'Firefox ESR' ]}),
+    require('autoprefixer')({browsers: [ 'last 2 versions', 'ie >= 11', 'Firefox ESR' ]}),
     require('postcss-clean')()
   ]
 })

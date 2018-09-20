@@ -26,14 +26,14 @@
 }
 @media (--viewport-xl-max) {
   .Text--intro {
-    margin-top: calc(var(--baseline-px) * 4);
-    margin-bottom: calc(var(--baseline-px) * 4);
+    margin-top: calc(var(--baseline-px) * 6);
+    margin-bottom: calc(var(--baseline-px) * 6);
   }
 }
 @media (--viewport-lg-max) {
   .Text--intro {
-    margin-top: calc(var(--baseline-px));
-    margin-bottom: calc(var(--baseline-px));
+    margin-top: calc(var(--baseline-px) * 2);
+    margin-bottom: calc(var(--baseline-px) * 2);
   }
 }
 
@@ -257,8 +257,8 @@ ul.Text-linkList li::before {
 }
 
 .Text :matches(h1, .Text-h1) {
-  font-size: 48px;
-  line-height: 52px;
+  font-size: 32px;
+  line-height: 48px;
   text-align: center;
 }
 
@@ -416,6 +416,7 @@ ul.Text-linkList li::before {
   .Text :matches(h1, .Text-h1) {
     font-size: 56px;
     line-height: 56px;
+    padding-bottom: 0.5em;
   }
 
   .Text :matches(h2, .Text-h2) {
