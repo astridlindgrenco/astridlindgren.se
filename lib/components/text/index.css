@@ -416,6 +416,7 @@ ul.Text-linkList li::before {
   .Text :matches(h1, .Text-h1) {
     font-size: 56px;
     line-height: 56px;
+    padding-bottom: 0.5em;
   }
 
   .Text :matches(h2, .Text-h2) {
