@@ -150,28 +150,25 @@
 }
 @media (--viewport-lg-max) {
   .SubNav-CharacterMenu { top: calc(100% - 15vh + 5px); height: calc(10vw + 24px); transition: 500ms; overflow: hidden; }
-  .SubNav-CharacterMenu:target { height: auto }
+  .SubNav-CharacterMenu.open { height: auto; }
 
   .SubNav-CharacterMenu .SubNav-title { display: block; text-decoration: none; }
-  .SubNav-CharacterMenu .SubNav-close { display: none }
-  .SubNav-CharacterMenu:target .SubNav-title { display: none }
-  .SubNav-CharacterMenu:target .SubNav-close { display: block }
 
   .Subnav-toggle-icon { display: block; position: absolute; right: 5vw; top: calc(5vw + 5px); transition: 250ms; }
-  .Subnav-toggle-icon--close { transform: rotate(180deg) }
+  .SubNav-CharacterMenu.open .Subnav-toggle-icon { transform: rotate(180deg) }
 
   .SubNav-CharacterMenu .SubNav-container { overflow-y: auto; position: relative; display: block; width: 100%; height: 100%; }
   .SubNav-CharacterMenu-Title {
-    padding: 5vw 0px;
+    padding: calc(5vw - 2px) 0px;
     margin: 0px;
   }
   .SubNav-CharacterMenu .SubNav-link {
     display: block;
     width: 100%;
-    padding: 24px 0px;
+    padding: 18px 0px;
 
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
   }
   .SubNav-indicator { display: none; }
 }
