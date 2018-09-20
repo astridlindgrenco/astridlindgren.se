@@ -1,5 +1,4 @@
 'use strict'
-
 const Koa = require('koa')
 const body = require('koa-body')
 const serve = require('koa-static')
@@ -15,14 +14,8 @@ const stores = require('./lib/middleware/stores')
 const prismic = require('./lib/middleware/prismic')
 const lang = require('./lib/middleware/lang')
 const navigation = require('./lib/middleware/navigation')
-const Db = require('node-cache')
 
 const server = new Koa()
-
-/**
- *  Cache for navigation links
- */
-server.context.db = new Db()
 
 /**
  * Compile and serve assets on demand during development
