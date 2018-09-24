@@ -31,6 +31,7 @@
   text-decoration: underline;
   font-size: var(--base-font-size);
   padding: calc(var(--baseline-px) * 3) 0 calc(var(--baseline-px) * 5) 0;
+  margin-bottom: 2em;
 }
 @media (--viewport-md) {
   .LinkBlock-label {
