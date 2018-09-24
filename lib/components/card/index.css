@@ -70,6 +70,7 @@ a.Card-moreLink {
   text-decoration: underline;
   margin-top: calc(var(--baseline-px) * 6);
   font-weight: 600;
+  font-size: 22px;
   cursor: pointer !important;
 }
 
