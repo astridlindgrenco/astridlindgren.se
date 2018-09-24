@@ -79,5 +79,6 @@ nbproject/project.xml
 
 # Cache
 /cache.json
-lib/assets/sitemap.txt
 links.map
+lib/assets/sitemap.txt
+lib/assets/sitemap.xml
