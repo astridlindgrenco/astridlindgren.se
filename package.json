@@ -73,6 +73,7 @@
     "uglifyify": "^5.0.1",
     "uglifyjs": "^2.4.11",
     "unassertify": "^2.1.1",
+    "uuid": "^3.3.2",
     "watchify-middleware": "^1.8.0",
     "y18n": "^4.0.0",
     "yo-yoify": "^4.3.0"
