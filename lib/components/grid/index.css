@@ -39,7 +39,7 @@
 }
 .Grid--shelf > .Grid-cell {
   flex: 10 0 auto;
-  margin: 0 2%;
+  margin: 0px;
 }
 
 @media (--viewport-sm-max) {
