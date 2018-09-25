@@ -116,6 +116,10 @@ textarea,
   touch-action: manipulation;
 }
 
+details {
+  list-style: none;
+}
+
 /**
  * Clean out browser button styles
  */
