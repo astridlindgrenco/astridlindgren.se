@@ -4,6 +4,7 @@ const body = require('koa-body')
 const serve = require('koa-static')
 const compress = require('koa-compress')
 const helmet = require('koa-helmet')
+const cacheControl = require('koa-cache-control')
 const noTrailingSlash = require('koa-no-trailing-slash')
 // const app = require('./lib/app')
 const router = require('./lib/router')
@@ -36,6 +37,10 @@ if (process.env.NODE_ENV === 'development') {
 
 if (process.env.NODE_ENV !== 'development') {
   server.use(helmet())
+  server.use(cacheControl({
+    maxAge: 600,
+    public: true
+  }))
 }
 
 /**
