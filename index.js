@@ -125,14 +125,10 @@ server.listen(process.env.PORT, () => {
   // Add time to console.log
   // FIXME: logging framework?
   if (console && console.log) {
-    let date = new Date()
-
     const old = console.log
     console.log = function () {
-      Array.prototype.unshift.call(arguments, '[' + date.toLocaleTimeString([], {
-        hour: '2-digit',
-        minute: '2-digit'
-      }) + ']')
+      const date = new Date()
+      Array.prototype.unshift.call(arguments, `[${date.toDateString()} ${date.toLocaleTimeString('sv-SE')}.${date.getMilliseconds()}]`)
       old.apply(this, arguments)
     }
   }
