@@ -32,7 +32,7 @@
   "list": "List",
   "matrix": "Matrix",
   "movie": "movie",
-  "movielist": "movielista",
+  "movielist": "movies",
   "newsdesk": "newsdesk",
   "Photograpers": "Photo",
   "quotes": "quotes",
@@ -44,6 +44,6 @@
   "Show less": "Show less",
   "Show more": "Show more",
   "sort by": "Order by",
-  "the works": "the works",
+  "the works": "the-works",
   "view by": "View as"
 }
