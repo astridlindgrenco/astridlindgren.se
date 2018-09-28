@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+Allow: /sv
+Allow: /en
+Allow: /de
+Sitemap: http://www.astridlindgren.com/sitemap.xml
