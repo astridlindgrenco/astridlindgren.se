@@ -5,19 +5,33 @@
 
 .SubNav {
   width: 100%;
-  padding: 0.25em 0.5em;
+  padding: 0 16px;
   background-color: #222;
   color: whitesmoke;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   font-size: 16px;
+  flex-wrap: nowrap;
+}
+
+.SubNav-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  /* IE fix */
+  overflow-y: hidden;
+  height: 100%;
+  max-width: 100%;
+  animation: slideIn 0.75s forwards;
+  animation-delay: 0s;
+  -webkit-overflow-scrolling: touch;
 }
 
 .SubNav-link {
-  padding: 0 0.5em;
+  flex: 0 0 auto;
+  padding: 8px;
   transition: 250ms;
   text-decoration: none;
 }
@@ -30,41 +44,6 @@
   text-decoration: underline;
 }
 
-@media (max-width: 1400px) {
-  .SubNav {
-    position: relative;
-    overflow: hidden;
-
-    padding: 0px 1.5em;
-
-    line-height: 3em;
-    height: 3em;
-  }
-  .SubNav-link {
-    padding: 0px 0px 0px 1.5em;
-  }
-  .SubNav-link:hover {
-    font-weight: normal;
-  }
-
-  .SubNav-container {
-    position: absolute;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-
-    height: 100%;
-    max-width: 100%;
-
-    animation: slideIn 0.75s forwards;
-    animation-delay: 0s;
-    -webkit-overflow-scrolling: touch;
-  }
-  .SubNav-container .SubNav-link { flex: 0 0 auto; }
-  .SubNav-container .SubNav-link:last-child {
-    margin-right: 2em;
-  }
-}
 
 @keyframes slideIn {
   0% { left: 110vw; }
@@ -92,24 +71,29 @@
   color: #fff;
   background-color: purple;
 }
-.SubNav-CharacterMenu-background {
+
+/***
+* Bug with .SubNav-CharacterMenu-background in IE !!!
+* TODO: re-write it again
+*/
+
+/* .SubNav-CharacterMenu-background {
   position: absolute;
   top: calc(calc(100% - 185px) + 15px); left: 0px; right: -25px;
   width: 100%;
   max-width: 1250px;
   height: 165px;
   margin: 0 auto;
-
   background-color: purple;
   filter: brightness(125%);
-}
+} */
 @media (max-width: 1400px) {
   .SubNav-CharacterMenu {
     max-width: 75vw;
   }
-  .SubNav-CharacterMenu-background {
+  /* .SubNav-CharacterMenu-background {
     display: none;
-  }
+  } */
 }
 
 .SubNav-CharacterMenu-Title {
@@ -131,6 +115,7 @@
 .SubNav-CharacterMenu .SubNav-container {
   display: flex;
   justify-content: center;
+  height: auto;
 }
 .SubNav-CharacterMenu .SubNav-link {
   line-height: 42px;
@@ -143,11 +128,6 @@
 }
 .SubNav-CharacterMenu .SubNav-title { text-decoration: none; }
 
-@media (max-width: 1400px) {
-  .SubNav-container {
-    width: 100%;
-  }
-}
 @media (--viewport-lg-max) {
   .SubNav-CharacterMenu { top: calc(100% - 15vh + 5px); height: calc(10vw + 24px); transition: 500ms; overflow: hidden; }
   .SubNav-CharacterMenu.open { height: auto; }
