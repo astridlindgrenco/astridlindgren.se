@@ -1,6 +1,6 @@
 {
   "name": "astridlindgren.se",
-  "version": "0.8.0",
+  "version": "0.8.4",
   "description": "Main app for astridlindgren.se",
   "main": "index.js",
   "scripts": {
@@ -34,6 +34,7 @@
     "browserify": "^16.2.2",
     "common-shakeify": "^0.5.0",
     "dedent": "^0.7.0",
+    "details-polyfill": "^1.1.0",
     "fun-component": "^4.1.0",
     "global-cache": "^1.2.1",
     "koa": "^2.4.1",

@@ -32,8 +32,8 @@
 }
 @media (--viewport-lg-max) {
   .Text--intro {
-    margin-top: calc(var(--baseline-px) * 2);
-    margin-bottom: calc(var(--baseline-px) * 2);
+    margin-top: calc(var(--baseline-px) * 4);
+    margin-bottom: calc(var(--baseline-px) * 4);
   }
 }
 

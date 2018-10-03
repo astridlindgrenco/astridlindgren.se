@@ -231,7 +231,7 @@
   .Header--withOpenNav .Header-nav {
     opacity: 1;
     visibility: visible;
-
+    flex-basis: auto !important; /* IE fix */
     height: auto;
     max-height: 1000px;
     margin-top: calc(var(--baseline-px) * 3);
