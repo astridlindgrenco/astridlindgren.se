@@ -58,7 +58,17 @@ sub vcl_fini {
 }
 
 sub vcl_backend_response {
-  if (beresp.http.content-type ~ "text") {
+  if (beresp.http.content-type ~ "text"
+   || beresp.http.content-type ~ "xml"
+   || beresp.http.content-type ~ "json"
+   || beresp.http.content-type ~ "ttf"
+   || beresp.http.content-type ~ "svg"
+   || beresp.http.content-type ~ "otf"
+   || beresp.http.content-type ~ "ico"
+   || beresp.http.content-type ~ "truetype"
+   || beresp.http.content-type ~ "opentype"
+   || beresp.http.content-type ~ "javascript"
+  ) {
     set beresp.do_gzip = true;
   }
 }
