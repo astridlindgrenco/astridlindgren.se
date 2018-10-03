@@ -20,8 +20,7 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  /* IE fix */
-  overflow-y: hidden;
+  overflow-y: hidden;   /* IE fix */
   height: 100%;
   max-width: 100%;
   animation: slideIn 0.75s forwards;
@@ -34,6 +33,7 @@
   padding: 8px;
   transition: 250ms;
   text-decoration: none;
+  flex-wrap: nowrap;   /* not sure FIX: iOS v.10.3.3, Safari in iPad */
 }
 
 .SubNav-link--active {
