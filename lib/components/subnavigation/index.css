@@ -85,29 +85,11 @@
   right: -15px;
 }
 
-/***
-* Bug with .SubNav-CharacterMenu-background in IE !!!
-* TODO: re-write it again
-*/
-
-/* .SubNav-CharacterMenu-background {
-  position: absolute;
-  top: calc(calc(100% - 185px) + 15px); left: 0px; right: -25px;
-  width: 100%;
-  max-width: 1250px;
-  height: 165px;
-  margin: 0 auto;
-  background-color: purple;
-  filter: brightness(125%);
-} */
 @media (max-width: 1400px) {
   .SubNav-CharacterMenu {
     max-width: 75vw;
     box-shadow: none;
   }
-  /* .SubNav-CharacterMenu-background {
-    display: none;
-  } */
 }
 
 .SubNav-CharacterMenu-Title {
