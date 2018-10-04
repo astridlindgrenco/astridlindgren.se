@@ -72,6 +72,19 @@
   background-color: purple;
 }
 
+.SubNav-CharacterMenu::after {
+  content: '';
+  background-color: inherit;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 15px;
+  bottom: -15px;
+  right: -15px;
+}
+
 /***
 * Bug with .SubNav-CharacterMenu-background in IE !!!
 * TODO: re-write it again
@@ -90,6 +103,7 @@
 @media (max-width: 1400px) {
   .SubNav-CharacterMenu {
     max-width: 75vw;
+    box-shadow: none;
   }
   /* .SubNav-CharacterMenu-background {
     display: none;
@@ -123,11 +137,14 @@
   font-weight: normal;
   font-size: 24px;
 }
-.SubNav-CharacterMenu .SubNav-link--active, .SubNav-CharacterMenu .SubNav-link:hover {
+.SubNav-CharacterMenu .SubNav-link--active {
   font-weight: bold;
 }
 .SubNav-CharacterMenu .SubNav-title { text-decoration: none; }
 
+.SubNav-indicator {
+  margin-right: 0.25em;
+}
 @media (--viewport-lg-max) {
   .SubNav-CharacterMenu { top: calc(100% - 15vh + 5px); height: calc(10vw + 24px); transition: 500ms; overflow: hidden; }
   .SubNav-CharacterMenu.open { height: auto; }
@@ -137,7 +154,14 @@
   .Subnav-toggle-icon { display: block; position: absolute; right: 5vw; top: calc(5vw + 5px); transition: 250ms; }
   .SubNav-CharacterMenu.open .Subnav-toggle-icon { transform: rotate(180deg) }
 
-  .SubNav-CharacterMenu .SubNav-container { overflow-y: auto; position: relative; display: block; width: 100%; height: 100%; }
+  .SubNav-CharacterMenu .SubNav-container {
+    overflow-y: auto;
+    position: relative;
+    padding-bottom: calc(var(--baseline-px) * 4);
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
   .SubNav-CharacterMenu-Title {
     padding: calc(5vw - 2px) 0px;
     margin: 0px;
@@ -149,6 +173,9 @@
 
     text-align: center;
     font-size: 18px;
+  }
+  .SubNav-CharacterMenu .SubNav-link:hover {
+    font-weight: bold;
   }
   .SubNav-indicator { display: none; }
 }
