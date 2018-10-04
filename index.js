@@ -75,11 +75,16 @@ server.use(lang)
 server.use(navigation)
 
 /**
+ * Middlewares for rendering and error handling
+ */
+
+server.use(errors)
+server.use(render)
+
+/**
  * Hook up em' routes
  */
 
-server.use(render)
-server.use(errors)
 server.use(router)
 
 /**
