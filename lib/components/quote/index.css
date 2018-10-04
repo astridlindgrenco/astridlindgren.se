@@ -54,34 +54,35 @@
   }
 }
 
+/*** TEMPORARILY SUSPENDED ***/
 /**
  * Modifier: Long cite
  */
 
-@media (--lg-viewport) {
+/* @media (--lg-viewport) {
   .Quote-cite--long {
     text-align: center;
   }
-}
+} */
 
 /**
  * Modifier: Long quote
  */
 
-.Quote--long {
+/* .Quote--long {
   text-align: left;
 }
 @media (--viewport-lg-max) {
   .Quote--long {
     text-align: center;
   }
-}
+} */
 
 /**
  * Modifier: Super long quote
  */
 
-.Quote--superLong {
+/* .Quote--superLong {
   text-align: left;
 }
 @media (--lg-viewport) {
@@ -91,7 +92,7 @@
   .Quote--superLong .Quote-body {
     font-size: 24px;
   }
-}
+} */
 
 
 /* Quote Page */
