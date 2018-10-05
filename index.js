@@ -7,7 +7,6 @@ const cacheControl = require('koa-cache-control')
 const noTrailingSlash = require('koa-no-trailing-slash')
 const router = require('./lib/router')
 const render = require('./lib/render')
-const errors = require('./lib/errors')
 const assets = require('./lib/middleware/assets')
 const stores = require('./lib/middleware/stores')
 const prismic = require('./lib/middleware/prismic')
@@ -78,7 +77,7 @@ server.use(navigation)
  * Middlewares for rendering and error handling
  */
 
-server.use(errors)
+// server.use(errors)
 server.use(render)
 
 /**
@@ -93,7 +92,7 @@ server.use(router)
 
 server.listen(process.env.PORT, () => {
   // Add time to console.log
-   if (console && console.log) {
+  if (console && console.log) {
     const old = console.log
     console.log = function () {
       const date = new Date()
@@ -102,5 +101,5 @@ server.listen(process.env.PORT, () => {
     }
   }
 
-   console.log(`[Server] 🚀 Listening on localhost:${process.env.PORT}`)
- })
+  console.log(`[Server] 🚀 Listening on localhost:${process.env.PORT}`)
+})
