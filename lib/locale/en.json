@@ -14,6 +14,7 @@
   "Biografi": "Biography",
   "book": "book",
   "booklist": "books",
+  "Booktype": "Format",
   "by author year": "By Year",
   "by book title": "By Title",
   "by": "by",
@@ -24,6 +25,7 @@
   "descending number": "Descending",
   "descending text": "From Z to A",
   "Director": "Director",
+  "Editors": "Editors",
   "Error": "Something went terribly wrong, we are very sorry!",
   "Essä": "Essay",
   "Filter": "Filter",
@@ -47,8 +49,9 @@
   "newsdesk": "newsdesk",
   "Om Astrid": "About Astrid",
   "Pekbok": "Board book",
-  "Photograpers": "Photo",
+  "Photograpers": "Photographer",
   "Pjäs": "Play",
+  "Publisher": "Publisher",
   "quotes": "quotes",
   "right-quote": "&rsquo;",
   "Samlingsvolym": "Collection",
@@ -62,5 +65,6 @@
   "Textbok": "Chapter book",
   "the works": "the-works",
   "view by": "View as",
-  "Visbok": "Songs"
+  "Visbok": "Songs",
+  "Translators": "Translators"
 }

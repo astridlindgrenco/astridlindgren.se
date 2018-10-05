@@ -5,7 +5,7 @@
   "Antologi": "Anthologie",
   "ascending number": "aufsteigend",
   "ascending text": "Von A bis Z",
-  "Author": "Autor",
+  "Author": "Schriftsteller",
   "Av Astrid": "Von Astrid",
   "back": "Zurück",
   "Barn": "Kinder",
@@ -14,6 +14,7 @@
   "Biografi": "Biografie",
   "book": "das-buch",
   "booklist": "die-bucher",
+  "Booktype": "Form",
   "by author year": "Nach Jahr",
   "by book title": "Nach Titel",
   "by": "von",
@@ -24,6 +25,7 @@
   "descending number": "Absteigend",
   "descending text": "Von Z bis A",
   "Director": "der Regisseur",
+  "Editors": "Redakteur",
   "Error": "Etwas ist schrecklich schief gelaufen, es tut uns schrecklich leid!",
   "Essä": "Essay",
   "Filter": "Filtrieren",
@@ -47,8 +49,9 @@
   "newsdesk": "presse-und-nachrichten",
   "Om Astrid": "Über Astrid",
   "Pekbok": "Pappbilderbuch",
-  "Photograpers": "Fotografie",
+  "Photograpers": "Fotograf",
   "Pjäs": "Theaterstück",
+  "Publisher": "Verlag",
   "quotes": "zitate",
   "right-quote": "&rdquo;",
   "Samlingsvolym": "Sammelband",
@@ -62,5 +65,6 @@
   "Textbok" : "Erzählende Buch",
   "the works": "die-werke",
   "view by": "Gesehen von",
-  "Visbok": "Lieder Buch"
+  "Visbok": "Lieder Buch",
+  "Translators": "Übersetzer"
 }

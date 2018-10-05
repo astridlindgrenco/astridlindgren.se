@@ -12,7 +12,7 @@
   "Biografi": "Biografi",
   "book": "bok",
   "booklist": "boklista",
-  "Booktype": "Boktyp",
+  "Booktype": "Typ",
   "by author year": "Efter årtal",
   "by book title": "Efter titel",
   "by": "av",
@@ -25,6 +25,7 @@
   "descending number": "Fallande",
   "descending text": "Från Ö till A",
   "Director": "Regissör",
+  "Editors": "Redaktör",
   "Error": "Järnspikar! Nu blev det fel på riktigt!",
   "Essä": "Essä",
   "Filter": "Filtrera",
@@ -47,8 +48,9 @@
   "movielist": "filmlista",
   "newsdesk": "nyhetsrummet",
   "Om Astrid": "Om Astrid",
-  "Photograpers": "Fotografi",
+  "Photograpers": "Fotograf",
   "Pjäs": "Pjäs",
+  "Publisher": "Förlag",
   "quotes": "citaten",
   "right-quote": "&rdquo;",
   "Samlingsvolym": "Samlingsvolym",
@@ -62,5 +64,6 @@
   "Textbok": "Kapitelbok",
   "the works": "verken",
   "view by": "Visa som",
-  "Visbok": "Visbok"
+  "Visbok": "Visbok",
+  "Translators": "Översättare"
 }
