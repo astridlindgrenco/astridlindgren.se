@@ -1,0 +1,122 @@
+/* @define CharacterMenu */
+
+@import '../base';
+
+
+.CharacterMenu {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  height: 165px;
+  margin: -3em auto 0 auto;
+  padding: 0px 50px;
+
+  color: #fff;
+  background-color: purple;
+}
+
+@media (max-width: 1400px) {
+  .CharacterMenu {
+    max-width: 75vw;
+  }
+}
+
+.CharacterMenu-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;   /* IE fix */
+  height: 100%;
+  max-width: 100%;
+  animation: slideIn 0.75s forwards;
+  animation-delay: 0s;
+  -webkit-overflow-scrolling: touch;
+}
+
+.CharacterMenu-link {
+  flex: 0 0 auto;
+  padding: 8px;
+  transition: 250ms;
+  text-decoration: none;
+  flex-wrap: nowrap;   /* not sure FIX: iOS v.10.3.3, Safari in iPad */
+}
+
+.CharacterMenu-link--active {
+  font-weight: 700;
+}
+.CharacterMenu-link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+
+.CharacterMenu-title {
+  padding: 40px 0 25px 0;
+
+  line-height: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.CharacterMenu-titleLink { text-decoration: none; }
+
+.CharacterMenu-toggle-icon {
+  display: none;
+}
+
+.CharacterMenu-container {
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+.CharacterMenu-link {
+  line-height: 42px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.CharacterMenu-link--active {
+  font-weight: bold;
+}
+
+.CharacterMenu-indicator {
+  margin-right: 0.25em;
+}
+
+@media (--viewport-lg-max) {
+  .CharacterMenu {
+    height: calc(10vw + 24px);
+    margin-top: -1.5em;
+    transition: 500ms;
+    overflow: hidden;
+    box-shadow: none !important;
+  }
+  .CharacterMenu.open { height: auto; }
+
+  .CharacterMenu-titleLink { display: block; }
+
+  .CharacterMenu-toggle-icon { display: block; position: absolute; right: 5vw; top: calc(5vw + 5px); transition: 250ms; }
+  .CharacterMenu.open .CharacterMenu-toggle-icon { transform: rotate(180deg) }
+
+  .CharacterMenu-container {
+    overflow-y: auto;
+    position: relative;
+    padding-bottom: calc(var(--baseline-px) * 4);
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .CharacterMenu-title {
+    padding: calc(5vw - 2px) 0px;
+  }
+  .CharacterMenu-link {
+    display: block;
+    width: 100%;
+    padding: 18px 0px;
+
+    text-align: center;
+    font-size: 18px;
+  }
+  .CharacterMenu-indicator { display: none; }
+}
