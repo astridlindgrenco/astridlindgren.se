@@ -1,17 +1,5 @@
-@import '../base/index.css';
-@import '../base/props.css';
+@import '../base';
 
-footer {
-  overflow: hidden;
-  width: 100vw;
-  max-width: 100vw;
-
-  background-color: #222;
-  color: #fafaf5;
-
-  font-weight: 400;
-  font-size: 18px;
-}
 .Footer-logo {
   display: block;
   max-width: 285px;
@@ -21,9 +9,9 @@ footer {
 
 .Footer-footer {
   position: relative;
-  max-width: 960px;
-  margin: 0px auto 62px auto;
+  margin: 125px auto 0 auto;
   padding: 15px 0px;
+  padding-bottom: 62px;
 }
 .Footer-social {
   position: absolute;
@@ -59,22 +47,25 @@ footer {
 .Footer-breadcrums a {
   text-decoration: none;
 }
-.Footer-content {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
 
-  padding: 62px 10vw 125px 10vw;
-  margin: 0px auto;
+/**
+ * Element: Footer main content
+ */
+.Footer-content {
+  margin: 62px auto 0 auto;
 }
-.Footer-content-linksblock {
-  display: block;
-  height: 100%;
-  /*width: 100%;*/
-  margin: 0px 55px;
+
+.Footer-content .Footer-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5em;
 }
-.Footer-content-linksblock-title { display: block; text-transform: uppercase }
-.Footer-content-linksblock-link { display: block; text-transform: capitalize; text-decoration: none !important; }
+.Footer-content .Footer-linkList {
+  margin-top: 0;
+}
+.Footer-linkList a {
+  text-decoration: none;
+}
 
 .Footer-copyright {
   padding: 15px;
@@ -86,24 +77,28 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (--viewport-xl) {
+  .Footer-content {
+    max-width: 80%;
+  }
+}
+@media (--viewport-lg-max) {
   .Footer-logo {
     margin: 0px 24px;
     padding-bottom: 50px;
   }
+  .Footer-list {
+    justify-content: flex-start;
+    margin-bottom: calc(var(--baseline-px) * 3);
+  }
+}
+@media (--viewport-md-max) {
   .Footer-content {
     display: block;
-    padding: 5vw 24px;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
     justify-content: left
   }
-  .Footer-content-linksblock {
-    padding-bottom: 25px;
-    margin: 0px;
-  }
-  .Footer-content-linksblock-title {
-    font-weight: 600;
-  }
-
-  .Footer-breadcrums{ display: none; }
+  .Footer-breadcrums { display: none; }
   .Footer-social { position: relative; display: flex; justify-content: left; margin-left: 10px }
 }

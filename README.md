@@ -76,6 +76,10 @@ A few words from the coders of this website:
   3. yarn
   4. yarn start
 
+## Semantic Versioning
+
+See https://docs.npmjs.com/getting-started/semantic-versioning
+
 ## Special thanks
 
 Special thanks to codeandconspire who built the open sourced globalgoals.org website for inspiration.

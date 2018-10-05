@@ -2,11 +2,9 @@
 const Koa = require('koa')
 const body = require('koa-body')
 const serve = require('koa-static')
-const compress = require('koa-compress')
 const helmet = require('koa-helmet')
 const cacheControl = require('koa-cache-control')
 const noTrailingSlash = require('koa-no-trailing-slash')
-// const app = require('./lib/app')
 const router = require('./lib/router')
 const render = require('./lib/render')
 const errors = require('./lib/errors')
@@ -44,21 +42,6 @@ if (process.env.NODE_ENV !== 'development') {
 }
 
 /**
- * Prevent indexing everything but production
- */
-
-if (process.env.NODE_ENV !== 'production') {
-  server.use(require('./lib/middleware/robots'))
-}
-
-/**
- * Capture special routes before any other middleware
- */
-
-// server.use(api)
-// server.use(redirects)
-
-/**
  * Remove trailing slashes before continuing
  */
 
@@ -72,18 +55,6 @@ server.use(assets)
 server.use(serve('public', { maxage: 1000 * 60 * 60 * 24 * 365 }))
 
 /**
- * Add on Universal Analytics for server process tracking
- */
-
-// server.use(analytics(process.env.GOOGLE_ANALYTICS_ID))
-
-/**
- * Set up request cache mechanism
- */
-
-// server.use(cache)
-
-/**
  * Parse request body
  */
 
@@ -95,13 +66,6 @@ server.use(body())
 
 server.use(stores)
 
-//
-/**
- * Handle rendering response
- */
-
-// server.use(render())
-
 /**
  * Hook up the Prismic api
  */
@@ -111,25 +75,25 @@ server.use(lang)
 server.use(navigation)
 
 /**
+ * Middlewares for rendering and error handling
+ */
+
+server.use(errors)
+server.use(render)
+
+/**
  * Hook up em' routes
  */
 
-if (process.env.NODE_ENV !== 'development') {
-  // Compress html
-  server.use(compress())
-}
-
-server.use(render)
-server.use(errors)
 server.use(router)
 
 /**
  * Lift off
  */
+
 server.listen(process.env.PORT, () => {
   // Add time to console.log
-  // FIXME: logging framework?
-  if (console && console.log) {
+   if (console && console.log) {
     const old = console.log
     console.log = function () {
       const date = new Date()
@@ -138,5 +102,5 @@ server.listen(process.env.PORT, () => {
     }
   }
 
-  console.log(`[Server] 🚀 Listening on localhost:${process.env.PORT}`)
-})
+   console.log(`[Server] 🚀 Listening on localhost:${process.env.PORT}`)
+ })

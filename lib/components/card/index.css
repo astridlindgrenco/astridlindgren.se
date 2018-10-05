@@ -116,6 +116,27 @@ a.Card-moreLink {
 }
 
 /**
+ * Flexbox fix for IE11
+ */
+@media (--viewport-xs) {
+  .Card--vertical > .Card-media {
+    flex-shrink: 0
+  }
+
+  .Card--vertical > .Card-content {
+    flex-basis: auto;
+  }
+
+  .Card--horizontal > .Card-media {
+    flex-shrink: 0
+  }
+
+  .Card--horizontal > .Card-content {
+    flex-basis: auto;
+  }
+}
+
+/**
  * Modifier: horizontal layout
  */
 

@@ -190,6 +190,23 @@
    }
  }
 
+/**
+ * Modifier: Adds margin uppwards towards previous section
+ */
+ .Section--pushTop {
+   margin-top: calc(var(--baseline-px) * 3);
+ }
+ @media (--viewport-md) {
+   .Section--pushTop {
+     margin-top: calc(var(--baseline-px) * 4);
+   }
+ }
+ @media (--viewport-xl) {
+   .Section--pushTop {
+     margin-top: calc(var(--baseline-px) * 6);
+   }
+ }
+
  /**
   * Modifier: has and hasn't background color
   */

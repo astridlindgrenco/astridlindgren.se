@@ -1,6 +1,6 @@
 {
   "name": "astridlindgren.se",
-  "version": "0.5.2",
+  "version": "0.11.1",
   "description": "Main app for astridlindgren.se",
   "main": "index.js",
   "scripts": {
@@ -34,6 +34,7 @@
     "browserify": "^16.2.3",
     "common-shakeify": "^0.5.1",
     "dedent": "^0.7.0",
+    "details-polyfill": "^1.1.0",
     "fun-component": "^4.1.0",
     "global-cache": "^1.2.1",
     "koa": "^2.5.3",
@@ -74,7 +75,6 @@
     "uglifyify": "^5.0.1",
     "uglifyjs": "^2.4.11",
     "unassertify": "^2.1.1",
-    "uuid": "^3.3.2",
     "watchify-middleware": "^1.8.0",
     "y18n": "^4.0.0",
     "yo-yoify": "^4.3.0"
