@@ -73,6 +73,8 @@
   padding: calc(var(--baseline-px) * 2) calc(var(--baseline-px) * 4);
   margin-top: calc(var(--baseline-px) * 2);
   text-decoration: none;
+  cursor: pointer;
+
 }
 @media (--viewport-sm) {
   .Filter-submit {

@@ -38,7 +38,7 @@
   padding: 8px;
   transition: 250ms;
   text-decoration: none;
-  flex-wrap: nowrap;   /* not sure FIX: iOS v.10.3.3, Safari in iPad */
+  flex-wrap: nowrap;   /* not sure FIX: iOS v.10.3.3, Safari, iPad */
 }
 
 .CharacterMenu-link--active {
@@ -59,6 +59,10 @@
   text-transform: uppercase;
 }
 .CharacterMenu-titleLink { text-decoration: none; }
+
+@media (--viewport-lg) {
+  .CharacterMenu-titleLink { cursor: default; }
+}
 
 .CharacterMenu-toggle-icon {
   display: none;
