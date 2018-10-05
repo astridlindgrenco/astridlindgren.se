@@ -19,20 +19,20 @@
 .Text--intro {
   margin-left: auto;
   margin-right: auto;
-  margin-top: calc(var(--baseline-px) * 8);
+  margin-top: calc(var(--baseline-px) * 12);
   margin-bottom: calc(var(--baseline-px) * 8);
 
   font-weight: bold;
 }
 @media (--viewport-xl-max) {
   .Text--intro {
-    margin-top: calc(var(--baseline-px) * 6);
+    margin-top: calc(var(--baseline-px) * 8);
     margin-bottom: calc(var(--baseline-px) * 6);
   }
 }
 @media (--viewport-lg-max) {
   .Text--intro {
-    margin-top: calc(var(--baseline-px) * 4);
+    margin-top: calc(var(--baseline-px) * 6);
     margin-bottom: calc(var(--baseline-px) * 4);
   }
 }
