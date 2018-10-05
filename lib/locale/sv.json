@@ -33,6 +33,7 @@
   "Home": "Till startsidan",
   "Illustrator": "Illustratör",
   "isbn": "ISBN",
+  "Kapitelbok": "Kapitelbok",
   "Kategori": "Kategori",
   "Kärlek": "Kärlek",
   "Language": "Språk",
@@ -56,7 +57,7 @@
   "Show less": "Visa mindre",
   "Show more": "Visa mer",
   "sort by": "Sortera",
-  "Textbok": "Textbok",
+  "Textbok": "Kapitelbok",
   "the works": "verken",
   "view by": "Visa som",
   "Visbok": "Visbok"
