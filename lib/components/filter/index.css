@@ -234,13 +234,13 @@
  }
  .Filter:not(.Filter--activeFilter) .Filter-selectsToggle::after {
    content: '—';
-   display: block;
-   flex-basis: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    width: 28px;
    height: 28px;
-   line-height: 12px;
+   line-height: 28px;
    font-size: 20px;
-   padding: 8px;
    border-radius: 50%;
    background: var(--color-black);
    margin-left: 8px;
@@ -249,7 +249,6 @@
  }
  .Filter--collapsed:not(.Filter--activeFilter) .Filter-selectsToggle::after {
    content: '+';
-   line-height: 14px;
  }
 
 /**
