@@ -31,11 +31,17 @@ if (process.env.NODE_ENV === 'development') {
 /**
  * Take extra care to clean up em' headers in production
  */
+const SECONDS_TEN_MINUTES = 1 * 60 * 10
+const SECONDS_ONE_DAY = SECONDS_TEN_MINUTES * 6 * 24
+const SECONDS_ONE_YEAR = SECONDS_ONE_DAY * 365
+
+const MS_ONE_DAY = 1000 * 60 * 60 * 24
+const MS_ONE_YEAR = MS_ONE_DAY * 365
 
 if (process.env.NODE_ENV !== 'development') {
   server.use(helmet())
   server.use(cacheControl({
-    maxAge: 600,
+    maxAge: SECONDS_ONE_YEAR,
     public: true
   }))
 }
@@ -51,7 +57,7 @@ server.use(noTrailingSlash())
  */
 
 server.use(assets)
-server.use(serve('public', { maxage: 1000 * 60 * 60 * 24 * 365 }))
+server.use(serve('public', { maxage: MS_ONE_YEAR }))
 
 /**
  * Parse request body
