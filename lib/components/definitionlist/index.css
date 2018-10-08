@@ -14,14 +14,6 @@
   font-weight: 600;
   margin-bottom: calc(var(--baseline-px) / 2);
 }
-@media (--viewport-sm) {
-.DefinitionList-title {
-  float: left;
-}
-  .DefinitionList-title:nth-child(2n+1) {
-    clear: both;
-  }
-}
 
 /**
  * Data
@@ -33,7 +25,15 @@
 }
 @media (--viewport-sm) {
   .DefinitionList-data {
-    float: left;
     margin-left: calc(var(--baseline-px) * 2);
+  }
+}
+
+.DefinitionList-container {
+  display: block;
+}
+@media (--viewport-sm) {
+  .DefinitionList-container {
+    display: flex;
   }
 }
