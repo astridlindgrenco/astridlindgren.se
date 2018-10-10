@@ -82,6 +82,11 @@ a.Card-moreLink {
   }
 }
 
+@media (--viewport-sm-max) {
+  a.Card-moreLink {
+    font-size: 18px;
+  }
+}
 
 /*
  * Element: Category
