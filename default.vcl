@@ -76,7 +76,7 @@ sub vcl_recv {
 
 sub vcl_synth {
     if (resp.status == 301 || resp.status == 302) {
-        set resp.http.location = resp.reason;
+        set resp.http.location = "www.astridlindgren.com" + resp.reason;
         set resp.reason = "Moved";
         return (deliver);
     }
