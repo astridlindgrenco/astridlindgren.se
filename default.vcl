@@ -35,29 +35,29 @@ sub vcl_deliver {
 sub vcl_recv {
   // redirects
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/sv") {
-    if (req.url ~ "verken") return (synth(301, "/sv/verken"));
-    if (req.url ~ "varlden-runt") return (synth(301, "/sv/verken"));
-    if (req.url ~ "manniskan") return (synth(301, "/sv/astrid-lindgren"));
-    if (req.url ~ "karaktarerna") return (synth(301, "/sv/karaktarer"));
+    if (req.url ~ "verken") {return (synth(301, "/sv/verken"));}
+    if (req.url ~ "varlden-runt") {return (synth(301, "/sv/verken"));}
+    if (req.url ~ "manniskan") {return (synth(301, "/sv/astrid-lindgren"));}
+    if (req.url ~ "karaktarerna") {return (synth(301, "/sv/karaktarer"));}
     return (synth(301, "/sv"));
   }
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/ru") {
     return (synth(301, "/en"));
   }
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/en") {
-    if (req.url ~ "verken") return (synth(301, "/en/works"));
-    if (req.url ~ "varlden-runt") return (synth(301, "/en/works"));
-    if (req.url ~ "person") return (synth(301, "/en/astrid-lindgren"));
-    if (req.url ~ "her-works") return (synth(301, "/en/works"));
-    if (req.url ~ "characters") return (synth(301, "/en/characters"));
+    if (req.url ~ "verken") {return (synth(301, "/en/works"));}
+    if (req.url ~ "varlden-runt") {return (synth(301, "/en/works"));}
+    if (req.url ~ "person") {return (synth(301, "/en/astrid-lindgren"));}
+    if (req.url ~ "her-works") {return (synth(301, "/en/works"));}
+    if (req.url ~ "characters") {return (synth(301, "/en/characters"));}
     return (synth(301, "/en"));
   }
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/de") {
-    if (req.url ~ "verken") return (synth(301, "/de/das-werk"));
-    if (req.url ~ "varlden-runt") return (synth(301, "/de/das-werk"));
-    if (req.url ~ "das-werk") return (synth(301, "/de/das-werk"));
-    if (req.url ~ "der-mensch") return (synth(301, "/de/astrid-lindgren"));
-    if (req.url ~ "figuren") return (synth(301, "/de/figuren"));
+    if (req.url ~ "verken") {return (synth(301, "/de/das-werk"));}
+    if (req.url ~ "varlden-runt") {return (synth(301, "/de/das-werk"));}
+    if (req.url ~ "das-werk") {return (synth(301, "/de/das-werk"));}
+    if (req.url ~ "der-mensch") {return (synth(301, "/de/astrid-lindgren"));}
+    if (req.url ~ "figuren") {return (synth(301, "/de/figuren"));}
     return (synth(301, "/de"));
   }
   if (req.http.host ~ "(astridlindgrentext.se|astridlindgrenab.se)") {
