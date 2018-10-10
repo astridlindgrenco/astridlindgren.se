@@ -76,12 +76,11 @@
 }
   .Section-toggle::before {
     content: '+';
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     width: 32px;
     height: 32px;
     font-size: 24px;
+    line-height: 32px;
     border-radius: 50%;
     background: var(--color-black);
     margin: 0 auto 8px auto;
@@ -89,6 +88,7 @@
   }
   .Section-toggle--isExpanded::before {
     content: '—';
+    line-height: 30px;
   }
   .Section-toggle:focus {
     outline: none;
