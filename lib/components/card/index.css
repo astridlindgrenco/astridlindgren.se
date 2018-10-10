@@ -15,6 +15,7 @@
 /*
  * Element: Content
  * Category heading body etc
+ * 1. Dark arts fix for iOS 10
  */
 
 .Card-content {
@@ -29,6 +30,9 @@
 }
 .Card--image .Card-content { border-top: 0 }
 
+.is-ios10 .Card-content {
+  display: block; /* 1 */
+}
 
 /*
  * Element: Title
@@ -123,7 +127,7 @@ a.Card-moreLink {
 /**
  * Flexbox fix for IE11
  */
-@media (--viewport-xs) {
+@media (--viewport-sm) {
   .Card--vertical > .Card-media {
     flex-shrink: 0
   }
@@ -151,6 +155,7 @@ a.Card-moreLink {
  }
    .Card--horizontal .Card-content {
      display: flex;
+     flex-direction: column;
      flex-basis: auto;
      align-self: center;
      width: 50%;
@@ -194,58 +199,9 @@ a.Card-moreLink {
 }
 
 /**
- * Modifier: Background theme color
+ * Modifier: Has background theme color
  */
 
-.Card--bgBlueBlack {
-  background-color: var(--color-blue-black);
-  color: var(--color-text-on-dark);
-}
-
-.Card--bgWarmGray {
-  background-color: var(--color-warm-gray);
-}
-
-.Card--bgSlateBlue {
-  background-color: var(--color-slate-blue);
-  color: var(--color-text-on-dark);
-}
-
-.Card--bgLightBlue {
-  background-color: var(--color-light-blue);
-}
-
-.Card--bgDarkBlue {
-  background-color: var(--color-dark-blue);
-  color: var(--color-text-on-dark);
-}
-
-.Card--bgSlateGreen {
-  background-color: var(--color-slate-green);
-  color: var(--color-text-on-dark);
-}
-
-.Card--bgLightGreen {
-  background-color: var(--color-light-green);
-}
-
-.Card--bgYellow {
-  background-color: var(--color-yellow);
-}
-
-.Card--bgLightOrange {
-  background-color: var(--color-light-orange);
-}
-
-.Card--bgPeach {
-  background-color: var(--color-peach);
-}
-
-.Card--bgLightRed {
-  background-color: var(--color-light-red);
-}
-
-.Card--bgDarkRed {
-  background-color: var(--color-dark-red);
-  color: var(--color-text-on-dark);
+.Card--hasBg .Card-content {
+  border: 0;
 }
