@@ -137,7 +137,8 @@ a.Card-moreLink {
   }
 
   .Card--horizontal > .Card-media {
-    flex-shrink: 0
+    flex-shrink: 0;
+    width: 100%;
   }
 
   .Card--horizontal > .Card-content {
@@ -149,6 +150,9 @@ a.Card-moreLink {
  * Modifier: horizontal layout
  */
 
+.Card--horizontal.Card--title:not(.Card--body) .Card-body {
+ margin: calc(var(--baseline-px) * 4) 0 calc(var(--baseline-px) * 8) 0;
+}
 @media (--viewport-lg) {
  .Card--horizontal {
    flex-direction: row;
@@ -177,9 +181,6 @@ a.Card-moreLink {
      height: 100%;
      object-fit: cover;
    }
-   .Card--horizontal.Card--title:not(.Card--body) .Card-body {
-     margin: calc(var(--baseline-px) * 4) 0 calc(var(--baseline-px) * 8) 0;
-   }
 
    /* If horizontal card has body, left align text */
    .Card--horizontal.Card--body .Card-content {
@@ -192,8 +193,8 @@ a.Card-moreLink {
  * This only applies to horizontally layouted cards
  */
 
-@media (min-width: 960px) {
-  .Card--reversed {
+@media (--viewport-lg) {
+  .Card--horizontal.Card--reversed {
     flex-direction: row-reverse;
   }
 }
