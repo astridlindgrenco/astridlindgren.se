@@ -45,22 +45,22 @@ sub vcl_recv {
     return (synth(301, "/en"));
   }
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/en") {
-    if (req.url ~ "verken") {return (synth(301, "/en/works"));}
-    if (req.url ~ "varlden-runt") {return (synth(301, "/en/works"));}
-    if (req.url ~ "person") {return (synth(301, "/en/astrid-lindgren"));}
-    if (req.url ~ "her-works") {return (synth(301, "/en/works"));}
-    if (req.url ~ "characters") {return (synth(301, "/en/characters"));}
+    if (req.url ~ "verken") {return (synth(301, "/en/the-works"));}
+    if (req.url ~ "varlden-runt") {return (synth(301, "/en/the-works"));}
+    if (req.url ~ "person") {return (synth(301, "/en/about-astrid-lindgren"));}
+    if (req.url ~ "her-works") {return (synth(301, "/en/the-works"));}
+    if (req.url ~ "characters") {return (synth(301, "/en/astrids-characters"));}
     return (synth(301, "/en"));
   }
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/de") {
     if (req.url ~ "verken") {return (synth(301, "/de/das-werk"));}
     if (req.url ~ "varlden-runt") {return (synth(301, "/de/das-werk"));}
     if (req.url ~ "das-werk") {return (synth(301, "/de/das-werk"));}
-    if (req.url ~ "der-mensch") {return (synth(301, "/de/astrid-lindgren"));}
+    if (req.url ~ "der-mensch") {return (synth(301, "/de/der-mensch-astrid-lindgren"));}
     if (req.url ~ "figuren") {return (synth(301, "/de/figuren"));}
     return (synth(301, "/de"));
   }
-  if (req.http.host ~ "(astridlindgrentext.se|astridlindgrenab.se)") {
+  if (req.http.host ~ "(astridlindgren.se|astridlindgrentext.se|astridlindgrenab.se)") {
     return (synth(301, "/sv"));
   }
 
@@ -76,7 +76,8 @@ sub vcl_recv {
 
 sub vcl_synth {
     if (resp.status == 301 || resp.status == 302) {
-        set resp.http.location = "www.astridlindgren.com" + resp.reason;
+        // set resp.http.location = "http://www.astridlindgren.com" + resp.reason;
+        set resp.http.location = "http://212.237.144.151" + resp.reason;
         set resp.reason = "Moved";
         return (deliver);
     }
