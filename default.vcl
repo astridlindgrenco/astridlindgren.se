@@ -73,13 +73,13 @@ sub vcl_recv {
     if (req.url ~ "figuren") {return (synth(301, "/de/figuren"));}
     return (synth(301, "/de"));
   }
-  if (req.http.host ~ "astridlindgrenab.se" && req.url ~ "/en") {
+  if ((req.http.host ~ "astridlindgrenab.se" || "saltkrakan.se") && req.url ~ "/en") {
     if (req.url ~ "faq-2") {return (synth(301, "/en/frequently-asked-questions"));}
     if (req.url ~ "our-view-on-copyright") {return (synth(301, "/en/the-company"));}
     if (req.url ~ "contact") {return (synth(301, "/en/the-company/contact-us"));}
     return (synth(301, "/en/the-company"));
   }
-  if (req.http.host ~ "astridlindgrenab.se") {
+  if (req.http.host ~ "astridlindgrenab.se" || "saltkrakan.se") {
     if (req.url ~ "lar-kanna-saltkrakan/verksamheter") {return (synth(301, "/sv/foretaget/verksamhetsomraden"));}
     if (req.url ~ "lar-kanna-saltkrakan") {return (synth(301, "/sv/foretaget/om-oss"));}
     if (req.url ~ "vanliga-fragor-och-svar") {return (synth(301, "/sv/vanliga-fragor-och-svar"));}
