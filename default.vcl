@@ -32,7 +32,18 @@ sub vcl_deliver {
   unset resp.http.Link;
 }
 
+acl purge {
+        "10.50.4.92"/24;
+}
+
 sub vcl_recv {
+  # purge
+  if (req.method == "PURGE") {
+    if (!client.ip ~ purge) {
+      return(synth(405,"Not allowed."));
+    }
+    return (purge);
+  }
   # redirects
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/sv") {
     if (req.url ~ "manniskan") {return (synth(301, "/sv/astrid-lindgren"));}
