@@ -45,22 +45,6 @@ sub vcl_recv {
     return (purge);
   }
   # redirects
-  if (req.http.host ~ "astridlindgren.se" && req.url ~ "/sv") {
-    if (req.url ~ "manniskan") {return (synth(301, "/sv/astrid-lindgren"));}
-    if (req.url ~ "verken") {return (synth(301, "/sv/verken"));}
-    if (req.url ~ "mer-fakta") {return (synth(301, "/sv/astrid-lindgren"));}
-    if (req.url ~ "karaktarerna") {return (synth(301, "/sv/karaktarerna"));}
-    if (req.url ~ "lekstugan") {return (synth(301, "sv/karaktarerna/pippi-langstrump/lek-och-pyssla"));}
-    if (req.url ~ "lekstugan") {return (synth(301, "sv/karaktarerna/pippi-langstrump/lek-och-pyssla"));}
-    if (req.url ~ "varlden-runt") {return (synth(301, "/sv/astrid-i-varlden"));}
-    if (req.url ~ "kulturcentret") {return (synth(301, "/sv/platser-att-besoka"));}
-    if (req.url ~ "aktuellt") {return (synth(301, "/sv/nyhetsrummet"));}
-    if (req.url ~ "upplev-i-verkligheten") {return (synth(301, "/sv/platser-att-besoka"));}
-    if (req.url ~ "faq") {return (synth(301, "/sv/vanliga-fragor-och-svar"));}
-    if (req.url ~ "pressrum") {return (synth(301, "/sv/nyhetsrummet"));}
-    if (req.url ~ "kontakt-0") {return (synth(301, "/sv/foretaget/kontakt"));}
-    return (synth(301, "/sv"));
-  }
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/ru") {
     return (synth(301, "/en"));
   }
@@ -83,6 +67,22 @@ sub vcl_recv {
     if (req.url ~ "das-werk") {return (synth(301, "/de/das-werk"));}
     if (req.url ~ "figuren") {return (synth(301, "/de/figuren"));}
     return (synth(301, "/de"));
+  }
+  if (req.http.host ~ "astridlindgren.se") { # all swedish pages
+    if (req.url ~ "manniskan") {return (synth(301, "/sv/astrid-lindgren"));}
+    if (req.url ~ "verken") {return (synth(301, "/sv/verken"));}
+    if (req.url ~ "mer-fakta") {return (synth(301, "/sv/astrid-lindgren"));}
+    if (req.url ~ "karaktarerna") {return (synth(301, "/sv/karaktarerna"));}
+    if (req.url ~ "lekstugan") {return (synth(301, "/sv/karaktarerna/pippi-langstrump/lek-och-pyssla"));}
+    if (req.url ~ "lekstugan") {return (synth(301, "/sv/karaktarerna/pippi-langstrump/lek-och-pyssla"));}
+    if (req.url ~ "varlden-runt") {return (synth(301, "/sv/astrid-i-varlden"));}
+    if (req.url ~ "kulturcentret") {return (synth(301, "/sv/platser-att-besoka"));}
+    if (req.url ~ "aktuellt") {return (synth(301, "/sv/nyhetsrummet"));}
+    if (req.url ~ "upplev-i-verkligheten") {return (synth(301, "/sv/platser-att-besoka"));}
+    if (req.url ~ "faq") {return (synth(301, "/sv/vanliga-fragor-och-svar"));}
+    if (req.url ~ "pressrum") {return (synth(301, "/sv/nyhetsrummet"));}
+    if (req.url ~ "kontakt-0") {return (synth(301, "/sv/foretaget/kontakt"));}
+    return (synth(301, "/sv"));
   }
   if (req.http.host ~ "astridlindgrenab.se|saltkrakan.se" && req.url ~ "/en") {
     if (req.url ~ "faq-2") {return (synth(301, "/en/frequently-asked-questions"));}
@@ -118,8 +118,7 @@ sub vcl_recv {
 
 sub vcl_synth {
     if (resp.status == 301 || resp.status == 302) {
-        # set resp.http.location = "http://www.astridlindgren.com" + resp.reason;
-        set resp.http.location = "http://212.237.144.151" + resp.reason;
+        set resp.http.location = "http://www.astridlindgren.com" + resp.reason;
         set resp.reason = "Moved";
         return (deliver);
     }
