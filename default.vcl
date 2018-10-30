@@ -37,6 +37,19 @@ acl purge {
 }
 
 sub vcl_recv {
+  # Allow the backend to serve up stale content if it is responding slowly.
+  #set req.grace = 15s;
+
+  # The infamous shellshock
+  if ( req.http.User-Agent ~ "[(][^)]*[)][^{]*[{][^;]*[;][^}]*[}][^;]*[;]" ) {
+    return(synth( 418, "I'm a teapot" ));
+  }
+
+  # http to https
+  #if (client.ip != "127.0.0.1" && req.http.X-Forwarded-Proto !~ "(?i)https") {
+  #  set req.http.x-redir = "https://www.astridlindgren.com" + req.url;
+  #  return(synth(850, ""));
+  #}
   # purge
   if (req.method == "PURGE") {
     if (!client.ip ~ purge) {
@@ -52,9 +65,64 @@ sub vcl_recv {
     return (synth(404, "Unknown."));
   }
   # redirects
-  if (req.http.host ~ "astridlindgren.se" && req.url ~ "/en/node/566") {
-    return (synth(301, "/sv/verken/sangerna/vargsangen"));
-  }
+  if (req.url ~ "/en/node/566") { return (synth(301, "/sv/verken/sangerna/vargsangen")); }
+  if (req.url ~ "/en/node/565") { return (synth(301,"/sv/verken/sangerna/har-kommer-pippi-langstrump")); }
+  if (req.url ~ "/en/node/569") { return (synth(301,"/sv/verken/sangerna/du-kare-lille-snickerbo")); }
+  if (req.url ~ "/en/node/561") { return (synth(301,"/sv/verken/sangerna/alla-ska-sova-for-nu-ar-det-natt")); }
+  if (req.url ~ "/en/node/487") { return (synth(301,"/sv/astrid-lindgren/astrid-i-varlden")); }
+  if (req.url ~ "/en/node/452") { return (synth(301,"/sv/karaktarerna/broderna-lejonhjarta")); }
+  if (req.url ~ "/en/node/567") { return (synth(301,"/sv/verken/sangerna/luffarvisan")); }
+  if (req.url ~ "/en/node/454") { return (synth(301,"/sv/karaktarerna/ronja")); }
+  if (req.url ~ "/en/node/542") { return (synth(301,"/sv/verken/sangerna")); }
+  if (req.url ~ "/en/node/457") { return (synth(301,"/sv/film/pippi-langstrump-1969")); }
+  if (req.url ~ "/en/node/497") { return (synth(301,"/sv/astrid-lindgren/yrkeslivet")); }
+  if (req.url ~ "/en/node/180") { return (synth(301,"/sv/astrid-lindgren/barndomen/foraldrarna")); }
+  if (req.url ~ "/en/node/300") { return (synth(301,"/sv/astrid-lindgren/ungdomen")); }
+  if (req.url ~ "/en/node/475") { return (synth(301,"/sv/astrid-lindgren/astrid-i-varlden")); }
+  if (req.url ~ "/en/node/541") { return (synth(301,"/sv/verken/filmlista")); }
+  if (req.url ~ "/en/node/179") { return (synth(301,"/sv/astrid-lindgren/barndomen")); }
+  if (req.url ~ "/en/node/258") { return (synth(301,"/sv/astrid-lindgren/priser-och-utmarkelser")); }
+  if (req.url ~ "/en/node/313") { return (synth(301,"/sv/karaktarerna")); }
+  if (req.url ~ "/en/node/564") { return (synth(301,"/sv/verken/sangerna/var-pa-saltkrakan")); }
+  if (req.url ~ "/en/node/432") { return (synth(301,"/sv/karaktarerna/pippi-langstrump")); }
+  if (req.url ~ "/en/node/568") { return (synth(301,"/sv/verken/sangerna/varldens-basta-karlsson")); }
+  if (req.url ~ "/en/node/130") { return (synth(301,"/sv/verken/illustrationerna/ilon-wikland")); }
+  if (req.url ~ "/en/node/472") { return (synth(301,"/sv/karaktarerna/emil-i-lonneberga")); }
+  if (req.url ~ "/en/node/493") { return (synth(301,"/sv/karaktarerna/madicken")); }
+  if (req.url ~ "/en/node/257") { return (synth(301,"/sv/astrid-lindgren/opinionsbildaren")); }
+  if (req.url ~ "/en/node/453") { return (synth(301,"/sv/karaktarerna/karlsson-pa-taket")); }
+  if (req.url ~ "/en/node/469") { return (synth(301,"/sv/bok/allrakaraste-syster")); }
+  if (req.url ~ "/en/node/463") { return (synth(301,"/sv/karaktarerna/bullerbyn")); }
+  if (req.url ~ "/en/node/2003") { return (synth(301,"/sv/astrid-lindgren/arvet-efter-astrid-lindgren/astrid-lindgren-priset")); }
+  if (req.url ~ "/en/node/503") { return (synth(301,"/sv/verken/boklista?character=&type=&authors=&content=Om+Astrid&illustrators=&publicist=&sort_by=author_year&view_by=grid")); }
+  if (req.url ~ "/en/node/537") { return (synth(301,"/sv/foretaget/verksamhetsomraden/teater")); }
+  if (req.url ~ "/en/node/134") { return (synth(301,"/sv/verken/illustrationerna/marit-tornqvist")); }
+  if (req.url ~ "/en/node/181") { return (synth(301,"/sv/astrid-lindgren/barndomen/syskonen")); }
+  if (req.url ~ "/en/node/2825") { return (synth(301,"/sv/bok/vad-gor-pippi")); }
+  if (req.url ~ "/en/node/456") { return (synth(301,"/sv/karaktarerna/madicken")); }
+  if (req.url ~ "/en/node/74") { return (synth(301,"/sv/karaktarerna/rasmus-pa-luffen")); }
+  if (req.url ~ "/en/node/143") { return (synth(301,"/sv/astrid-lindgren/opinionsbildaren")); }
+  if (req.url ~ "/en/node/1604") { return (synth(301,"/sv/verken/filmlista")); }
+  if (req.url ~ "/en/node/197") { return (synth(301,"/sv/karaktarerna/madicken")); }
+  if (req.url ~ "/en/node/10") { return (synth(301,"/sv/karaktarerna/masterdetektiven")); }
+  if (req.url ~ "/en/node/1802") { return (synth(301,"/sv/bok/pippi-flyttar-in")); }
+  if (req.url ~ "/en/node/2831") { return (synth(301,"/sv/karaktarerna/emil-i-lonneberga")); }
+  if (req.url ~ "/en/node/471") { return (synth(301,"/sv/film/pelle-flyttar-till-komfusenbo")); }
+  if (req.url ~ "/sv/node/1989") { return (synth(301,"/en/about-astrid-lindgren/childhood/the-siblings")); }
+  if (req.url ~ "/en/node/305") { return (synth(301,"/sv/karaktarerna/mio")); }
+  if (req.url ~ "/en/node/460") { return (synth(301,"/sv/karaktarerna/lotta-pa-brakmakargatan")); }
+  if (req.url ~ "/en/node/485") { return (synth(301,"/sv/verken/boklista?character=W7d4KxMAAGwg7q_B&type=&authors=&content=&illustrators=&publicist=&sort_by=author_year&view_by=grid")); }
+  if (req.url ~ "/en/node/517") { return (synth(301,"/sv/foretaget")); }
+  if (req.url ~ "/en/node/58") { return (synth(301,"/sv/bok/jag-vill-inte-ga-och-lagga-mig")); }
+  if (req.url ~ "/en/node?page=2") { return (synth(301,"/en/characters/the-brothers-lionheart")); }
+  if (req.url ~ "/en/node/2805") { return (synth(301,"/sv/bok/sunnanang2003")); }
+  if (req.url ~ "/en/node/337") { return (synth(301,"/sv/astrid-lindgren/arvet-efter-astrid-lindgren/astrid-lindgren-priset")); }
+  if (req.url ~ "/en/node/494") { return (synth(301,"/sv/film/tjorven-och-mysak")); }
+  if (req.url ~ "/en/node/605") { return (synth(301,"/sv/bok/pippi-gar-till-sjoss")); }
+  if (req.url ~ "/en/node/607") { return (synth(301,"/sv/bok/pippi-flyttar-in")); }
+  if (req.url ~ "/en/node/622") { return (synth(301,"/sv/bok/en-bunt-visor-for-pippi-emil-och-andra")); }
+  if (req.url ~ "/en/node?page=19") { return (synth(301,"/sv/karaktarerna/masterdetektiven")); }
+
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/ru") {
     return (synth(301, "/en"));
   }
@@ -116,7 +184,6 @@ sub vcl_recv {
     return (synth(301, "/sv"));
   }
 
-  unset req.http.Cookie; # 20180926
   if (req.http.Upgrade ~ "(?i)websocket") {
     set req.backend_hint = myclust.backend(client.identity);
     return (pipe);
@@ -124,11 +191,28 @@ sub vcl_recv {
   else {
     set req.backend_hint = myclust.backend(client.identity);
   }
+
+  # Remove all cookies for static files
+  # A valid discussion could be held on this line: do you really need to cache static files that don't cause load? Only if you have memory left.
+  # Sure, there's disk I/O, but chances are your OS will already have these files in their buffers (thus memory).
+  # Before you blindly enable this, have a read here: https://ma.ttias.be/stop-caching-static-files/
+  if (req.url ~ "^[^?]*\.(7z|avi|bmp|bz2|css|csv|doc|docx|eot|flac|flv|gif|gz|ico|jpeg|jpg|js|less|mka|mkv|mov|mp3|mp4|mpeg|mpg|odt|otf|ogg|ogm|opus|pdf|png|ppt|pptx|rar|rtf|svg|svgz|swf|tar|tbz|tgz|ttf|txt|txz|wav|webm|webp|woff|woff2|xls|xlsx|xml|xz|zip)(\?.*)?$") {
+    unset req.http.Cookie;
+    return (hash);
+  }
+
+  return (hash);
+
 }
 
 sub vcl_synth {
+    if (resp.status == 850) {
+       set resp.http.Location = req.http.x-redir;
+       set resp.status = 301;
+       return (deliver);
+    }
     if (resp.status == 301 || resp.status == 302) {
-        set resp.http.location = "http://www.astridlindgren.com" + resp.reason;
+        set resp.http.location = "https://www.astridlindgren.com" + resp.reason;
         set resp.reason = "Moved";
         return (deliver);
     }
@@ -149,6 +233,17 @@ sub vcl_fini {
 }
 
 sub vcl_backend_response {
+  # Enable leverage browser caching in Varnish
+  if (bereq.url ~ "\.(png|gif|jpg|swf|svg|ttf|otf|ico|css|js)$") {
+    unset beresp.http.set-cookie;
+    set beresp.http.cache-control = "max-age = 2592000";
+  }
+  # Don't cache 50x responses
+  if (beresp.status == 500 || beresp.status == 502 || beresp.status == 503 || beresp.status == 504) {
+    return (abandon);
+  }
+
+  # Zip text resources
   if (beresp.http.content-type ~ "text"
    || beresp.http.content-type ~ "xml"
    || beresp.http.content-type ~ "json"
@@ -162,4 +257,10 @@ sub vcl_backend_response {
   ) {
     set beresp.do_gzip = true;
   }
+
+  # Allow stale content, in case the backend goes down.
+  set beresp.grace = 5m;
+  set beresp.keep = 10m;
 }
+
+
