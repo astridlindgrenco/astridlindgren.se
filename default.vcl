@@ -44,7 +44,17 @@ sub vcl_recv {
     }
     return (purge);
   }
+  # bots and spams
+  if (req.url ~ "\.php") {
+    return (synth(404, "Unknown."));
+  }
+  if (req.url ~ "\.asp") {
+    return (synth(404, "Unknown."));
+  }
   # redirects
+  if (req.http.host ~ "astridlindgren.se" && req.url ~ "/en/node/566") {
+    return (synth(301, "/sv/verken/sangerna/vargsangen"));
+  }
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/ru") {
     return (synth(301, "/en"));
   }
@@ -57,7 +67,7 @@ sub vcl_recv {
     if (req.url ~ "culture-centre") {return (synth(301, "/en/places-to-visit"));}
     if (req.url ~ "experience-it-live") {return (synth(301, "/en/places-to-visit"));}
     if (req.url ~ "faq") {return (synth(301, "/en/frequently-asked-questions"));}
-    if (req.url ~ "pressroom") {return (synth(301, "/en"));}
+    if (req.url ~ "pressroom") {return (synth(301, "/en/press"));}
     if (req.url ~ "contact-us") {return (synth(301, "/en/the-company/contact-us"));}
     return (synth(301, "/en"));
   }
