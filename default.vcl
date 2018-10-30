@@ -33,13 +33,18 @@ sub vcl_deliver {
 }
 
 acl purge {
-        "10.50.4.92"/24;
+  "10.50.4.92"/24;
 }
 
 sub vcl_recv {
-  # Allow the backend to serve up stale content if it is responding slowly.
-  #set req.grace = 15s;
-
+  # purge
+  if (req.method == "PURGE") {
+    if (!client.ip ~ purge) {
+      return(synth(405,"Not allowed."));
+    }
+    return (purge);
+  }
+  
   # The infamous shellshock
   if ( req.http.User-Agent ~ "[(][^)]*[)][^{]*[{][^;]*[;][^}]*[}][^;]*[;]" ) {
     return(synth( 418, "I'm a teapot" ));
@@ -50,21 +55,13 @@ sub vcl_recv {
   #  set req.http.x-redir = "https://www.astridlindgren.com" + req.url;
   #  return(synth(850, ""));
   #}
-  # purge
-  if (req.method == "PURGE") {
-    if (!client.ip ~ purge) {
-      return(synth(405,"Not allowed."));
-    }
-    return (purge);
-  }
-  # bots and spams
-  if (req.url ~ "\.php") {
+
+  # Screen bots and spams
+  if (req.url ~ "\.(php|asp)") {
     return (synth(404, "Unknown."));
   }
-  if (req.url ~ "\.asp") {
-    return (synth(404, "Unknown."));
-  }
-  # redirects
+
+  # Redirects for old node numbers
   if (req.url ~ "/en/node/566") { return (synth(301, "/sv/verken/sangerna/vargsangen")); }
   if (req.url ~ "/en/node/565") { return (synth(301,"/sv/verken/sangerna/har-kommer-pippi-langstrump")); }
   if (req.url ~ "/en/node/569") { return (synth(301,"/sv/verken/sangerna/du-kare-lille-snickerbo")); }
@@ -123,6 +120,7 @@ sub vcl_recv {
   if (req.url ~ "/en/node/622") { return (synth(301,"/sv/bok/en-bunt-visor-for-pippi-emil-och-andra")); }
   if (req.url ~ "/en/node?page=19") { return (synth(301,"/sv/karaktarerna/masterdetektiven")); }
 
+  # Redirects for old url's
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/ru") {
     return (synth(301, "/en"));
   }
@@ -187,35 +185,30 @@ sub vcl_recv {
   if (req.http.Upgrade ~ "(?i)websocket") {
     set req.backend_hint = myclust.backend(client.identity);
     return (pipe);
-  }
-  else {
+  } else {
     set req.backend_hint = myclust.backend(client.identity);
   }
 
   # Remove all cookies for static files
-  # A valid discussion could be held on this line: do you really need to cache static files that don't cause load? Only if you have memory left.
-  # Sure, there's disk I/O, but chances are your OS will already have these files in their buffers (thus memory).
-  # Before you blindly enable this, have a read here: https://ma.ttias.be/stop-caching-static-files/
-  if (req.url ~ "^[^?]*\.(7z|avi|bmp|bz2|css|csv|doc|docx|eot|flac|flv|gif|gz|ico|jpeg|jpg|js|less|mka|mkv|mov|mp3|mp4|mpeg|mpg|odt|otf|ogg|ogm|opus|pdf|png|ppt|pptx|rar|rtf|svg|svgz|swf|tar|tbz|tgz|ttf|txt|txz|wav|webm|webp|woff|woff2|xls|xlsx|xml|xz|zip)(\?.*)?$") {
+  if (req.url ~ "^[^?]*\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff)(\?.*)?$") {
     unset req.http.Cookie;
     return (hash);
   }
 
   return (hash);
-
 }
 
 sub vcl_synth {
-    if (resp.status == 850) {
-       set resp.http.Location = req.http.x-redir;
-       set resp.status = 301;
-       return (deliver);
-    }
-    if (resp.status == 301 || resp.status == 302) {
-        set resp.http.location = "https://www.astridlindgren.com" + resp.reason;
-        set resp.reason = "Moved";
-        return (deliver);
-    }
+  if (resp.status == 850) {
+    set resp.http.Location = req.http.x-redir;
+    set resp.status = 301;
+    return (deliver);
+  }
+  if (resp.status == 301 || resp.status == 302) {
+    set resp.http.location = "https://www.astridlindgren.com" + resp.reason;
+    set resp.reason = "Moved";
+    return (deliver);
+  }
 }
 
 sub vcl_hash {
@@ -229,38 +222,31 @@ sub vcl_hash {
 }
 
 sub vcl_fini {
-  return (ok);
+  return(ok);
 }
 
 sub vcl_backend_response {
   # Enable leverage browser caching in Varnish
-  if (bereq.url ~ "\.(png|gif|jpg|swf|svg|ttf|otf|ico|css|js)$") {
+  if (bereq.url ~ "^[^?]*\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff)(\?.*)?$") {
     unset beresp.http.set-cookie;
     set beresp.http.cache-control = "max-age = 2592000";
   }
+
   # Don't cache 50x responses
   if (beresp.status == 500 || beresp.status == 502 || beresp.status == 503 || beresp.status == 504) {
     return (abandon);
   }
 
   # Zip text resources
-  if (beresp.http.content-type ~ "text"
-   || beresp.http.content-type ~ "xml"
-   || beresp.http.content-type ~ "json"
-   || beresp.http.content-type ~ "ttf"
-   || beresp.http.content-type ~ "svg"
-   || beresp.http.content-type ~ "otf"
-   || beresp.http.content-type ~ "ico"
-   || beresp.http.content-type ~ "truetype"
-   || beresp.http.content-type ~ "opentype"
-   || beresp.http.content-type ~ "javascript"
-  ) {
+  if (beresp.http.content-type ~ "text|xml|json|ttf|svg|otf|ico|truetype|opentype|javascript") {
     set beresp.do_gzip = true;
   }
 
   # Allow stale content, in case the backend goes down.
-  set beresp.grace = 5m;
   set beresp.keep = 10m;
+
+  # Allow the backend to serve up stale content if it is responding slowly.
+  set beresp.grace = 5m;
 }
 
 
