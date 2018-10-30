@@ -63,8 +63,9 @@ sub vcl_recv {
 
   # Handle language selection if needed
   if (req.url ~ "^/$") {
-    if (req.http.Accept-Language !~ "de") {return (synth(301,"/de"));}
-    if (req.http.Accept-Language !~ "en") {return (synth(301,"/en"));
+    if (req.http.Accept-Language ~ "sv") {return (synth(301,"/sv"));}
+    if (req.http.Accept-Language ~ "en") {return (synth(301,"/en"));
+    if (req.http.Accept-Language ~ "de") {return (synth(301,"/de"));}
     return (synth(301,"/sv"));}
   }
 
@@ -197,7 +198,7 @@ sub vcl_recv {
   }
 
   # Remove all cookies for static files
-  if (req.url ~ "^[^?]*\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff)(\?.*)?$") {
+  if (req.url ~ "\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff|woff2)$") {
     unset req.http.Cookie;
     return (hash);
   }
@@ -237,9 +238,10 @@ sub vcl_fini {
 
 sub vcl_backend_response {
   # Enable leverage browser caching in Varnish
-  if (bereq.url ~ "^[^?]*\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff)(\?.*)?$") {
+  if (bereq.url ~ "\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff|woff2)$") {
     unset beresp.http.set-cookie;
-    set beresp.http.cache-control = "max-age = 2592000";
+    set beresp.http.cache-control = "public, max-age=259200";
+    set beresp.ttl = 3d;    
   }
 
   # Don't cache 50x responses
