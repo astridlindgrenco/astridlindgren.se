@@ -50,19 +50,26 @@ sub vcl_recv {
     return(synth( 418, "I'm a teapot" ));
   }
 
-  # http to https
-  #if (client.ip != "127.0.0.1" && req.http.X-Forwarded-Proto !~ "(?i)https") {
-  #  set req.http.x-redir = "https://www.astridlindgren.com" + req.url;
-  #  return(synth(850, ""));
-  #}
+  # Https
+  if (client.ip != "127.0.0.1" && req.http.X-Forwarded-Proto !~ "(?i)https") {
+    set req.http.x-redir = "https://www.astridlindgren.com" + req.url;
+    return(synth(850, ""));
+  }
 
   # Screen bots and spams
   if (req.url ~ "\.(php|asp)") {
     return (synth(404, "Unknown."));
   }
 
+  # Handle language selection if needed
+  if (req.url ~ "^/$") {
+    if (req.http.Accept-Language !~ "de") {return (synth(301,"/de"));}
+    if (req.http.Accept-Language !~ "en") {return (synth(301,"/en"));
+    return (synth(301,"/sv"));}
+  }
+
   # Redirects for old node numbers
-  if (req.url ~ "/en/node/566") { return (synth(301, "/sv/verken/sangerna/vargsangen")); }
+  if (req.url ~ "/en/node/566") { return (synth(301,"/sv/verken/sangerna/vargsangen")); }
   if (req.url ~ "/en/node/565") { return (synth(301,"/sv/verken/sangerna/har-kommer-pippi-langstrump")); }
   if (req.url ~ "/en/node/569") { return (synth(301,"/sv/verken/sangerna/du-kare-lille-snickerbo")); }
   if (req.url ~ "/en/node/561") { return (synth(301,"/sv/verken/sangerna/alla-ska-sova-for-nu-ar-det-natt")); }
@@ -199,11 +206,14 @@ sub vcl_recv {
 }
 
 sub vcl_synth {
+  # Https
   if (resp.status == 850) {
     set resp.http.Location = req.http.x-redir;
     set resp.status = 301;
     return (deliver);
   }
+
+  # Redirects
   if (resp.status == 301 || resp.status == 302) {
     set resp.http.location = "https://www.astridlindgren.com" + resp.reason;
     set resp.reason = "Moved";
