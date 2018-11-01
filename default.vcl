@@ -1,4 +1,4 @@
-# 2018-11-01 16:02
+# 2018-11-01 16:16
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -139,7 +139,7 @@ sub vcl_recv {
     return (synth(308, "/en"));
   }
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/de") {
-    return (synth(308, "/en")); # temporary until release of german pages
+    return (synth(307, "/en")); # temporary until release of german pages
     if (req.url ~ "der-mensch") {return (synth(308, "/de/der-mensch"));}
     if (req.url ~ "das-werk") {return (synth(308, "/de/das-werk"));}
     if (req.url ~ "figuren") {return (synth(308, "/de/figuren"));}
@@ -187,13 +187,13 @@ sub vcl_recv {
   # Handle language selection if needed
   if (req.url ~ "^/$") {
     if (req.http.Accept-Language ~ "sv") {return (synth(307, "/sv"));}
-    if (req.http.Accept-Language ~ "en") {return (synth(307, "/en"));
-    if (req.http.Accept-Language ~ "de") {return (synth(307, "/de"));}
     if (req.http.Accept-Language ~ "de") {return (synth(307, "/en"));} # Blocka tyska sajten tills vidare
+    #if (req.http.Accept-Language ~ "de") {return (synth(307, "/de"));}
+    if (req.http.Accept-Language ~ "en") {return (synth(307, "/en"));
     return (synth(308, "/sv"));}
   }
 
-  if (req.http.host ~ "astridlindgren.com" && req.url ~ "$/de") {return (synth(307, "/en"));} # Blocka tyska sajten tills vidare
+  if (req.http.host ~ "astridlindgren.com" && req.url ~ "^/de") {return (synth(307, "/en"));} # Blocka tyska sajten tills vidare
 
 
   if (req.http.Upgrade ~ "(?i)websocket") {
