@@ -58,7 +58,7 @@ sub vcl_recv {
   }
 
   # Screen bots and spams
-  if (req.url ~ "\.(php|asp)") {
+  if (req.url ~ "\.(php|asp|cgi)") {
     return (synth(410, "Gone."));
   }
 
