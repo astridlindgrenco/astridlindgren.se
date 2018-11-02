@@ -31,18 +31,25 @@ if (process.env.NODE_ENV === 'development') {
 /**
  * Take extra care to clean up em' headers in production
  */
-const SECONDS_TEN_MINUTES = 1 * 60 * 10
-const SECONDS_ONE_DAY = SECONDS_TEN_MINUTES * 6 * 24
-const SECONDS_ONE_YEAR = SECONDS_ONE_DAY * 365
 
-const MS_ONE_DAY = 1000 * 60 * 60 * 24
-const MS_ONE_YEAR = MS_ONE_DAY * 365
-
-if (process.env.NODE_ENV !== 'development') {
+if (process.env.NODE_ENV === 'production') {
   server.use(helmet())
+}
+
+/**
+ * Set cache header
+ */
+
+if (process.env.NODE_ENV === 'production') {
   server.use(cacheControl({
-    maxAge: SECONDS_ONE_YEAR,
+    maxAge: 600, /* 10 minutes */
     public: true
+  }))
+} else {
+  server.use(cacheControl({
+    noChache: true,
+    noStore: true,
+    mustRevalidate: true
   }))
 }
 
@@ -55,9 +62,10 @@ server.use(noTrailingSlash())
 /**
  * Serve static files
  */
-
+const MS_ONE_DAY = 1000 * 60 * 60 * 24
+const MS_ONE_MONTH = MS_ONE_DAY * 30
 server.use(assets)
-server.use(serve('public', { maxage: MS_ONE_YEAR }))
+server.use(serve('public', { maxage: MS_ONE_MONTH }))
 
 /**
  * Parse request body
