@@ -244,16 +244,20 @@ sub vcl_fini {
 }
 
 sub vcl_backend_response {
-  # Enable leverage browser caching in Varnish
-  if (bereq.url ~ "\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff|woff2)$") {
-    unset beresp.http.set-cookie;
-    set beresp.http.cache-control = "public, max-age=259200";
-    set beresp.ttl = 30d;
-  }
-
   # Don't cache 50x responses
   if (beresp.status == 500 || beresp.status == 502 || beresp.status == 503 || beresp.status == 504) {
     return (abandon);
+  }
+
+  # Enable short browser caching on pages
+  set beresp.http.cache-control = "private, max-age=300";
+  set beresp.ttl = 300s;
+
+  # Enable longer browser caching on
+  if (bereq.url ~ "\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff|woff2)$") {
+    unset beresp.http.set-cookie;
+    set beresp.http.cache-control = "public, max-age=2592000";
+    set beresp.ttl = 30d;
   }
 
   # Zip text resources

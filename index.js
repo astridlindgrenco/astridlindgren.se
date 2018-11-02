@@ -37,21 +37,14 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 /**
- * Set cache header
+ * Do not cache pages at all
  */
 
-if (process.env.NODE_ENV === 'production') {
-  server.use(cacheControl({
-    maxAge: 600, /* 10 minutes */
-    public: true
-  }))
-} else {
-  server.use(cacheControl({
-    noChache: true,
-    noStore: true,
-    mustRevalidate: true
-  }))
-}
+server.use(cacheControl({
+  noChache: true,
+  noStore: true,
+  mustRevalidate: true
+}))
 
 /**
  * Remove trailing slashes before continuing
