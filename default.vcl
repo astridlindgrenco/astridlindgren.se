@@ -1,4 +1,4 @@
-# 2018-11-07 11:48
+# 2018-11-07 12:29
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -140,6 +140,7 @@ sub vcl_recv {
     return (synth(308, "/de"));
   }
   if (req.http.host ~ "astridlindgren.se") { # all swedish pages
+    if (req.url ~ "pilutta-visan") {return (synth(308, "/sv/verken/sangerna/pilutta-visan"));}
     if (req.url ~ "manniskan") {return (synth(308, "/sv/astrid-lindgren"));}
     if (req.url ~ "verken") {return (synth(308, "/sv/verken"));}
     if (req.url ~ "mer-fakta") {return (synth(308, "/sv/astrid-lindgren"));}
