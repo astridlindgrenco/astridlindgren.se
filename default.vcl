@@ -1,4 +1,4 @@
-# 2018-11-01 16:16
+# 2018-11-07 11:48
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -51,19 +51,13 @@ sub vcl_recv {
     return(synth(418, "I'm a teapot." ));
   }
 
-  # Https
-  if (client.ip != "127.0.0.1" && req.http.X-Forwarded-Proto !~ "(?i)https") {
-    set req.http.x-redir = "https://www.astridlindgren.com" + req.url;
-    return(synth(850, ""));
-  }
-
   # Screen bots and spams
   if (req.url ~ "\.(php|asp|cgi)") {
     return (synth(410, "Gone."));
   }
 
   # Redirects for old site URL's
-  if (req.url ~ "/en/node/") {
+  if (req.url ~ "/(en|sv)/node(/|\?)") {
     if (req.url ~ "/en/node/566") { return (synth(308, "/sv/verken/sangerna/vargsangen")); }
     if (req.url ~ "/en/node/565") { return (synth(308, "/sv/verken/sangerna/har-kommer-pippi-langstrump")); }
     if (req.url ~ "/en/node/569") { return (synth(308, "/sv/verken/sangerna/du-kare-lille-snickerbo")); }
@@ -113,14 +107,14 @@ sub vcl_recv {
     if (req.url ~ "/en/node/485") { return (synth(308, "/sv/verken/boklista?character=W7d4KxMAAGwg7q_B&type=&authors=&content=&illustrators=&publicist=&sort_by=author_year&view_by=grid")); }
     if (req.url ~ "/en/node/517") { return (synth(308, "/sv/foretaget")); }
     if (req.url ~ "/en/node/58") { return (synth(308, "/sv/bok/jag-vill-inte-ga-och-lagga-mig")); }
-    if (req.url ~ "/en/node?page=2") { return (synth(308, "/en/characters/the-brothers-lionheart")); }
+    if (req.url ~ "/en/node\?page=2") { return (synth(308, "/en/characters/the-brothers-lionheart")); }
     if (req.url ~ "/en/node/2805") { return (synth(308, "/sv/bok/sunnanang2003")); }
     if (req.url ~ "/en/node/337") { return (synth(308, "/sv/astrid-lindgren/arvet-efter-astrid-lindgren/astrid-lindgren-priset")); }
     if (req.url ~ "/en/node/494") { return (synth(308, "/sv/film/tjorven-och-mysak")); }
     if (req.url ~ "/en/node/605") { return (synth(308, "/sv/bok/pippi-gar-till-sjoss")); }
     if (req.url ~ "/en/node/607") { return (synth(308, "/sv/bok/pippi-flyttar-in")); }
     if (req.url ~ "/en/node/622") { return (synth(308, "/sv/bok/en-bunt-visor-for-pippi-emil-och-andra")); }
-    if (req.url ~ "/en/node?page=19") { return (synth(308, "/sv/karaktarerna/masterdetektiven")); }
+    if (req.url ~ "/en/node\?page=19") { return (synth(308, "/sv/karaktarerna/masterdetektiven")); }
   }
   if (req.http.host ~ "astridlindgren.se" && req.url ~ "/ru") {
     return (synth(308, "/en"));
@@ -183,6 +177,12 @@ sub vcl_recv {
     return (synth(308, "/sv"));
   }
   # /Redirects
+
+  # Https
+  if (client.ip != "127.0.0.1" && req.http.X-Forwarded-Proto !~ "(?i)https") {
+    set req.http.x-redir = "https://www.astridlindgren.com" + req.url;
+    return(synth(850, ""));
+  }
 
   # Handle language selection if needed
   if (req.url ~ "^/$") {
@@ -271,3 +271,5 @@ sub vcl_backend_response {
   # Allow the backend to serve up stale content if it is responding slowly.
   set beresp.grace = 15m;
 }
+
+
