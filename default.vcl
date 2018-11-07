@@ -1,4 +1,4 @@
-# 2018-11-07 12:29
+# 2018-11-07 20:13
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -33,17 +33,18 @@ sub vcl_deliver {
   unset resp.http.Link;
 }
 
-acl purge {
+acl banners {
   "10.50.4.92"/24;
 }
 
 sub vcl_recv {
-  # purge
-  if (req.method == "PURGE") {
-    if (!client.ip ~ purge) {
+  # empty cache
+  if (req.method == "BANALL") {
+    if (!client.ip ~ banners) {
       return(synth(405,"Not allowed."));
     }
-    return (purge);
+    ban("obj.http.x-url ~ .");
+    return(synth(200, "Ban completed"));
   }
 
   # The infamous shellshock
