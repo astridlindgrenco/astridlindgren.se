@@ -96,11 +96,20 @@
     overflow: hidden;
     box-shadow: none !important;
   }
+  .CharacterMenu--dynamicHeight {
+    height: calc(10vw + var(--CharacterMenuTitleHeight));
+  }
   .CharacterMenu.open { height: auto; }
 
   .CharacterMenu-titleLink { display: block; }
 
-  .CharacterMenu-toggle-icon { display: block; position: absolute; right: 5vw; top: calc(5vw + 5px); transition: 250ms; }
+  .CharacterMenu-toggle-icon {
+    display: block;
+    position: absolute;
+    right: 5vw;
+    top: calc(5vw + 5px);
+    transition: transform 250ms ease;
+  }
   .CharacterMenu.open .CharacterMenu-toggle-icon { transform: rotate(180deg) }
 
   .CharacterMenu-container {
@@ -112,7 +121,7 @@
     height: 100%;
   }
   .CharacterMenu-title {
-    padding: calc(5vw - 2px) 0px;
+    padding: calc(5vw - 1px) 0px;
   }
   .CharacterMenu-link {
     display: block;
