@@ -1,4 +1,4 @@
-# 2018-11-07 20:13
+# 2018-11-07 21:59
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -272,6 +272,7 @@ sub vcl_backend_response {
 
   # Allow the backend to serve up stale content if it is responding slowly.
   set beresp.grace = 15m;
+  
+  # store url to enable ban pattern
+  set beresp.http.x-url = bereq.url;
 }
-
-
