@@ -1,6 +1,7 @@
 'use strict'
 const Koa = require('koa')
 const body = require('koa-body')
+const etag = require('koa-etag')
 const serve = require('koa-static')
 const helmet = require('koa-helmet')
 const cacheControl = require('koa-cache-control')
@@ -37,16 +38,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 /**
- * Do not cache pages at all
- */
-
-server.use(cacheControl({
-  noChache: true,
-  noStore: true,
-  mustRevalidate: true
-}))
-
-/**
  * Remove trailing slashes before continuing
  */
 
@@ -59,6 +50,17 @@ const MS_ONE_DAY = 1000 * 60 * 60 * 24
 const MS_ONE_MONTH = MS_ONE_DAY * 30
 server.use(assets)
 server.use(serve('public', { maxage: MS_ONE_MONTH }))
+
+/**
+ * Do not cache pages at all
+ */
+
+server.use(cacheControl({
+  noCache: true,
+  noStore: true,
+  mustRevalidate: true
+}))
+server.use(etag())
 
 /**
  * Parse request body

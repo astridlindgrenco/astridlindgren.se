@@ -1,4 +1,4 @@
-# 2018-11-07 21:59
+# 2018-11-09 15:36
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -251,9 +251,12 @@ sub vcl_backend_response {
     return (abandon);
   }
 
-  # Enable short browser caching on pages
-  set beresp.http.cache-control = "private, max-age=300";
-  set beresp.ttl = 300s;
+  # No chache on ETag:ed pages
+  # https://medium.com/pixelpoint/best-practices-for-cache-control-settings-for-your-website-ff262b38c5a2
+  if (beresp.http.ETag ~ ".*") {
+    set beresp.http.cache-control = "no-cache";
+    set beresp.ttl = 300s; # or use default?
+  }
 
   # Enable longer browser caching on
   if (bereq.url ~ "\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff|woff2)$") {
@@ -272,7 +275,7 @@ sub vcl_backend_response {
 
   # Allow the backend to serve up stale content if it is responding slowly.
   set beresp.grace = 15m;
-  
+
   # store url to enable ban pattern
   set beresp.http.x-url = bereq.url;
 }
