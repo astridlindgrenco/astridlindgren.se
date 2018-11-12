@@ -263,11 +263,14 @@ sub vcl_backend_response {
   # https://medium.com/pixelpoint/best-practices-for-cache-control-settings-for-your-website-ff262b38c5a2
   if (beresp.http.ETag ~ ".*") {
     set beresp.http.cache-control = "no-cache";
+    set beresp.ttl = 2m; # This should already be picked-up from max-age
+    # we have no cookies set in backend right now, otherwise
+    # if (... check for some cookies ...) { unset beresp.http.set-cookie; }
   }
 
   # Enable longer browser caching on
   if (bereq.url ~ "\.(xml|png|jpg|json|txt|svg|ttf|otf|ico|css|js|woff|woff2)$") {
-    unset beresp.http.set-cookie;
+    unset beresp.http.set-cookie; # we have no cookies set in backend rihgt now, but to make sure
     set beresp.http.cache-control = "public, max-age=2592000";
     set beresp.ttl = 30d;
   }
