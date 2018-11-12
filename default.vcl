@@ -1,4 +1,4 @@
-# 2018-11-09 15:36
+# 2018-11-10 20:54
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -8,7 +8,7 @@ backend serv1 {
   .host = "10.50.4.92";
   .port = "8080";
   .probe = {
-    .url = "/sitemap.xml";
+    .url = "/robots.txt";
     .timeout = 30s;
     .interval = 60s;
     .window = 5;
@@ -28,7 +28,7 @@ sub vcl_deliver {
     set resp.http.X-Cache = "MISS";
   }
   unset resp.http.X-Varnish;
-  unset resp.http.Server;
+  unset resp.http.server;
   unset resp.http.Via;
   unset resp.http.Link;
 }
@@ -211,6 +211,14 @@ sub vcl_recv {
     return (hash);
   }
 
+  # Remove all tracking cookies by removing all cookies (we have no sessions)
+  unset req.http.Cookie;
+
+  # Remove the cookie when it's empty
+  # if (req.http.Cookie == "") {
+  #  unset req.http.Cookie;
+  # }
+
   # Cache
   return (hash);
 }
@@ -251,11 +259,10 @@ sub vcl_backend_response {
     return (abandon);
   }
 
-  # No chache on ETag:ed pages
+  # No cache on ETag:ed pages
   # https://medium.com/pixelpoint/best-practices-for-cache-control-settings-for-your-website-ff262b38c5a2
   if (beresp.http.ETag ~ ".*") {
     set beresp.http.cache-control = "no-cache";
-    set beresp.ttl = 300s; # or use default?
   }
 
   # Enable longer browser caching on
@@ -279,3 +286,5 @@ sub vcl_backend_response {
   # store url to enable ban pattern
   set beresp.http.x-url = bereq.url;
 }
+
+
