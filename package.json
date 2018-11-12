@@ -6,6 +6,7 @@
   "scripts": {
     "test": "standard",
     "start": "node -r dotenv/config index.js",
+    "debug": "nodemon --inspect -e js,css -r dotenv/config index.js",
     "rstart": "nodemon -e js,css -r dotenv/config index.js",
     "setup": "./bin/setup",
     "restart": "nodemon -r dotenv/config --inspect index.js -e js -i lib/components",
