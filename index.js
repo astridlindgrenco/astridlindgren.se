@@ -52,14 +52,17 @@ server.use(assets)
 server.use(serve('public', { maxage: MS_ONE_MONTH }))
 
 /**
- * Do not cache pages at all
+ * Cache pages a short time, like 2 minutes
  */
 
 server.use(cacheControl({
-  noCache: true,
-  noStore: true,
-  mustRevalidate: true
+  maxAge: 120
 }))
+
+/**
+ * Add Etag to pages
+ */
+
 server.use(etag())
 
 /**
