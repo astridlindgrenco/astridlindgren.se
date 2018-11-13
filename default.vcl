@@ -161,6 +161,7 @@ sub vcl_recv {
     if (req.url ~ "faq-2") {return (synth(308, "/en/frequently-asked-questions"));}
     if (req.url ~ "our-view-on-copyright") {return (synth(308, "/en/the-company"));}
     if (req.url ~ "contact") {return (synth(308, "/en/the-company/contact-us"));}
+    if (req.url ~ "privacy-policy") {return (synth(308, "/en/privacy-policy"));}
     return (synth(308, "/en/the-company"));
   }
   if (req.http.host ~ "astridlindgrenab.se|saltkrakan.se") {
