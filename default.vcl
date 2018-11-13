@@ -145,10 +145,10 @@ sub vcl_recv {
     if (req.url ~ "manniskan") {return (synth(308, "/sv/astrid-lindgren"));}
     if (req.url ~ "verken") {return (synth(308, "/sv/verken"));}
     if (req.url ~ "mer-fakta") {return (synth(308, "/sv/astrid-lindgren"));}
+    if (req.url ~ "varlden-runt") {return (synth(308, "/sv/astrid-i-varlden"));}
     if (req.url ~ "karaktarerna") {return (synth(308, "/sv/karaktarerna"));}
     if (req.url ~ "lekstugan") {return (synth(308, "/sv/karaktarerna/pippi-langstrump/lek-och-pyssla"));}
     if (req.url ~ "lekstugan") {return (synth(308, "/sv/karaktarerna/pippi-langstrump/lek-och-pyssla"));}
-    if (req.url ~ "varlden-runt") {return (synth(308, "/sv/astrid-i-varlden"));}
     if (req.url ~ "kulturcentret") {return (synth(308, "/sv/platser-att-besoka"));}
     if (req.url ~ "aktuellt") {return (synth(308, "/sv/nyhetsrummet"));}
     if (req.url ~ "upplev-i-verkligheten") {return (synth(308, "/sv/platser-att-besoka"));}
