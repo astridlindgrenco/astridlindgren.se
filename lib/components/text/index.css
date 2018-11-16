@@ -121,7 +121,7 @@
   padding: 5px;
   max-width: 100%;
   font-weight: 600;
-  color: var(--color-link);
+  color: inherit;
   transition: color 50ms var(--ease-out);
   text-decoration: underline;
 }
