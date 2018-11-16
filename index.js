@@ -4,6 +4,7 @@ const body = require('koa-body')
 const etag = require('koa-etag')
 const serve = require('koa-static')
 const helmet = require('koa-helmet')
+const rewrite = require('koa-rewrite')
 const cacheControl = require('koa-cache-control')
 const noTrailingSlash = require('koa-no-trailing-slash')
 const router = require('./lib/router')
@@ -43,8 +44,16 @@ if (process.env.NODE_ENV === 'production') {
 
 server.use(noTrailingSlash())
 
+/*
+ * Rewrite main CSS and JS paths (which uses a Cache Busting filename on the client)
+ * to the plain filename on the server so we can serve it regardless of which
+ * version the client requests (as it could request an old version depending on other caching)
+ */
+server.use(rewrite('/index-(.*).css', '/index.css'))
+server.use(rewrite('/index-(.*).js', '/index.js'))
+
 /**
- * Serve static files
+ * Serve static files, rewrite requests to versioned CSS and JS to the actual file
  */
 const MS_ONE_DAY = 1000 * 60 * 60 * 24
 const MS_ONE_MONTH = MS_ONE_DAY * 30
