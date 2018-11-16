@@ -53,7 +53,7 @@ server.use(rewrite('/index-(.*).css', '/index.css'))
 server.use(rewrite('/index-(.*).js', '/index.js'))
 
 /**
- * Serve static files, rewrite requests to versioned CSS and JS to the actual file
+ * Serve static files
  */
 const MS_ONE_DAY = 1000 * 60 * 60 * 24
 const MS_ONE_MONTH = MS_ONE_DAY * 30
