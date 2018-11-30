@@ -35,7 +35,6 @@ npm-debug.log*
 *.env*
 server.key
 server.crt
-.vscode
 .npmrc
 
 # Runtime data
