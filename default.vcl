@@ -31,6 +31,11 @@ sub vcl_deliver {
   unset resp.http.server;
   unset resp.http.Via;
   unset resp.http.Link;
+  # No cache on ETag:ed pages
+  # https://medium.com/pixelpoint/best-practices-for-cache-control-settings-for-your-website-ff262b38c5a2
+  if (resp.http.ETag ~ ".*") {
+    set resp.http.cache-control = "no-cache";
+  }  
 }
 
 acl banners {
@@ -53,7 +58,7 @@ sub vcl_recv {
   }
 
   # Screen bots and spams
-  if (req.url ~ "\.(php|asp|cgi)") {
+  if (req.url ~ "(\.(php|asp|cgi)|\(|\))") {
     return (synth(410, "Gone."));
   }
 
@@ -215,11 +220,6 @@ sub vcl_recv {
   # Remove all tracking cookies by removing all cookies (we have no sessions)
   unset req.http.Cookie;
 
-  # Remove the cookie when it's empty
-  # if (req.http.Cookie == "") {
-  #  unset req.http.Cookie;
-  # }
-
   # Cache
   return (hash);
 }
@@ -258,15 +258,6 @@ sub vcl_backend_response {
   # Don't cache 50x responses
   if (beresp.status == 500 || beresp.status == 502 || beresp.status == 503 || beresp.status == 504) {
     return (abandon);
-  }
-
-  # No cache on ETag:ed pages
-  # https://medium.com/pixelpoint/best-practices-for-cache-control-settings-for-your-website-ff262b38c5a2
-  if (beresp.http.ETag ~ ".*") {
-    set beresp.http.cache-control = "no-cache";
-    set beresp.ttl = 2m; # This should already be picked-up from max-age
-    # we have no cookies set in backend right now, otherwise
-    # if (... check for some cookies ...) { unset beresp.http.set-cookie; }
   }
 
   # Enable longer browser caching on
