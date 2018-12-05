@@ -9,7 +9,7 @@
       "protocol": "inspector",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run-script", "debug"],
-      "console": "integratedTerminal"
+      "restart": true
     },
     {
       "type": "chrome",

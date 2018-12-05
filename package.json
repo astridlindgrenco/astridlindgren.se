@@ -8,7 +8,7 @@
     "start": "node -r dotenv/config index.js",
     "debug": "nodemon --inspect -e js,css -r dotenv/config index.js",
     "rstart": "nodemon -e js,css -r dotenv/config index.js",
-    "setup": "./bin/setup",
+    "setup": "node ./bin/setup",
     "restart": "nodemon -r dotenv/config --inspect index.js -e js -i lib/components",
     "build:js:app": "browserify lib/app/index.js -t localenvify -t yo-yoify -t babelify -p common-shakeify -g unassertify -g uglifyify | uglifyjs -o public/index.js",
     "build:js": "npm run build:js:app",
