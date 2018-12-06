@@ -1,4 +1,4 @@
-# 2018-11-10 20:54
+# 2018-12-06 21:04
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -33,7 +33,7 @@ sub vcl_deliver {
   unset resp.http.Link;
   # No cache on ETag:ed pages
   # https://medium.com/pixelpoint/best-practices-for-cache-control-settings-for-your-website-ff262b38c5a2
-  if (resp.http.ETag ~ ".*") {
+  if (resp.http.ETag ~ ".+") {
     set resp.http.cache-control = "no-cache";
   }  
 }
@@ -52,16 +52,31 @@ sub vcl_recv {
     return(synth(200, "Ban completed"));
   }
 
+  # Only GET, HEAD
+  if (req.method !~ "GET|HEAD") {
+    return (synth(410, "Gone."));
+  }
+  
   # The infamous shellshock
-  if ( req.http.User-Agent ~ "[(][^)]*[)][^{]*[{][^;]*[;][^}]*[}][^;]*[;]" ) {
+  if (req.http.User-Agent ~ "[(][^)]*[)][^{]*[{][^;]*[;][^}]*[}][^;]*[;]" ) {
     return(synth(418, "I'm a teapot." ));
   }
 
-  # Screen bots and spams
-  if (req.url ~ "(\.(php|asp|cgi)|\(|\))") {
+  # Screen basic attacks
+  # php asp cgi pl
+  # [ ] { } ( ) < > ** | ; ./ :
+  if (req.url ~ "(\.(php|asp|cgi|pl)|\[|\]|\{|\}|\(|\)|\<|\>|\*+|\||\;|\.\/|:)") {
     return (synth(410, "Gone."));
   }
-
+  
+  # [\n]+ [\s]+ %00 (%\w\w){10,}
+  # buffer attack:    /[\w]+\=[^\=]{500,+}\&/
+  # xss:              /((\%3D)|(=))[^\n]*((\%3C)|<)[^\n]+((\%3E)|>)/
+  # sql-i 'or':       /\w*((\%27)|(\’))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/ix
+  if (req.url ~ "(?i)([\n]+|[\s]+|%00|(%\w\w){10,}|[\w]+\=[^\=]{500,+}\&|((\%3D)|(=))[^\n]*((\%3C)|<)[^\n]+((\%3E)|>)|\w*((\%27)|(\’))((\%6F)|o|(\%4F))((\%72)|r|(\%52)))") {
+    return (synth(410, "Gone."));
+  }
+  
   # Redirects for old site URL's
   if (req.url ~ "/(en|sv)/node(/|\?)") {
     if (req.url ~ "/en/node/566") { return (synth(308, "/sv/verken/sangerna/vargsangen")); }
@@ -186,12 +201,34 @@ sub vcl_recv {
   }
   # /Redirects
 
+  # Wrong site?
+  if (req.http.host !~ "www.astridlindgren.com" || req.url ~ "imagecache|/sites/|/search|/node/\d+|/wpcontent|/wp-") {
+    return (synth(410, "Gone."));
+  }
+  
   # Https
   if (client.ip != "127.0.0.1" && req.http.X-Forwarded-Proto !~ "(?i)https") {
     set req.http.x-redir = "https://www.astridlindgren.com" + req.url;
     return(synth(850, ""));
   }
-
+  
+  # https://github.com/mattiasgeniar/varnish-4.0-configuration-templates/blob/master/default.vcl
+  # Some generic URL manipulation, useful for all templates that follow
+  # First remove URL parameters used to track effectiveness of online marketing campaigns
+  if (req.url ~ "(\?|&)(utm_[a-z]+|gclid|cx|ie|cof|siteurl|fbclid)=") {
+      set req.url = regsuball(req.url, "(utm_[a-z]+|gclid|cx|ie|cof|siteurl|fbclid)=[-_A-z0-9+()%.]+&?", "");
+      set req.url = regsub(req.url, "[?|&]+$", "");
+  }
+  # Strip hash, server doesn't need it.
+  if (req.url ~ "\#") {
+    set req.url = regsub(req.url, "\#.*$", "");
+  }
+  # Strip a trailing ? if it exists
+  if (req.url ~ "\?$") {
+    set req.url = regsub(req.url, "\?$", "");
+  }
+  
+  
   # Handle language selection if needed
   if (req.url ~ "^/$") {
     if (req.http.Accept-Language ~ "sv") {return (synth(307, "/sv"));}
@@ -220,8 +257,6 @@ sub vcl_recv {
   # Remove all tracking cookies by removing all cookies (we have no sessions)
   unset req.http.Cookie;
 
-  # Cache
-  return (hash);
 }
 
 sub vcl_synth {
@@ -281,5 +316,3 @@ sub vcl_backend_response {
   # store url to enable ban pattern
   set beresp.http.x-url = bereq.url;
 }
-
-
