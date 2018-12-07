@@ -35,7 +35,7 @@ sub vcl_deliver {
   # https://medium.com/pixelpoint/best-practices-for-cache-control-settings-for-your-website-ff262b38c5a2
   if (resp.http.ETag ~ ".+") {
     set resp.http.cache-control = "no-cache";
-  }  
+  }
 }
 
 acl banners {
@@ -56,7 +56,7 @@ sub vcl_recv {
   if (req.method !~ "GET|HEAD") {
     return (synth(410, "Gone."));
   }
-  
+
   # The infamous shellshock
   if (req.http.User-Agent ~ "[(][^)]*[)][^{]*[{][^;]*[;][^}]*[}][^;]*[;]" ) {
     return(synth(418, "I'm a teapot." ));
@@ -68,7 +68,7 @@ sub vcl_recv {
   if (req.url ~ "(\.(php|asp|cgi|pl)|\[|\]|\{|\}|\(|\)|\<|\>|\*+|\||\;|\.\/|:)") {
     return (synth(410, "Gone."));
   }
-  
+
   # [\n]+ [\s]+ %00 (%\w\w){10,}
   # buffer attack:    /[\w]+\=[^\=]{500,+}\&/
   # xss:              /((\%3D)|(=))[^\n]*((\%3C)|<)[^\n]+((\%3E)|>)/
@@ -76,7 +76,7 @@ sub vcl_recv {
   if (req.url ~ "(?i)([\n]+|[\s]+|%00|(%\w\w){10,}|[\w]+\=[^\=]{500,+}\&|((\%3D)|(=))[^\n]*((\%3C)|<)[^\n]+((\%3E)|>)|\w*((\%27)|(\’))((\%6F)|o|(\%4F))((\%72)|r|(\%52)))") {
     return (synth(410, "Gone."));
   }
-  
+
   # Redirects for old site URL's
   if (req.url ~ "/(en|sv)/node(/|\?)") {
     if (req.url ~ "/en/node/566") { return (synth(308, "/sv/verken/sangerna/vargsangen")); }
@@ -202,16 +202,16 @@ sub vcl_recv {
   # /Redirects
 
   # Wrong site?
-  if (req.http.host !~ "www.astridlindgren.com" || req.url ~ "imagecache|/sites/|/search|/node/\d+|/wpcontent|/wp-") {
+  if (req.http.host !~ "astridlindgren.com" || req.url ~ "imagecache|/sites/|/search|/node/\d+|/wpcontent|/wp-") {
     return (synth(410, "Gone."));
   }
-  
+
   # Https
   if (client.ip != "127.0.0.1" && req.http.X-Forwarded-Proto !~ "(?i)https") {
     set req.http.x-redir = "https://www.astridlindgren.com" + req.url;
     return(synth(850, ""));
   }
-  
+
   # https://github.com/mattiasgeniar/varnish-4.0-configuration-templates/blob/master/default.vcl
   # Some generic URL manipulation, useful for all templates that follow
   # First remove URL parameters used to track effectiveness of online marketing campaigns
@@ -227,8 +227,8 @@ sub vcl_recv {
   if (req.url ~ "\?$") {
     set req.url = regsub(req.url, "\?$", "");
   }
-  
-  
+
+
   # Handle language selection if needed
   if (req.url ~ "^/$") {
     if (req.http.Accept-Language ~ "sv") {return (synth(307, "/sv"));}
