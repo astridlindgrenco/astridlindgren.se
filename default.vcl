@@ -1,4 +1,4 @@
-# 2018-12-16 20.37
+# 2018-12-17 09.47
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -233,14 +233,10 @@ sub vcl_recv {
   # Handle language selection if needed
   if (req.url ~ "^/$") {
     if (req.http.Accept-Language ~ "sv") {return (synth(307, "/sv"));}
-    if (req.http.Accept-Language ~ "de") {return (synth(307, "/en"));} # Blocka tyska sajten tills vidare
-    #if (req.http.Accept-Language ~ "de") {return (synth(307, "/de"));}
-    if (req.http.Accept-Language ~ "en") {return (synth(307, "/en"));
-    return (synth(308, "/sv"));}
+    if (req.http.Accept-Language ~ "de") {return (synth(307, "/de"));}
+    if (req.http.Accept-Language ~ "en") {return (synth(307, "/en"));}
+    return (synth(308, "/sv"));
   }
-
-  if (req.http.host ~ "astridlindgren.com" && req.url ~ "^/de") {return (synth(307, "/en"));} # Blocka tyska sajten tills vidare
-
 
   if (req.http.Upgrade ~ "(?i)websocket") {
     set req.backend_hint = myclust.backend(client.identity);
