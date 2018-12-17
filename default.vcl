@@ -1,4 +1,4 @@
-# 2018-12-06 21:04
+# 2018-12-16 20.37
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -65,7 +65,7 @@ sub vcl_recv {
   # Screen basic attacks
   # php asp cgi pl
   # [ ] { } ( ) < > ** | ; ./ :
-  if (req.url ~ "(\.(php|asp|cgi|pl)|\[|\]|\{|\}|\(|\)|\<|\>|\*+|\||\;|\.\/|:)") {
+  if (req.url ~ "(?i)(\.(php|asp|cgi|pl)|\[|\]|\{|\}|\(|\)|\<|\>|\*+|\||\;|\.(\|%2F)/|:)") {
     return (synth(410, "Gone."));
   }
 
@@ -73,7 +73,8 @@ sub vcl_recv {
   # buffer attack:    /[\w]+\=[^\=]{500,+}\&/
   # xss:              /((\%3D)|(=))[^\n]*((\%3C)|<)[^\n]+((\%3E)|>)/
   # sql-i 'or':       /\w*((\%27)|(\’))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/ix
-  if (req.url ~ "(?i)([\n]+|[\s]+|%00|(%\w\w){10,}|[\w]+\=[^\=]{500,+}\&|((\%3D)|(=))[^\n]*((\%3C)|<)[^\n]+((\%3E)|>)|\w*((\%27)|(\’))((\%6F)|o|(\%4F))((\%72)|r|(\%52)))") {
+  # sql-i:            /(select|insert|update|union|all)(\+|\s|%20|\()/i
+  if (req.url ~ "(?i)(((select|insert|update|union|all)(\+|\s|%20|\())|[\n]+|[\s]+|%00|(%\w\w){10,}|[\w]+\=[^\=]{500,+}\&|((\%3D)|(=))[^\n]*((\%3C)|<)[^\n]+((\%3E)|>)|\w*((\%27)|(\’))((\%6F)|o|(\%4F))((\%72)|r|(\%52)))") {
     return (synth(410, "Gone."));
   }
 
