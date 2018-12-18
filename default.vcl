@@ -38,18 +38,17 @@ sub vcl_deliver {
   }
 }
 
-acl banners {
+acl purgers {
   "10.50.4.92"/24;
 }
 
 sub vcl_recv {
-  # empty cache
-  if (req.method == "BANALL") {
-    if (!client.ip ~ banners) {
+  # purge page
+  if (req.method == "PURGE") {
+    if (!client.ip ~ purgers) {
       return(synth(405,"Not allowed."));
     }
-    ban("obj.http.x-url ~ .");
-    return(synth(200, "Ban completed"));
+    return(purge);
   }
 
   # Only GET, HEAD

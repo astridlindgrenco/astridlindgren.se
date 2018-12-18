@@ -12,6 +12,7 @@ const render = require('./lib/render')
 const assets = require('./lib/middleware/assets')
 const stores = require('./lib/middleware/stores')
 const prismic = require('./lib/middleware/prismic')
+const linkmap = require('./lib/middleware/linkmap')
 const lang = require('./lib/middleware/lang')
 const navigation = require('./lib/middleware/navigation')
 
@@ -91,6 +92,15 @@ server.use(stores)
  */
 
 server.use(prismic)
+
+/**
+ * Load the linkmap
+ */
+server.use(linkmap)
+
+/**
+ * Parse request and set up language and navigation
+ */
 server.use(lang)
 server.use(navigation)
 
