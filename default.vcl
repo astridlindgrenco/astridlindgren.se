@@ -251,8 +251,16 @@ sub vcl_recv {
     return (hash);
   }
 
-  # Remove all tracking cookies by removing all cookies (we have no sessions)
-  unset req.http.Cookie;
+  # Remove all tracking cookies from page requests other than the prismic preview cookie, this should happen:
+  # ReqUnset       Cookie: _ga=GA1.2.2016106568.1540820877; _hjIncludedInSample=1; _gid=GA1.2.1430828390.1545127668; cookieconsent_status=dismiss; _gat_UA-12563240-2=1
+  # ReqHeader      Cookie:
+  # ReqUnset       Cookie:
+  if (req.http.Cookie ~ "(_ga|_gid|_gat_[-A-Z0-9]+|cookieconsent_status|_hjIncludedInSample)=") {
+      set req.http.Cookie = regsuball(req.http.Cookie, "(_ga|_gid|_gat_[-A-Z0-9]+|cookieconsent_status|_hjIncludedInSample)=[-_A-z0-9+()%.]+;?\s?", "");
+      if (req.http.Cookie !~ "=") {
+        unset req.http.Cookie;
+      }
+  }
 
 }
 
