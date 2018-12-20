@@ -1,4 +1,4 @@
-# 2018-12-17 09.47
+# 2018-12-20 11.31
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -203,7 +203,7 @@ sub vcl_recv {
   # /Redirects
 
   # Wrong site?
-  if (req.http.host !~ "astridlindgren.com" || req.url ~ "imagecache|/sites/|/search|/node/\d+|/wpcontent|/wp-") {
+  if (req.url ~ "imagecache|/sites/|/search|/node/\d+|/wpcontent|/wp-") {
     return (synth(410, "Gone."));
   }
 
