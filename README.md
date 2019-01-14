@@ -5,7 +5,6 @@ Website for Astrid Lindgren Company that promotes and protects the Astrid Lindgr
 ## Setup
 
 Requirements:
-
 - Git
 - NodeJS 10+
 - Nodemon
@@ -18,18 +17,17 @@ Requirements:
   - Debugger for Chrome
   - EditorConfig for VS Code
   - VCL - Varnish Configuration Language
-- Restore npm packages
-- Run the npm build script
-- Start the "Debug (one-click)" debug configuration
+- > npm install
+- > npm run setup
+- > npm run build
+- > npm run debug
+- Or start the "Debug (one-click)" debug configuration in VS Code
   - This will start nodemon with --inspect to allow a debugger to attach, launch Chrome on the correct localhost port and attach the VS Code debugger in one go. Nodeman will restart automatically on code changes.
   - The links.map file will be generated on the first request
-    - If this fails, try creating the links.map file manually with "[]" as its content
 
 ### Environment variables
 
-A .env file is generated in the root folder by running the npm setup script but it needs to be amended with the correct values. Or simply created manually with the correct values directly. These values are not checked into source control for obvious reasons.
-
-These variables would preferably be stored encrypted in a build system and applied during deploys depending on the target environment.
+A .env file is generated in the root folder by running the npm setup script. It won't generate API keys / access tokens.
 
 ## Technologies
 

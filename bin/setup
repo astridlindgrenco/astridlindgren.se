@@ -14,7 +14,7 @@ const dotenv = dedent`
   AL_URL=http://localhost:3000
   AL_LANG=sv-se
 
-  IMAGEKIT_ID=
+  IMAGEKIT_ID=bkdj0cuom
 
   PRISMIC_API=https://astridlindgren.cdn.prismic.io/api/v2
   PRISMIC_REPOSITORY=astridlindgren
