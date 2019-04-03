@@ -112,6 +112,12 @@
   border: 0;
 }
 
+button.Header-actionTrigger {
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 1px;
+}
+
 .Header-actionLabel {
   font-size: 15px;
   margin-left: var(--baseline-px);
