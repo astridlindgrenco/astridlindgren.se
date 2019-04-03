@@ -390,6 +390,13 @@ ul.Text-linkList li::before {
   line-height: 24px;
 }
 
+.Text-caption
+{
+  font-size: 12px;
+  line-height: 18px;
+  padding-bottom: 1em;
+}
+
 /**
  * Wider viewports
  */
@@ -401,6 +408,13 @@ ul.Text-linkList li::before {
   }
   .Text--smaller {
     font-size: 20px;
+  }
+
+  .Text-caption
+  {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 1em;
   }
 }
 
@@ -469,6 +483,13 @@ ul.Text-linkList li::before {
     font-size: 32px;
     line-height: 40px;
   }
+
+  .Text-caption
+  {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 1em;
+  }
 }
 
 @media (--viewport-xl) {
@@ -484,6 +505,13 @@ ul.Text-linkList li::before {
 
   .Text--growingLate .Text-large {
     font-size: 24px;
+  }
+
+  .Text-caption
+  {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 1em;
   }
 }
 
