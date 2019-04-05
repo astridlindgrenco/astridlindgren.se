@@ -38,7 +38,7 @@
   -webkit-overflow-scrolling: touch;
 }
 .Grid--shelf > .Grid-cell {
-  flex: 10 0 auto;
+  flex: 1 0 auto;
   margin: 0 2%;
 }
 
