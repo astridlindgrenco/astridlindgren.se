@@ -3,6 +3,10 @@
 @import '../base';
 
 
+.CharacterMenuPerspective {
+  perspective: 1000px;
+}
+
 .CharacterMenu {
   position: relative;
   width: 100%;
@@ -10,7 +14,7 @@
   height: 165px;
   margin: -3em auto 0 auto;
   padding: 0px 50px;
-
+  transform: rotateY(3deg);
   color: #fff;
   background-color: purple;
 }
