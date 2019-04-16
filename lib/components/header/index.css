@@ -43,9 +43,6 @@
     .Header-navList--secondary {
       justify-content: flex-end;
     }
-      .Header-navList--secondary .Header-navItem:not(:first-child) {
-
-      }
 
   .Header-link {
     padding: var(--baseline-px);
