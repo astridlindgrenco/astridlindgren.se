@@ -2,50 +2,56 @@
 
 @import '../base';
 
+/* @media (min-width: 940px) { */
+  .SubNav {
+    width: 100%;
+    padding: 4px;
+    background-color: #222;
+    color: whitesmoke;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    flex-wrap: nowrap;
+  }
 
-.SubNav {
-  width: 100%;
-  padding: 4px;
-  background-color: #222;
-  color: whitesmoke;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  flex-wrap: nowrap;
-}
+  .SubNav-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    overflow-y: hidden;   /* IE fix */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    animation: slideIn 0.75s forwards;
+    animation-delay: 0s;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.SubNav-container {
-  display: flex;
-  flex-wrap: wrap;
-  overflow-x: auto;
-  overflow-y: hidden;   /* IE fix */
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  max-width: 100%;
-  animation: slideIn 0.75s forwards;
-  animation-delay: 0s;
-  -webkit-overflow-scrolling: touch;
-}
+  .SubNav-link {
+    flex: 0 0 auto;
+    padding: 4px 12px;
+    transition: 250ms;
+    text-decoration: none;
+    flex-wrap: nowrap;   /* not sure FIX: iOS v.10.3.3, Safari in iPad */
+  }
 
-.SubNav-link {
-  flex: 0 0 auto;
-  padding: 4px 12px;
-  transition: 250ms;
-  text-decoration: none;
-  flex-wrap: nowrap;   /* not sure FIX: iOS v.10.3.3, Safari in iPad */
-}
+  .SubNav-link--active {
+    font-weight: 700;
+  }
+  .SubNav-link:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+/* } */
 
-.SubNav-link--active {
-  font-weight: 700;
+@media (max-width: 939px) {
+  .SubNav {
+    display: none;
+  }
 }
-.SubNav-link:hover {
-  color: var(--color-white);
-  text-decoration: underline;
-}
-
 
 @keyframes slideIn {
   0% { left: 110vw; }

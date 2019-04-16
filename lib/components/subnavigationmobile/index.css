@@ -1,0 +1,50 @@
+/* @define SubnNav */
+
+@import '../base';
+
+
+.SubNav-Mobile {
+  width: 100%;
+  padding: 4px;
+  margin-left: 12px;
+  font-size: 16px;
+}
+
+.SubNav-container-mobile {
+  height: 100%;
+  max-width: 100%;
+  /* animation: slideIn 0.75s forwards;
+  animation-delay: 0s;
+  -webkit-overflow-scrolling: touch; */
+}
+
+.SubNav-link-mobile {
+  transition: 250ms;
+  margin-bottom: 4px;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.SubNav-link-mobile-container {
+  margin-bottom: 4px;
+}
+
+.SubNav-link-mobile--active {
+  font-weight: 700;
+}
+.SubNav-link-mobile:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 940px) {
+  .SubNav-Mobile {
+    display: none;
+  }
+}
+
+/* @keyframes slideIn {
+  0% { left: 110vw; }
+  80% { left: -10px; max-width: 105%; }
+  100% { left: 0px; max-width: 100%; }
+} */

@@ -15,6 +15,7 @@
 @import "../components/footer";
 @import "../components/hero";
 @import "../components/subnavigation";
+@import "../components/subnavigationmobile";
 @import "../components/charactermenu";
 @import "../components/linkblock";
 @import "../components/display";
