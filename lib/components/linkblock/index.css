@@ -36,7 +36,7 @@
 }
 @media (--viewport-md) {
   .LinkBlock-label {
-    padding: calc(var(--baseline-px) * 5) 0 0 0;
+    padding: calc(var(--baseline-px) * 3) 0 0 0;
   }
 }
 

@@ -50,12 +50,12 @@
 
 .Section-footer {
   text-align: center;
-  margin-top: calc(var(--baseline-px) * 8);
+  margin-top: calc(var(--baseline-px) * 4);
 }
 
 @media (--viewport-lg) {
   .Section-footer {
-    margin-top: calc(var(--baseline-px) * 12);
+    margin-top: calc(var(--baseline-px) * 4);
   }
 }
 

@@ -4,10 +4,10 @@
    * Grids
    */
 
-  --baseline-px: 8px;
+  --baseline-px: 6px;
   --baseline: calc(var(--baseline-px) * 2);
-  --grid-gutter: 40px;
-  --grid-gutter-sm: 32px;
+  --grid-gutter: 24px;
+  --grid-gutter-sm: 18px;
 
   /**
    * Basic type
