@@ -32,7 +32,7 @@
 
   .SubNav-link {
     flex: 0 0 auto;
-    padding: 4px 12px;
+    padding: 4px 8px;
     transition: 250ms;
     text-decoration: none;
     flex-wrap: nowrap;   /* not sure FIX: iOS v.10.3.3, Safari in iPad */
