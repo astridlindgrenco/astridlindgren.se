@@ -394,7 +394,7 @@ ul.Text-linkList li::before {
 {
   font-size: 12px;
   line-height: 18px;
-  padding-bottom: 1em;
+  padding-bottom: 3em;
 }
 
 /**
@@ -414,7 +414,7 @@ ul.Text-linkList li::before {
   {
     font-size: 16px;
     line-height: 22px;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
   }
 }
 
@@ -488,7 +488,7 @@ ul.Text-linkList li::before {
   {
     font-size: 16px;
     line-height: 22px;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
   }
 }
 
@@ -511,7 +511,7 @@ ul.Text-linkList li::before {
   {
     font-size: 16px;
     line-height: 22px;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
   }
 }
 
