@@ -39,7 +39,11 @@
 }
 .Grid--shelf > .Grid-cell {
   flex: 1 0 auto;
-  margin: 0 2%;
+  margin: 3% 2%;
+}
+
+.Grid--shelf.Wrap--shelf {
+  flex-flow: wrap !important;
 }
 
 @media (--viewport-sm-max) {
