@@ -1,0 +1,10 @@
+
+@font-face {
+  font-family: "Ronja";
+  font-style: normal;
+  font-weight: bold;
+  src: url("./Austin-Medium-Web.woff") format("woff");
+  font-display: block;
+}
+
+.u-font-ronja { font-family: 'Ronja', 'AvenirNext', 'Avenir Next', sans-serif !important; }

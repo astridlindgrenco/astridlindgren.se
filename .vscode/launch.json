@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Node",
+      "port": 9229,
+      "protocol": "inspector",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "debug"],
+      "restart": true
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceRoot}/index.js"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug (one-click)",
+      "configurations": ["Node", "Chrome"]
+    }
+  ]
+}

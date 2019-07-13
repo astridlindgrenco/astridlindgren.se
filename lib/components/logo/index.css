@@ -1,0 +1,10 @@
+/* @define Logo */
+
+@import '../base';
+
+.Logo {
+  width: 140px;
+}
+.Logo--fill {
+  width: 100%;
+}

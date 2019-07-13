@@ -1,0 +1,28 @@
+/* @define Searchbox */
+
+@import '../base';
+
+.SearchBox {
+}
+
+.SearchBox-input {
+  width: 100%;
+  font-size: 14px;
+  padding: calc(var(--grid-gutter) / 4) calc(var(--grid-gutter) / 3);
+  border: 1px solid var(--color-gray);
+}
+
+/* Addsearch junk */
+
+#addsearch-results #addsearch-pic {
+ display: none !important;
+}
+#addsearch-results.addsearch-d #addsearch-results-right {
+ width: 0;
+ margin-left: 583px;
+}
+#addsearch-results.addsearch-d {
+  width: 585px !important;
+  margin-left: 192px; /* REMOVE THIS LINE IF YOUR SEARCH INPUT IS ALIGNED TO THE LEFT */
+}
+#addsearch-logo { display: none !important; }

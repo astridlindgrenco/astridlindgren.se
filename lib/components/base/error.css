@@ -1,0 +1,20 @@
+.ErrorSection {
+  min-height: 25em;
+}
+.ErrorSection h1 {
+  padding: 1em 0;
+  font-size: 2em;
+  line-height: 100%;
+}
+.ErrorSection-content {
+
+}
+.ErrorSection-content-wrapper {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap-reverse;
+  align-items: flex-start;
+}
+.ErrorSection-content-wrapper-img {
+  max-width: 500px;
+}

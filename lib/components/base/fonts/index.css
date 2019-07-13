@@ -1,0 +1,6 @@
+@import "./astridlindgrenab.css";
+
+:root {
+  --font-family-body: 'AvenirNext', 'Avenir Next', sans-serif;
+  --font-family-heading: 'AvenirNext', 'Avenir Next', sans-serif;
+}
