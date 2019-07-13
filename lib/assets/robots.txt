@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /sv
-Allow: /en
-Allow: /de
-Sitemap: https://www.astridlindgren.com/sitemap.xml
