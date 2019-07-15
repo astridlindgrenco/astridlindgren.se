@@ -1,6 +1,6 @@
 {
   "name": "astridlindgren.se",
-  "version": "2.1.10",
+  "version": "2.1.11",
   "description": "Main app for astridlindgren.se",
   "main": "index.js",
   "scripts": {
