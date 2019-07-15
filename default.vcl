@@ -1,4 +1,4 @@
-# 2018-12-20 11.31
+# 2018-07-15 11:06
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
