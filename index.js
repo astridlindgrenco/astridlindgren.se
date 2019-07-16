@@ -61,11 +61,11 @@ server.use(assets)
 server.use(serve('public', { maxage: MS_ONE_MONTH }))
 
 /**
- * Cache pages a short time, like 2 minutes
+ * Cache pages a short time, like 6 minutes.
  */
 
 server.use(cacheControl({
-  maxAge: 120
+  maxAge: 360
 }))
 
 /**
