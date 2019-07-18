@@ -65,7 +65,7 @@ server.use(serve('public', { maxage: MS_ONE_MONTH }))
  */
 
 server.use(cacheControl({
-  maxAge: 360
+  maxAge: MS_ONE_DAY
 }))
 
 /**
@@ -121,5 +121,5 @@ server.listen(process.env.PORT, () => {
     }
   }
 
-  console.log(`[Server] 🚀 Listening on localhost:${process.env.PORT}`)
+  console.log(`[Server] 🚀 Listening on ${process.env.HOST}:${process.env.PORT}`)
 })
