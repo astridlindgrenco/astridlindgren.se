@@ -14,6 +14,7 @@ const stores = require('./lib/middleware/stores')
 const prismic = require('./lib/middleware/prismic')
 const lang = require('./lib/middleware/lang')
 const navigation = require('./lib/middleware/navigation')
+const os = require('os')
 
 const server = new Koa()
 
@@ -121,5 +122,5 @@ server.listen(process.env.PORT, () => {
     }
   }
 
-  console.log(`[Server] 🚀 Listening on ${process.env.HOST}:${process.env.PORT}`)
+  console.log(`[Server] 🚀 Listening on ${os.hostname()}:${process.env.PORT}`)
 })
