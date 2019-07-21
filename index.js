@@ -93,13 +93,14 @@ server.use(stores)
 
 server.use(prismic)
 server.use(lang)
-server.use(navigation)
 
 /**
  * Hook up em' routes
  */
 
 server.use(router)
+
+server.use(navigation)
 
 /**
  * Middlewares for rendering
