@@ -14,6 +14,7 @@ const stores = require('./lib/middleware/stores')
 const prismic = require('./lib/middleware/prismic')
 const lang = require('./lib/middleware/lang')
 const navigation = require('./lib/middleware/navigation')
+const linked = require('./lib/middleware/linked')
 const os = require('os')
 
 const server = new Koa()
@@ -100,12 +101,12 @@ server.use(lang)
 
 server.use(router)
 
-server.use(navigation)
-
 /**
  * Middlewares for rendering
  */
 
+server.use(navigation)
+server.use(linked)
 server.use(render)
 
 /**
