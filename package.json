@@ -71,7 +71,7 @@
     "postcss-url": "^8.0.0",
     "prismic-dom": "^2.1.0",
     "prismic-element": "^1.0.0",
-    "prismic-javascript": "^2.0.3",
+    "prismic-javascript": "^2.1.1",
     "prismic-richtext": "^1.0.3",
     "suitcss-components-grid": "^4.0.0",
     "suitcss-utils-flex": "^2.0.1",
