@@ -1,4 +1,4 @@
-# 2018-07-15 11:06
+# 2020-01-12 15:50
 # Varnish instructions deployed on Elastx.
 # Copy this to the proper location on the balancing node.
 vcl 4.0;
@@ -199,6 +199,10 @@ sub vcl_recv {
   }
   if (req.http.host ~ "astridlindgrentext.se") {
     return (synth(308, "/sv"));
+  }
+  if (req.http.host ~ "pippioftoday.com|pippioftoday.se|pippioftoday.de|pippioftoday.co.uk") {
+    set req.http.x-redir = "https://savethechildren.net/pippi";
+    return (synth(850, ""));
   }
   # /Redirects
 
