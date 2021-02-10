@@ -36,9 +36,10 @@ if (process.env.NODE_ENV === 'development') {
  * Take extra care to clean up em' headers in production
  */
 
-if (process.env.NODE_ENV === 'production') {
-  server.use(helmet())
-}
+// Disable Helmet in production while we construct our new CSP after upgrade
+// if (process.env.NODE_ENV === 'production') {
+//   server.use(helmet())
+// }
 
 /**
  * Remove trailing slashes before continuing
