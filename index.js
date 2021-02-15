@@ -33,13 +33,16 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 /**
- * Take extra care to clean up em' headers in production
+ * Always clean up headers, even during development
  */
-
-// Disable Helmet in production while we construct our new CSP after upgrade
-// if (process.env.NODE_ENV === 'production') {
-//   server.use(helmet())
-// }
+server.use(helmet.contentSecurityPolicy({
+  directives:{
+    defaultSrc:["'self'", 'astridlindgren.prismic.io', 'astridlindgren.cdn.prismic.io', 'vars.hotjar.com'],
+    scriptSrc:["'self'", "'unsafe-inline'", "'unsafe-eval'", 'addsearch.com/', '*.hotjar.com/', 'static.cdn.prismic.io/', 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/'],
+    styleSrc:["'self'","'unsafe-inline'", 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'hello.myfonts.net/count/'],
+    imgSrc:["'self'", 'data:', 'images.prismic.io', 'astridlindgren.cdn.prismic.io'],
+    connectSrc:['in.hotjar.com', 'astridlindgren.prismic.io'],
+    fontSrc:["'self'", 'data:', ]}}));
 
 /**
  * Remove trailing slashes before continuing
