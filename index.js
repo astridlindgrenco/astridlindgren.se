@@ -39,7 +39,7 @@ server.use(helmet.contentSecurityPolicy({
   directives:{
     defaultSrc:["'self'", 'astridlindgren.prismic.io', 'astridlindgren.cdn.prismic.io', 'vars.hotjar.com'],
     scriptSrc:["'self'", "'unsafe-inline'", "'unsafe-eval'", 'addsearch.com/', '*.hotjar.com/', 'static.cdn.prismic.io/', 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/'],
-    styleSrc:["'self'","'unsafe-inline'", 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'hello.myfonts.net/count/'],
+    styleSrc:["'self'","'unsafe-inline'", 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'hello.myfonts.net/count/', 'www.googletagmanager.com', 'cdn.polyfill.io'],
     imgSrc:["'self'", 'data:', 'images.prismic.io', 'astridlindgren.cdn.prismic.io'],
     connectSrc:['in.hotjar.com', 'astridlindgren.prismic.io'],
     fontSrc:["'self'", 'data:', ]}}));
