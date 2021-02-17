@@ -42,7 +42,7 @@ server.use(helmet.contentSecurityPolicy({
     styleSrc: ["'self'", "'unsafe-inline'", 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'hello.myfonts.net/count/', 'app.addsearch.com', '*.cloudfront.net'],
     imgSrc: ["'self'", 'data:', 'images.prismic.io', 'astridlindgren.cdn.prismic.io', 'www.google-analytics.com'],
     connectSrc: ['in.hotjar.com', 'astridlindgren.prismic.io', 'www.google-analytics.com', 'stats.g.doubleclick.net'],
-    frameSrc: ['www.youtube.com'],
+    frameSrc: ['www.youtube.com', 'astridlindgren.prismic.io', 'vars.hotjar.com'],
     fontSrc: ["'self'", 'data:'] } }))
 
 /**
