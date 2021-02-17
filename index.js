@@ -36,13 +36,13 @@ if (process.env.NODE_ENV === 'development') {
  * Always clean up headers, even during development
  */
 server.use(helmet.contentSecurityPolicy({
-  directives:{
-    defaultSrc:["'self'", 'astridlindgren.prismic.io', 'astridlindgren.cdn.prismic.io', 'vars.hotjar.com'],
-    scriptSrc:["'self'", "'unsafe-inline'", "'unsafe-eval'", 'addsearch.com/', '*.hotjar.com/', 'static.cdn.prismic.io/', 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'www.googletagmanager.com', 'www.google-analytics.com', 'cdn.polyfill.io'],
-    styleSrc:["'self'","'unsafe-inline'", 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'hello.myfonts.net/count/'],
-    imgSrc:["'self'", 'data:', 'images.prismic.io', 'astridlindgren.cdn.prismic.io', 'www.google-analytics.com'],
-    connectSrc:['in.hotjar.com', 'astridlindgren.prismic.io', 'www.google-analytics.com', 'stats.g.doubleclick.net'],
-    fontSrc:["'self'", 'data:', ]}}));
+  directives: {
+    defaultSrc: ["'self'", 'astridlindgren.prismic.io', 'astridlindgren.cdn.prismic.io', 'vars.hotjar.com'],
+    scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'addsearch.com/', '*.hotjar.com/', 'static.cdn.prismic.io/', 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'www.googletagmanager.com', 'www.google-analytics.com', 'cdn.polyfill.io'],
+    styleSrc: ["'self'", "'unsafe-inline'", 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'hello.myfonts.net/count/', 'app.addsearch.com', '*.cloudfront.net'],
+    imgSrc: ["'self'", 'data:', 'images.prismic.io', 'astridlindgren.cdn.prismic.io', 'www.google-analytics.com'],
+    connectSrc: ['in.hotjar.com', 'astridlindgren.prismic.io', 'www.google-analytics.com', 'stats.g.doubleclick.net'],
+    fontSrc: ["'self'", 'data:'] } }))
 
 /**
  * Remove trailing slashes before continuing
