@@ -20,6 +20,11 @@
   font-weight: 600;
   margin: 0 auto;
 }
+
+.Quote-body p {
+  display: inline;
+}
+
 @media (--lg-viewport) {
   .Quote-body {
     font-size: 40px;
