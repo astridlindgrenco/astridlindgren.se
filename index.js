@@ -41,7 +41,7 @@ server.use(helmet.contentSecurityPolicy({
     scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'www.youtube.com', 'addsearch.com/', '*.hotjar.com/', 'static.cdn.prismic.io/', 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'www.googletagmanager.com', 'www.google-analytics.com', 'cdn.polyfill.io', 's6.searchcdn.com'],
     styleSrc: ["'self'", "'unsafe-inline'", 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'hello.myfonts.net/count/', 'app.addsearch.com', '*.cloudfront.net'],
     imgSrc: ["'self'", 'data:', 'images.prismic.io', 'astridlindgren.cdn.prismic.io', 'www.google-analytics.com', 'd20vwa69zln1wj.cloudfront.net', '*.addsearch.com', 'addsearch.com'],
-    connectSrc: ['in.hotjar.com', 'vc.hotjar.io', 'astridlindgren.prismic.io', 'www.google-analytics.com', 'stats.g.doubleclick.net'],
+    connectSrc: ["'self'", 'in.hotjar.com', 'vc.hotjar.io', 'astridlindgren.prismic.io', 'www.google-analytics.com', 'stats.g.doubleclick.net'],
     frameSrc: ['www.youtube.com', 'astridlindgren.prismic.io', 'vars.hotjar.com'],
     fontSrc: ["'self'", 'data:'] } }))
 
