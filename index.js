@@ -38,11 +38,12 @@ if (process.env.NODE_ENV === 'development') {
 server.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'", 'astridlindgren.prismic.io', 'astridlindgren.cdn.prismic.io', 'vars.hotjar.com'],
-    scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'www.youtube.com', 'addsearch.com/', '*.hotjar.com/', 'static.cdn.prismic.io/', 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'www.googletagmanager.com', 'www.google-analytics.com', 'cdn.polyfill.io', 's6.searchcdn.com'],
+    scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'embed.typeform.com', 'www.youtube.com', 'addsearch.com/', '*.hotjar.com/', 'static.cdn.prismic.io/', 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'www.googletagmanager.com', 'www.google-analytics.com', 'cdn.polyfill.io', 's6.searchcdn.com'],
     styleSrc: ["'self'", "'unsafe-inline'", 'cdnjs.cloudflare.com/ajax/libs/cookieconsent2/', 'hello.myfonts.net/count/', 'app.addsearch.com', '*.cloudfront.net'],
     imgSrc: ["'self'", 'data:', 'images.prismic.io', 'astridlindgren.cdn.prismic.io', 'www.google-analytics.com', 'd20vwa69zln1wj.cloudfront.net', '*.addsearch.com', 'addsearch.com'],
     connectSrc: ["'self'", 'in.hotjar.com', 'vc.hotjar.io', 'astridlindgren.prismic.io', 'www.google-analytics.com', 'stats.g.doubleclick.net'],
-    frameSrc: ['www.youtube.com', 'astridlindgren.prismic.io', 'vars.hotjar.com'],
+    frameSrc: ["'self'", 'www.youtube.com', 'astridlindgren.prismic.io', 'astridlindgren.typeform.com', 'vars.hotjar.com'],
+    frameAncestors: ["'self'", 'astridlindgren.typeform.com'],
     fontSrc: ["'self'", 'data:'] } }))
 
 /**
